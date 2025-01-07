@@ -2,8 +2,10 @@ import { definePreset } from '@primeng/themes';
 import Aura from '@primeng/themes/aura';
 
 
+
 const FmPreset = definePreset(Aura, {
 	primitive: {
+		
 		
 		red:{
 			50: "hsl(2.5, 94.8%, 95%)",
@@ -148,35 +150,42 @@ const FmPreset = definePreset(Aura, {
 			900: "hsl(327.1, 64.9%, 10%)",
 			950: "hsl(327.1, 64.9%, 5%)"
 		},
-	},
 	
-	semantic: {
-		primary: {
-			50: '{navy.50}',
-			100: '{navy.100}',
-			200: '{navy.200}',
-			300: '{navy.300}',
-			400: '{navy.400}',
-			500: '{navy.500}',
-			600: '{navy.600}',
-			700: '{navy.700}',
-			800: '{navy.800}',
-			900: '{navy.900}',
-			950: '{navy.950}',
-		},
-		colorScheme:{
-			light:{
-				primary: {
-					color:"{primary.700}",
-				},
-			},
-			dark:{
-				primary: {
-					color:"green",
-				},
-			},
-		},
+
 	},
+    semantic: {
+        primary: {
+            50: '{navy.50}',
+            100: '{navy.100}',
+            200: '{navy.200}',
+            300: '{navy.300}',
+            400: '{navy.400}',
+            500: '{navy.500}',
+            600: '{navy.600}',
+            700: '{navy.700}',
+            800: '{navy.800}',
+            900: '{navy.900}',
+            950: '{navy.950}'
+        },
+        colorScheme: {
+            light: {
+                primary: {
+                    color: '{red.700}',
+                    inverseColor: '#ffffff',
+                    hoverColor: '{primary.600}',
+                    activeColor: '{primary.800}'
+                },
+            },
+            dark: {
+                primary: {
+                    color: '{primary.300}',
+                    inverseColor: '{zinc.950}',
+                    hoverColor: '{zinc.100}',
+                    activeColor: '{zinc.200}'
+                },               
+            }
+        }
+    }
 });
 
 export { FmPreset };

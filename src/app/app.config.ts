@@ -1,13 +1,14 @@
 import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
 import { provideRouter } from '@angular/router';
 
-import { FmPreset } from '~/fm-theme/fm-preset';
+
 
 // Install PrimeNg 18 Theme
 
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { providePrimeNG } from 'primeng/config';
-import Aura from '@primeng/themes/aura';
+//import Aura from '@primeng/themes/aura';
+import { FmPreset } from '~/fm-theme/fm-preset';
 
 import { routes } from './app.routes';
 
@@ -20,7 +21,11 @@ export const appConfig: ApplicationConfig = {
       theme: { 
         preset: FmPreset,
         options: {
-          darkModeSelector: 'fm-dark-mode'
+          darkModeSelector: '.fm-dark-mode',
+          cssLayer: {
+              name: 'MattIsCool',
+              order: 'app-styles, primeng, MattIsCool'
+          }
         } 
 
       } 

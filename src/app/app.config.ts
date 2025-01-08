@@ -21,10 +21,11 @@ export const appConfig: ApplicationConfig = {
       theme: { 
         preset: FmPreset,
         options: {
+          prefix: 'pfm',
           darkModeSelector: '.fm-dark-mode',
           cssLayer: {
-              name: 'MattIsCool',
-              order: 'app-styles, primeng, MattIsCool'
+              name: 'fmTheme',
+              order: 'app-styles, fmTheme, primeng,'
           }
         } 
 

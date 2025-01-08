@@ -3,9 +3,23 @@ import Aura from '@primeng/themes/aura';
 
 
 const FmPreset = definePreset(Aura, {
+
+	
 	primitive: {
-		
-		red:{
+		'fm-brand':{
+			black:'#121212',
+			navy:'#05314d',
+			blue:'#085280',
+			gray:'#edebe9',
+			white:'#fff',
+			yellow:'#ffb400',
+			orange:'#c55422',
+			green:'#2c6937',
+			teal:'#238196',
+			magenta:'#911a5b'
+		},
+		ui: {
+			red: {
 			50: "hsl(2.5, 94.8%, 95%)",
 			100: "hsl(2.5, 94.8%, 90%)",
 			200: "hsl(2.5, 94.8%, 80%)",
@@ -18,8 +32,8 @@ const FmPreset = definePreset(Aura, {
 			900: "hsl(2.5, 94.8%, 10%)",
 			950: "hsl(2.5, 94.8%, 5%)"
 		},
-		orange:{
-			50:  "hsl(17, 77.6%, 95%)",
+		orange: {
+			50: "hsl(17, 77.6%, 95%)",
 			100: "hsl(17, 77.6%, 90%)",
 			200: "hsl(17, 77.6%, 80%)",
 			300: "hsl(17, 77.6%, 70%)",
@@ -31,8 +45,8 @@ const FmPreset = definePreset(Aura, {
 			900: "hsl(17, 77.6%, 10%)",
 			950: "hsl(17, 77.6%, 5%)"
 		},
-		yellow:{
-			50:  "hsl(41.9, 100%, 95%)",
+		yellow: {
+			50: "hsl(41.9, 100%, 95%)",
 			100: "hsl(41.9, 100%, 90%)",
 			200: "hsl(41.9, 100%, 80%)",
 			300: "hsl(41.9, 100%, 70%)",
@@ -44,8 +58,8 @@ const FmPreset = definePreset(Aura, {
 			900: "hsl(41.9, 100%, 10%)",
 			950: "hsl(41.9, 100%, 5%)"
 		},
-		lime:{
-			50:  "hsl(96.3, 69.8%, 95%)",
+		lime: {
+			50: "hsl(96.3, 69.8%, 95%)",
 			100: "hsl(96.3, 69.8%, 90%)",
 			200: "hsl(96.3, 69.8%, 80%)",
 			300: "hsl(96.3, 69.8%, 70%)",
@@ -57,8 +71,8 @@ const FmPreset = definePreset(Aura, {
 			900: "hsl(96.3, 69.8%, 10%)",
 			950: "hsl(96.3, 69.8%, 5%)"
 		},
-		green:{
-			50:  "hsl(131.1, 32.4%, 95%)",
+		green: {
+			50: "hsl(131.1, 32.4%, 95%)",
 			100: "hsl(131.1, 32.4%, 90%)",
 			200: "hsl(131.1, 32.4%, 80%)",
 			300: "hsl(131.1, 32.4%, 70%)",
@@ -70,8 +84,8 @@ const FmPreset = definePreset(Aura, {
 			900: "hsl(131.1, 32.4%, 10%)",
 			950: "hsl(131.1, 32.4%, 5%)"
 		},
-		teal:{
-			50:  "hsl(191, 62.2%, 95%)",
+		teal: {
+			50: "hsl(191, 62.2%, 95%)",
 			100: "hsl(191, 62.2%, 90%)",
 			200: "hsl(191, 62.2%, 80%)",
 			300: "hsl(191, 62.2%, 70%)",
@@ -83,8 +97,8 @@ const FmPreset = definePreset(Aura, {
 			900: "hsl(191, 62.2%, 10%)",
 			950: "hsl(191, 62.2%, 5%)"
 		},
-		blue:{
-			50:  "hsl(213.9, 90.2%, 95%)",
+		blue: {
+			50: "hsl(213.9, 90.2%, 95%)",
 			100: "hsl(213.9, 90.2%, 90%)",
 			200: "hsl(213.9, 90.2%, 80%)",
 			300: "hsl(213.9, 90.2%, 70%)",
@@ -97,7 +111,7 @@ const FmPreset = definePreset(Aura, {
 			950: "hsl(213.9, 90.2%, 5%)"
 		},
 		navy: {
-			50:  "hsl(204.9, 61.5%, 95%)",
+			50: "hsl(204.9, 61.5%, 95%)",
 			100: "hsl(204.9, 61.5%, 90%)",
 			200: "hsl(204.9, 61.5%, 80%)",
 			300: "hsl(204.9, 61.5%, 70%)",
@@ -110,7 +124,7 @@ const FmPreset = definePreset(Aura, {
 			950: "hsl(204.9, 61.5%, 5%)"
 		},
 		indigo: {
-			50:  "hsl(235.1, 95.7%, 95%)",
+			50: "hsl(235.1, 95.7%, 95%)",
 			100: "hsl(235.1, 95.7%, 90%)",
 			200: "hsl(235.1, 95.7%, 80%)",
 			300: "hsl(235.1, 95.7%, 70%)",
@@ -123,7 +137,7 @@ const FmPreset = definePreset(Aura, {
 			950: "hsl(235.1, 95.7%, 5%)"
 		},
 		purple: {
-			50:  "hsl(270.2, 80.9%, 95%)",
+			50: "hsl(270.2, 80.9%, 95%)",
 			100: "hsl(270.2, 80.9%, 90%)",
 			200: "hsl(270.2, 80.9%, 80%)",
 			300: "hsl(270.2, 80.9%, 70%)",
@@ -136,7 +150,7 @@ const FmPreset = definePreset(Aura, {
 			950: "hsl(270.2, 80.9%, 5%)"
 		},
 		magenta: {
-			50:  "hsl(327.1, 64.9%, 95%)",
+			50: "hsl(327.1, 64.9%, 95%)",
 			100: "hsl(327.1, 64.9%, 90%)",
 			200: "hsl(327.1, 64.9%, 80%)",
 			300: "hsl(327.1, 64.9%, 70%)",
@@ -148,33 +162,54 @@ const FmPreset = definePreset(Aura, {
 			900: "hsl(327.1, 64.9%, 10%)",
 			950: "hsl(327.1, 64.9%, 5%)"
 		},
+		}
 	},
-	
+
 	semantic: {
 		primary: {
-			50: '{navy.50}',
-			100: '{navy.100}',
-			200: '{navy.200}',
-			300: '{navy.300}',
-			400: '{navy.400}',
-			500: '{navy.500}',
-			600: '{navy.600}',
-			700: '{navy.700}',
-			800: '{navy.800}',
-			900: '{navy.900}',
-			950: '{navy.950}',
+			50: '{ui.blue.50}',
+			100: '{ui.blue.100}',
+			200: '{ui.blue.200}',
+			300: '{ui.blue.300}',
+			400: '{ui.blue.400}',
+			500: '{ui.blue.500}',
+			600: '{ui.blue.600}',
+			700: '{ui.blue.700}',
+			800: '{ui.blue.800}',
+			900: '{ui.blue.900}',
+			950: '{ui.blue.950}',
 		},
-		colorScheme:{
-			light:{
+		 severity: {
+		    warning: {
+		 		background: "{orange.600}",
+		 		color: "#fff",
+		 	},
+		 	error: {
+		 		background: "{red.600}",
+		 		color: "#fff",
+		 	},
+		 	matt: {
+		 		background: "{teal.600}",
+		 		color: "#fff",
+		 	},
+
+   		 },
+		
+		colorScheme: {
+			light: {
 				primary: {
-					color:"{primary.700}",
+					color: "{fm-brand.blue}",
+				},
+				info: {
+					color: "#ff0000",
+				}				
+			},
+			dark: {
+				primary: {
+					color: "green",
 				},
 			},
-			dark:{
-				primary: {
-					color:"green",
-				},
-			},
+
 		},
 	},
 });

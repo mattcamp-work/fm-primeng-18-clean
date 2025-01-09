@@ -10,5 +10,5 @@ import { ButtonTestComponent } from './button-test/button-test.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'primeng-18-test';
+  title = 'primeng-18-clean';
 }

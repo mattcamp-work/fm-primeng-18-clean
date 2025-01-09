@@ -18,7 +18,7 @@ body, .fm-body-font {
 
 
 body {
-	background: #f8f8f8;
+	background: var(--ground-background);
 
 }
 
@@ -43,3 +43,10 @@ body {
 .flex-gap-4 {
   gap:2rem
 }
+// @import "node_modules/tailwindcss/base" layer(tailwindcss);
+// @import "node_modules/tailwindcss/components" layer(tailwindcss);
+// @import "node_modules/tailwindcss/utilities" layer(tailwindcss);
+
+// @tailwind base;
+// @tailwind components;
+// @tailwind utilities;

@@ -1,35 +1,37 @@
 import { definePreset } from '@primeng/themes';
 import Aura from '@primeng/themes/aura';
 
+import { button } from './components/button-styles'
+
 
 const FmPreset = definePreset(Aura, {
 
 
 	primitive: {
-		'brand': {
-			black: '#121212',
-			navy: '#05314d',
-			blue: '#085280',
-			gray: '#edebe9',
-			white: '#fff',
-			yellow: '#ffb400',
-			orange: '#c55422',
-			green: '#2c6937',
-			teal: '#238196',
-			magenta: '#911a5b'
+		'fm-brand': {
+			black: 	"hsl(0,0%,7%)",			// hex: '#121212',
+			navy: 	"hsl(203, 88%, 16%)",	// hex: '#05314d',
+			blue: 	"hsl(203, 88%, 27%)", 	// hex: '#085280',
+			gray: 	"hsl(30, 10%, 92%)",	// hex: '#edebe9',
+			white: 	"hsl(0, 0%, 100%)", 	// hex: '#fff',
+			yellow: "hsl(42, 100%, 50%)",	// hex: '#ffb400',
+			orange: "hsl(18, 71%, 45%)",	// hex: '#c55422',
+			green: 	"hsl(131, 41%, 29%)",	// hex: '#2c6937',
+			teal: 	"hsl(191, 62%, 36%)",	// hex: '#238196',
+			magenta: "hsl(327, 70%, 34%)",	// hex: '#911a5b'
 		},
 		'adk': {
-			primary: "#0a649d",
-			"primary-alt": "#238196",
-			secondary: "{fm-brand.white}",
-			destructive: "#d02f2f",
-			safe: "#098620",
-			interactive: "#47a7e2",
-			"base-alert": "#ffaa33",
-			canvas: "{fm-brand.gray}",
-			text: "{fm-brand.black}",
+			primary: 		"hsl(203, 88%, 33%)",	// hex: "#0a649d",
+			"primary-alt": 	"hsl(191, 62%, 36%)",	// hex: "#238196",
+			secondary: 		"{brand.white}",		// hex: "#fff",
+			destructive: 	"hsl(0, 63%, 50%)",		// hex"	#d02f2f",
+			safe: 			"hsl(131, 87%, 28%)",	// hex: "#098620",
+			interactive: 	"hsl(203, 73%, 58%)",	// hex:	"#47a7e2",
+			"base-alert": 	"hsl(35, 100%, 60%)",	// hex: "#ffaa33",
+			canvas: "{brand.gray}",
+			text: "{brand.black}",
 		},
-		'ui': {
+		
 			red: {
 				50: "hsl(2.5, 94.8%, 95%)",
 				100: "hsl(2.5, 94.8%, 90%)",
@@ -173,530 +175,152 @@ const FmPreset = definePreset(Aura, {
 				900: "hsl(327.1, 64.9%, 10%)",
 				950: "hsl(327.1, 64.9%, 5%)"
 			},
-		}
+			'fm-gray':{
+				50: "hsl(30, 10%, 95%)",
+				100: "hsl(30, 10%, 90%)",
+				200: "hsl(30, 10%, 80%)",
+				300: "hsl(30, 10%, 70%)",
+				400: "hsl(30, 10%, 60%)",
+				500: "hsl(30, 10%, 50%)",
+				600: "hsl(30, 10%, 40%)",
+				700: "hsl(30, 10%, 30%)",
+				800: "hsl(30, 10%, 20%)",
+				900: "hsl(30, 10%, 10%)",
+				950: "hsl(30, 10%, 5%)"
+			}
+		
 	},
-
-
 
 	semantic: {
 		primary: {
-			50: '{ui.navy.50}',
-			100: '{ui.navy.100}',
-			200: '{ui.navy.200}',
-			300: '{ui.navy.300}',
-			400: '{ui.navy.400}',
-			500: '{ui.navy.500}',
-			600: '{ui.navy.600}',
-			700: '{ui.navy.700}',
-			800: '{ui.navy.800}',
-			900: '{ui.navy.900}',
-			950: '{ui.navy.950}',
+			50: '{navy.50}',
+			100: '{navy.100}',
+			200: '{navy.200}',
+			300: '{navy.300}',
+			400: '{navy.400}',
+			500: '{navy.500}',
+			600: '{navy.600}',
+			700: '{adk.primary}',
+			800: '{navy.800}',
+			900: '{navy.900}',
+			950: '{navy.950}',
 		},
-		severity: {
-			warning: {
-				background: "{ui.orange.600}",
-				color: "#fff",
-				hover: "{ui.orange.700}",
-				active: "{ui.orange.800}",
-			},
-			error: {
-				background: "{ui.red.600}",
-				color: "#fff",
-			},
-			matt: {
-				background: "{ui.teal.600}",
-				color: "#fff",
-			},
 
+		severity:{
+			secondary: {
+				50: '{fm-gray.50}',
+				100: '{fm-gray.100}',
+				200: '{fm-gray.200}',
+				300: '{fm-gray.300}',
+				400: '{fm-gray.400}',
+				500: '{fm-gray.500}',
+				600: '{fm-gray.600}',
+				700: '{fm-gray.700}',
+				800: '{fm-gray.800}',
+				900: '{fm-gray.900}',
+				950: '{fm-gray.950}',
+			},
+			info: {
+				50: '{blue.50}',
+				100: '{blue.100}',
+				200: '{blue.200}',
+				300: '{blue.300}',
+				400: '{blue.400}',
+				500: '{blue.500}',
+				600: '{blue.600}',
+				700: '{blue.700}',
+				800: '{blue.800}',
+				900: '{blue.900}',
+				950: '{blue.950}',
+			},
+			success: {
+				50: '{lime.50}',
+				100: '{lime.100}',
+				200: '{lime.200}',
+				300: '{lime.300}',
+				400: '{lime.400}',
+				500: '{lime.500}',
+				600: '{lime.600}',
+				700: '{lime.700}',
+				800: '{lime.800}',
+				900: '{lime.900}',
+				950: '{lime.950}',
+			},
+			warning: {
+				50: '{orange.50}',
+				100: '{orange.100}',
+				200: '{orange.200}',
+				300: '{orange.300}',
+				400: '{orange.400}',
+				500: '{orange.500}',
+				600: '{orange.600}',
+				700: '{orange.700}',
+				800: '{orange.800}',
+				900: '{orange.900}',
+				950: '{orange.950}',
+			},
+			help: {
+				50: '{teal.50}',
+				100: '{teal.100}',
+				200: '{teal.200}',
+				300: '{teal.300}',
+				400: '{teal.400}',
+				500: '{teal.500}',
+				600: '{teal.600}',
+				700: '{teal.700}',
+				800: '{teal.800}',
+				900: '{teal.900}',
+				950: '{teal.950}',
+			},
+			danger: {
+				50: '{red.50}',
+				100: '{red.100}',
+				200: '{red.200}',
+				300: '{red.300}',
+				400: '{red.400}',
+				500: '{red.500}',
+				600: '{red.600}',
+				700: '{red.700}',
+				800: '{red.800}',
+				900: '{red.900}',
+				950: '{red.950}',
+			},
 		},
-		colorScheme: {
-			light: {
+
+		colorScheme: {			
+			light: {				
 				primary: {
-					color: "{adk.primary}",
+					color: "{primary.600}",
 				},
 				info: {
 					color: "#ff0000",
 				},
+				level: {
+					'floor': '#fff',
+					0: "{surface.50}",
+					1: "{surface.100}",
+					2: "{surface.200}",
+					3: "{surface.300}",
+					4: "{surface.400}",
+				}
 			},
 			dark: {
-				primary: {
-					color: "green",
-				},
+
+				level: {
+					'floor': '#000',
+					0: "{surface.950}",
+					1: "{surface.900}",
+					2: "{surface.800}",
+					3: "{surface.700}",
+					4: "{surface.600}",
+				}
+
 			},
 
 		},
 	},
 	components: {
-		button: {
-			colorScheme: {
-				light: {
-					root: {
-						primary: {
-							background: "{primary.color}",
-							hoverBackground: "{primary.hover.color}",
-							activeBackground: "{primary.active.color}",
-							borderColor: "{primary.color}",
-							hoverBorderColor: "{primary.hover.color}",
-							activeBorderColor: "{primary.active.color}",
-							color: "{primary.contrast.color}",
-							hoverColor: "{primary.contrast.color}",
-							activeColor: "{primary.contrast.color}",
-							focusRing: {
-								color: "{primary.color}",
-								shadow: "none"
-							}
-						},
-						secondary: {
-							background: "{surface.100}",
-							hoverBackground: "{surface.200}",
-							activeBackground: "{surface.300}",
-							borderColor: "{surface.100}",
-							hoverBorderColor: "{surface.200}",
-							activeBorderColor: "{surface.300}",
-							color: "{surface.600}",
-							hoverColor: "{surface.700}",
-							activeColor: "{surface.800}",
-							focusRing: {
-								color: "{surface.600}",
-								shadow: "none"
-							}
-						},
-						info: {
-							background: "{ui.blue.500}",
-							hoverBackground: "{ui.blue.600}",
-							activeBackground: "{ui.blue.700}",
-							borderColor: "{ui.blue.500}",
-							hoverBorderColor: "{ui.blue.600}",
-							activeBorderColor: "{ui.blue.700}",
-							color: "#ffffff",
-							hoverColor: "#ffffff",
-							activeColor: "#ffffff",
-							focusRing: {
-								color: "{ui.blue.500}",
-								shadow: "none"
-							}
-						},
-						success: {
-							background: "{ui.lime.600}",
-							hoverBackground: "{ui.lime.700}",
-							activeBackground: "{ui.lime.800}",
-							borderColor: "{ui.lime.500}",
-							hoverBorderColor: "{ui.lime.700}",
-							activeBorderColor: "{ui.lime.800}",
-							color: "#ffffff",
-							hoverColor: "#ffffff",
-							activeColor: "#ffffff",
-							focusRing: {
-								color: "{ui.lime.500}",
-								shadow: "none"
-							}
-						},
-						warn: {
-							background: "{ui.orange.500}",
-							hoverBackground: "{ui.orange.600}",
-							activeBackground: "{ui.orange.700}",
-							borderColor: "{ui.orange.500}",
-							hoverBorderColor: "{ui.orange.600}",
-							activeBorderColor: "{ui.orange.700}",
-							color: "#ffffff",
-							hoverColor: "#ffffff",
-							activeColor: "#ffffff",
-							focusRing: {
-								color: "{ui.orange.500}",
-								shadow: "none"
-							}
-						},
-						help: {
-							background: "{ui.teal.500}",
-							hoverBackground: "{ui.teal.600}",
-							activeBackground: "{ui.teal.700}",
-							borderColor: "{ui.teal.500}",
-							hoverBorderColor: "{ui.teal.600}",
-							activeBorderColor: "{ui.teal.700}",
-							color: "#ffffff",
-							hoverColor: "#ffffff",
-							activeColor: "#ffffff",
-							focusRing: {
-								color: "{ui.teal.500}",
-								shadow: "none"
-							}
-						},
-						danger: {
-							background: "{ui.red.600}",
-							hoverBackground: "{ui.red.700}",
-							activeBackground: "{ui.red.800}",
-							borderColor: "{ui.red.500}",
-							hoverBorderColor: "{ui.red.700}",
-							activeBorderColor: "{ui.red.800}",
-							color: "#ffffff",
-							hoverColor: "#ffffff",
-							activeColor: "#ffffff",
-							focusRing: {
-								color: "{ui.red.600}",
-								shadow: "none"
-							}
-						},
-						contrast: {
-							background: "{surface.950}",
-							hoverBackground: "{surface.900}",
-							activeBackground: "{surface.800}",
-							borderColor: "{surface.950}",
-							hoverBorderColor: "{surface.900}",
-							activeBorderColor: "{surface.800}",
-							color: "{surface.0}",
-							hoverColor: "{surface.0}",
-							activeColor: "{surface.0}",
-							focusRing: {
-								color: "{surface.950}",
-								shadow: "none"
-							}
-						}
-					},
-					outlined: {
-						primary: {
-							hoverBackground: "{primary.50}",
-							activeBackground: "{primary.100}",
-							borderColor: "{primary.200}",
-							color: "{primary.color}"
-						},
-						secondary: {
-							hoverBackground: "{surface.50}",
-							activeBackground: "{surface.100}",
-							borderColor: "{surface.200}",
-							color: "{surface.500}"
-						},
-						success: {
-							hoverBackground: "{green.50}",
-							activeBackground: "{green.100}",
-							borderColor: "{green.200}",
-							color: "{green.500}"
-						},
-						info: {
-							hoverBackground: "{sky.50}",
-							activeBackground: "{sky.100}",
-							borderColor: "{sky.200}",
-							color: "{sky.500}"
-						},
-						warn: {
-							hoverBackground: "{orange.50}",
-							activeBackground: "{orange.100}",
-							borderColor: "{orange.200}",
-							color: "{orange.500}"
-						},
-						help: {
-							hoverBackground: "{purple.50}",
-							activeBackground: "{purple.100}",
-							borderColor: "{purple.200}",
-							color: "{purple.500}"
-						},
-						danger: {
-							hoverBackground: "{red.50}",
-							activeBackground: "{red.100}",
-							borderColor: "{red.200}",
-							color: "{red.500}"
-						},
-						contrast: {
-							hoverBackground: "{surface.50}",
-							activeBackground: "{surface.100}",
-							borderColor: "{surface.700}",
-							color: "{surface.950}"
-						},
-						plain: {
-							hoverBackground: "{surface.50}",
-							activeBackground: "{surface.100}",
-							borderColor: "{surface.200}",
-							color: "{surface.700}"
-						}
-					},
-					text: {
-						primary: {
-							hoverBackground: "{primary.50}",
-							activeBackground: "{primary.100}",
-							color: "{primary.color}"
-						},
-						secondary: {
-							hoverBackground: "{surface.50}",
-							activeBackground: "{surface.100}",
-							color: "{surface.500}"
-						},
-						success: {
-							hoverBackground: "{green.50}",
-							activeBackground: "{green.100}",
-							color: "{green.500}"
-						},
-						info: {
-							hoverBackground: "{sky.50}",
-							activeBackground: "{sky.100}",
-							color: "{sky.500}"
-						},
-						warn: {
-							hoverBackground: "{orange.50}",
-							activeBackground: "{orange.100}",
-							color: "{orange.500}"
-						},
-						help: {
-							hoverBackground: "{purple.50}",
-							activeBackground: "{purple.100}",
-							color: "{purple.500}"
-						},
-						danger: {
-							hoverBackground: "{red.50}",
-							activeBackground: "{red.100}",
-							color: "{red.500}"
-						},
-						contrast: {
-							hoverBackground: "{surface.50}",
-							activeBackground: "{surface.100}",
-							color: "{surface.950}"
-						},
-						plain: {
-							hoverBackground: "{surface.50}",
-							activeBackground: "{surface.100}",
-							color: "{surface.700}"
-						}
-					},
-					link: {
-						color: "{primary.color}",
-						hoverColor: "{primary.color}",
-						activeColor: "{primary.color}"
-					}
-				},
-				dark: {
-					root: {
-						primary: {
-							background: "{primary.color}",
-							hoverBackground: "{primary.hover.color}",
-							activeBackground: "{primary.active.color}",
-							borderColor: "{primary.color}",
-							hoverBorderColor: "{primary.hover.color}",
-							activeBorderColor: "{primary.active.color}",
-							color: "{primary.contrast.color}",
-							hoverColor: "{primary.contrast.color}",
-							activeColor: "{primary.contrast.color}",
-							focusRing: {
-								color: "{primary.color}",
-								shadow: "none"
-							}
-						},
-						secondary: {
-							background: "{surface.800}",
-							hoverBackground: "{surface.700}",
-							activeBackground: "{surface.600}",
-							borderColor: "{surface.800}",
-							hoverBorderColor: "{surface.700}",
-							activeBorderColor: "{surface.600}",
-							color: "{surface.300}",
-							hoverColor: "{surface.200}",
-							activeColor: "{surface.100}",
-							focusRing: {
-								color: "{surface.300}",
-								shadow: "none"
-							}
-						},
-						info: {
-							background: "{blue.400}",
-							hoverBackground: "{blue.300}",
-							activeBackground: "{blue.200}",
-							borderColor: "{blue.400}",
-							hoverBorderColor: "{blue.300}",
-							activeBorderColor: "{blue.200}",
-							color: "{blue.950}",
-							hoverColor: "{blue.950}",
-							activeColor: "{blue.950}",
-							focusRing: {
-								color: "{blue.400}",
-								shadow: "none"
-							}
-						},
-						success: {
-							background: "{green.400}",
-							hoverBackground: "{green.300}",
-							activeBackground: "{green.200}",
-							borderColor: "{green.400}",
-							hoverBorderColor: "{green.300}",
-							activeBorderColor: "{green.200}",
-							color: "{green.950}",
-							hoverColor: "{green.950}",
-							activeColor: "{green.950}",
-							focusRing: {
-								color: "{green.400}",
-								shadow: "none"
-							}
-						},
-						warn: {
-							background: "{orange.400}",
-							hoverBackground: "{orange.300}",
-							activeBackground: "{orange.200}",
-							borderColor: "{orange.400}",
-							hoverBorderColor: "{orange.300}",
-							activeBorderColor: "{orange.200}",
-							color: "{orange.950}",
-							hoverColor: "{orange.950}",
-							activeColor: "{orange.950}",
-							focusRing: {
-								color: "{orange.400}",
-								shadow: "none"
-							}
-						},
-						help: {
-							background: "{purple.400}",
-							hoverBackground: "{purple.300}",
-							activeBackground: "{purple.200}",
-							borderColor: "{purple.400}",
-							hoverBorderColor: "{purple.300}",
-							activeBorderColor: "{purple.200}",
-							color: "{purple.950}",
-							hoverColor: "{purple.950}",
-							activeColor: "{purple.950}",
-							focusRing: {
-								color: "{purple.400}",
-								shadow: "none"
-							}
-						},
-						danger: {
-							background: "{red.400}",
-							hoverBackground: "{red.300}",
-							activeBackground: "{red.200}",
-							borderColor: "{red.400}",
-							hoverBorderColor: "{red.300}",
-							activeBorderColor: "{red.200}",
-							color: "{red.950}",
-							hoverColor: "{red.950}",
-							activeColor: "{red.950}",
-							focusRing: {
-								color: "{red.400}",
-								shadow: "none"
-							}
-						},
-						contrast: {
-							background: "{surface.0}",
-							hoverBackground: "{surface.100}",
-							activeBackground: "{surface.200}",
-							borderColor: "{surface.0}",
-							hoverBorderColor: "{surface.100}",
-							activeBorderColor: "{surface.200}",
-							color: "{surface.950}",
-							hoverColor: "{surface.950}",
-							activeColor: "{surface.950}",
-							focusRing: {
-								color: "{surface.0}",
-								shadow: "none"
-							}
-						}
-					},
-					outlined: {
-						primary: {
-							hoverBackground: "color-mix(in srgb, {primary.color}, transparent 96%)",
-							activeBackground: "color-mix(in srgb, {primary.color}, transparent 84%)",
-							borderColor: "{primary.700}",
-							color: "{primary.color}"
-						},
-						secondary: {
-							hoverBackground: "rgba(255,255,255,0.04)",
-							activeBackground: "rgba(255,255,255,0.16)",
-							borderColor: "{surface.700}",
-							color: "{surface.400}"
-						},
-						success: {
-							hoverBackground: "color-mix(in srgb, {green.400}, transparent 96%)",
-							activeBackground: "color-mix(in srgb, {green.400}, transparent 84%)",
-							borderColor: "{green.700}",
-							color: "{green.400}"
-						},
-						info: {
-							hoverBackground: "color-mix(in srgb, {sky.400}, transparent 96%)",
-							activeBackground: "color-mix(in srgb, {sky.400}, transparent 84%)",
-							borderColor: "{sky.700}",
-							color: "{sky.400}"
-						},
-						warn: {
-							hoverBackground: "color-mix(in srgb, {orange.400}, transparent 96%)",
-							activeBackground: "color-mix(in srgb, {orange.400}, transparent 84%)",
-							borderColor: "{orange.700}",
-							color: "{orange.400}"
-						},
-						help: {
-							hoverBackground: "color-mix(in srgb, {purple.400}, transparent 96%)",
-							activeBackground: "color-mix(in srgb, {purple.400}, transparent 84%)",
-							borderColor: "{purple.700}",
-							color: "{purple.400}"
-						},
-						danger: {
-							hoverBackground: "color-mix(in srgb, {red.400}, transparent 96%)",
-							activeBackground: "color-mix(in srgb, {red.400}, transparent 84%)",
-							borderColor: "{red.700}",
-							color: "{red.400}"
-						},
-						contrast: {
-							hoverBackground: "{surface.800}",
-							activeBackground: "{surface.700}",
-							borderColor: "{surface.500}",
-							color: "{surface.0}"
-						},
-						plain: {
-							hoverBackground: "{surface.800}",
-							activeBackground: "{surface.700}",
-							borderColor: "{surface.600}",
-							color: "{surface.0}"
-						}
-					},
-					text: {
-						primary: {
-							hoverBackground: "color-mix(in srgb, {primary.color}, transparent 96%)",
-							activeBackground: "color-mix(in srgb, {primary.color}, transparent 84%)",
-							color: "{primary.color}"
-						},
-						secondary: {
-							hoverBackground: "{surface.800}",
-							activeBackground: "{surface.700}",
-							color: "{surface.400}"
-						},
-						success: {
-							hoverBackground: "color-mix(in srgb, {green.400}, transparent 96%)",
-							activeBackground: "color-mix(in srgb, {green.400}, transparent 84%)",
-							color: "{green.400}"
-						},
-						info: {
-							hoverBackground: "color-mix(in srgb, {sky.400}, transparent 96%)",
-							activeBackground: "color-mix(in srgb, {sky.400}, transparent 84%)",
-							color: "{sky.400}"
-						},
-						warn: {
-							hoverBackground: "color-mix(in srgb, {orange.400}, transparent 96%)",
-							activeBackground: "color-mix(in srgb, {orange.400}, transparent 84%)",
-							color: "{orange.400}"
-						},
-						help: {
-							hoverBackground: "color-mix(in srgb, {purple.400}, transparent 96%)",
-							activeBackground: "color-mix(in srgb, {purple.400}, transparent 84%)",
-							color: "{purple.400}"
-						},
-						danger: {
-							hoverBackground: "color-mix(in srgb, {red.400}, transparent 96%)",
-							activeBackground: "color-mix(in srgb, {red.400}, transparent 84%)",
-							color: "{red.400}"
-						},
-						contrast: {
-							hoverBackground: "{surface.800}",
-							activeBackground: "{surface.700}",
-							color: "{surface.0}"
-						},
-						plain: {
-							hoverBackground: "{surface.800}",
-							activeBackground: "{surface.700}",
-							color: "{surface.0}"
-						}
-					},
-					link: {
-						color: "{primary.color}",
-						hoverColor: "{primary.color}",
-						activeColor: "{primary.color}"
-					}
-				}
-
-			}
-
-		}
+		button
 	}
 
 });

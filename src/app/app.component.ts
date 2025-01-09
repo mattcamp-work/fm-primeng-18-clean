@@ -6,6 +6,8 @@ import { ButtonTestComponent } from './button-test/button-test.component';
 
 import { SiteComponentsModule } from './site-components/site-components.module'; 
 
+import { ComponentWrappersModule } from './component-wrappers/component-wrappers.module'; 
+
 //import { CompRowComponent } from './button-test/button-test.component';
 
 @Component({
@@ -14,6 +16,7 @@ import { SiteComponentsModule } from './site-components/site-components.module';
   imports: [
       RouterOutlet,
       ButtonTestComponent,
+      SiteComponentsModule,
     ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

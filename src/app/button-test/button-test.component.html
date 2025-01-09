@@ -27,3 +27,16 @@
 	<p-button label="Help" size="large" severity="help" />
 	<p-button label="Danger" size="large" severity="danger" />
 </div>
+
+
+<div class="d-flex flex-gap-2 mt-5 pb-2">
+    
+    <p-splitbutton label="Save" (onClick)="save()" [model]="items" />
+    <p-splitbutton label="Save" (onClick)="save()" [model]="items" severity="secondary" />
+    <p-splitbutton label="Save" (onClick)="save()" [model]="items" severity="success" />
+    <p-splitbutton label="Save" (onClick)="save()" [model]="items" severity="info" />
+    <p-splitbutton label="Save" (onClick)="save()" [model]="items" severity="warn" />
+    <p-splitbutton label="Save" (onClick)="save()" [model]="items" severity="help" />
+    <p-splitbutton label="Save" (onClick)="save()" [model]="items" severity="danger" />
+    <p-toast />
+</div>

@@ -18,15 +18,44 @@ body, .fm-body-font {
 
 
 body {
-	background: var(--ground-background);
-
+	background: var(--p-level-1);
+  padding:0px;
+  margin:0px;
+  width: 100vw;
 }
 
+
+.text-white {
+  color:#fff;
+}
 
 .bg-white {
 	background-color:#fff;
 }
 
+.bg-level-floor {
+  background-color: var(--p-level-floor);
+}
+
+.bg-level-1 {
+  background-color: var(--p-level-1);
+}
+
+.bg-level-2 {
+  background-color: var(--p-level-2);
+}
+
+.bg-level-3 {
+  background-color: var(--p-level-3);
+}
+
+.bg-level-4 {
+  background-color: var(--p-level-4);
+}
+
+.bg-fm-navy {
+  background-color: var(--p-fm-brand-navy);
+}
 
 .flex-gap-1 {
   gap:.25rem

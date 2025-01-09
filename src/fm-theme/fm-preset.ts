@@ -287,7 +287,7 @@ const FmPreset = definePreset(Aura, {
 							hoverColor: "#ffffff",
 							activeColor: "#ffffff",
 							focusRing: {
-								color: "{ui.lime.600}",
+								color: "{ui.lime.500}",
 								shadow: "none"
 							}
 						},
@@ -324,7 +324,7 @@ const FmPreset = definePreset(Aura, {
 						danger: {
 							background: "{ui.red.600}",
 							hoverBackground: "{ui.red.700}",
-							activeBackground: "{ui.red.00}",
+							activeBackground: "{ui.red.800}",
 							borderColor: "{ui.red.500}",
 							hoverBorderColor: "{ui.red.700}",
 							activeBorderColor: "{ui.red.800}",

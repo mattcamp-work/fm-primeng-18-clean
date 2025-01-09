@@ -7,6 +7,7 @@ import { ButtonTestComponent } from './button-test/button-test.component';
 import { SiteComponentsModule } from './site-components/site-components.module'; 
 
 import { ComponentWrappersModule } from './component-wrappers/component-wrappers.module'; 
+import { PrimengImportsModule } from './primeng-imports/primeng-imports.module'; 
 
 //import { CompRowComponent } from './button-test/button-test.component';
 

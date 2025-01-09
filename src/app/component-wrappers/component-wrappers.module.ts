@@ -44,7 +44,14 @@ import { InputDialogComponent } from './input-dialog/input-dialog.component';
     ModalWrapComponent,
     AlertWrapComponent,
     TableWrapComponent,
-    TokenWrapComponent
+    TokenWrapComponent,
+    InputCalendarWrapComponent,
+    InputNumberComponent,
+    InputTextComponent,
+    InputSelectComponent,
+    InputRadioButtonComponent,
+    InputSwitchComponent,
+    InputDialogComponent
   ]
 })
 export class ComponentWrappersModule { }

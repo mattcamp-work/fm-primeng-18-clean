@@ -267,13 +267,13 @@ const button: any = {
 					}
 				},
 				secondary: {
-					background: "{surface.800}",
-					hoverBackground: "{surface.700}",
-					activeBackground: "{surface.600}",
-					borderColor: "{surface.800}",
-					hoverBorderColor: "{surface.700}",
-					activeBorderColor: "{surface.600}",
-					color: "{surface.300}",
+					background: "{surface.900}",
+					hoverBackground: "{surface.800}",
+					activeBackground: "{surface.700}",
+					borderColor: "{surface.600}",
+					hoverBorderColor: "{surface.600}",
+					activeBorderColor: "{surface.500}",
+					color: "{surface.100}",
 					hoverColor: "{surface.200}",
 					activeColor: "{surface.100}",
 					focusRing: {

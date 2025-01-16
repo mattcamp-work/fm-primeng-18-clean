@@ -150,7 +150,12 @@
 		</p-inputnumber>
 	</div>
 </app-comp-row>
-<app-comp-row title="">
+<app-comp-row title="Input Text">
+	<div class="">
+    <label class="d-block" for="petname">Pet's Name</label>
+    <input class="d-block" pInputText id="petname" aria-describedby="petname-help" [(ngModel)]="inputText_value" />
+    <small class="d-block" id="petname-help">Enter your username to reset your password.</small>
+</div>
 </app-comp-row>
 <app-comp-row title="">
 </app-comp-row>

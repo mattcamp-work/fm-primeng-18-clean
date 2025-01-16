@@ -11,10 +11,11 @@ import { DisplayRowComponent } from './display-row/display-row.component';
   declarations: [
    
     HeaderComponent,
-    ThemeToggleComponent,
+    
     DisplayRowComponent
   ],
   imports: [
+    ThemeToggleComponent,
     CompRowComponent,
     CommonModule
   ],

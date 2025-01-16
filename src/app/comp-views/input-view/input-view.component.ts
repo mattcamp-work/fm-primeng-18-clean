@@ -66,6 +66,9 @@ export class InputViewComponent {
   inputNumber_value6 ? : Number = 10.5;
   inputNumber_value7 ? : Number = 27.25;
 
+  //Input Text
+  inputText_value?: String = "";
+
   constructor() {
     this.cascadeSelect__data = data__cascadeSelect;
     this.cascadeSelect__optionGroupChildren = ['states', 'cities'];

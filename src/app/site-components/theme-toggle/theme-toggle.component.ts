@@ -1,10 +1,13 @@
 import { Component, Renderer2, OnDestroy } from '@angular/core';
 
+import { PrimengImportsModule } from '~app/primeng-imports/primeng-imports-fixed.module';
 
 @Component({
   selector: 'app-theme-toggle',
   templateUrl: './theme-toggle.component.html',
-  styleUrl: './theme-toggle.component.scss'
+  styleUrl: './theme-toggle.component.scss',
+  imports: [PrimengImportsModule],
+  standalone:true
 })
 
 export class ThemeToggleComponent implements OnDestroy {

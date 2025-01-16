@@ -290,10 +290,7 @@ const FmPreset = definePreset(Aura, {
 		colorScheme: {			
 			light: {				
 				primary: {
-					color: "{primary.600}",
-				},
-				info: {
-					color: "#ff0000",
+					color: "{adk.primary}",
 				},
 				level: {
 					'floor': '#fff',

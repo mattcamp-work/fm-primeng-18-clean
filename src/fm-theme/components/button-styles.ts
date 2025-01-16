@@ -234,6 +234,22 @@ const button: any = {
 		},
 		dark: {
 
+			primary:{
+				background: "{adk.primary}",
+					hoverBackground: "{navy.600}",
+					activeBackground: "{navy.500}",
+					borderColor: "{navy.700}",
+					hoverBorderColor: "{navy.600}",
+					activeBorderColor: "{navy.500}",
+					contrast:{
+						color:'#fff',
+					},
+					focusRing: {
+						color: "{primary.color}",
+						shadow: "none"
+					}
+			},
+
 			root: {
 				primary: {
 					background: "{primary.color}",
@@ -242,9 +258,9 @@ const button: any = {
 					borderColor: "{primary.color}",
 					hoverBorderColor: "{primary.hover.color}",
 					activeBorderColor: "{primary.active.color}",
-					color: "{primary.contrast.color}",
-					hoverColor: "{primary.contrast.color}",
-					activeColor: "{primary.contrast.color}",
+					color: "{contrast.color}",
+					hoverColor: "{contrast.color}",
+					activeColor: "{contrast.color}",
 					focusRing: {
 						color: "{primary.color}",
 						shadow: "none"
@@ -266,77 +282,78 @@ const button: any = {
 					}
 				},
 				info: {
-					background: "{severity.info.400}",
-					hoverBackground: "{severity.info.300}",
-					activeBackground: "{severity.info.200}",
-					borderColor: "{severity.info.400}",
-					hoverBorderColor: "{severity.info.300}",
-					activeBorderColor: "{severity.info.200}",
-					color: "{severity.info.950}",
-					hoverColor: "{severity.info.950}",
-					activeColor: "{severity.info.950}",
+					background: "{severity.info.500}",
+					hoverBackground: "{severity.info.400}",
+					activeBackground: "{severity.info.300}",
+					borderColor: "{severity.info.500}",
+					hoverBorderColor: "{severity.info.400}",
+					activeBorderColor: "{severity.info.300}",
+					color: "{severity.info.50}",
+					hoverColor: "{severity.info.50}",
+					activeColor: "{severity.info.50}",
 					focusRing: {
-						color: "{severity.info.400}",
+						color: "{severity.info.500}",
 						shadow: "none"
 					}
 				},
 				success: {
-					background: "{severity.success.400}",
-					hoverBackground: "{severity.success.300}",
-					activeBackground: "{severity.success.200}",
-					borderColor: "{severity.success.400}",
-					hoverBorderColor: "{severity.success.300}",
-					activeBorderColor: "{severity.success.200}",
-					color: "{severity.success.950}",
-					hoverColor: "{severity.success.950}",
-					activeColor: "{severity.success.950}",
+					background: "{severity.success.700}",
+					hoverBackground: "{severity.success.600}",
+					activeBackground: "{severity.success.500}",
+					borderColor: "{severity.success.700}",
+					hoverBorderColor: "{severity.success.600}",
+					activeBorderColor: "{severity.success.500}",
+					color: "{contrast.color}",
+					hoverColor: "{contrast.color}",
+					activeColor: "{contrast.color}",
 					focusRing: {
-						color: "{severity.success.400}",
+						color: "{severity.success.500}",
 						shadow: "none"
 					}
 				},
 				warn: {
-					background: "{severity.warning.400}",
-					hoverBackground: "{severity.warning.300}",
-					activeBackground: "{severity.warning.200}",
-					borderColor: "{severity.warning.400}",
-					hoverBorderColor: "{severity.warning.300}",
-					activeBorderColor: "{severity.warning.200}",
-					color: "{severity.warning.950}",
-					hoverColor: "{severity.warning.950}",
-					activeColor: "{severity.warning.950}",
+					background: "{severity.warning.500}",
+					hoverBackground: "{severity.warning.400}",
+					activeBackground: "{severity.warning.300}",
+					borderColor: "{severity.warning.500}",
+					hoverBorderColor: "{severity.warning.400}",
+					activeBorderColor: "{severity.warning.300}",
+					color: "{severity.warning.50}",
+					hoverColor: "{severity.warning.50}",
+					activeColor: "{severity.warning.50}",
 					focusRing: {
-						color: "{severity.warning.400}",
+						color: "{severity.warning.500}",
 						shadow: "none"
 					}
 				},
 				help: {
-					background: "{severity.help.400}",
-					hoverBackground: "{severity.help.300}",
-					activeBackground: "{severity.help.200}",
-					borderColor: "{severity.help.400}",
-					hoverBorderColor: "{severity.help.300}",
-					activeBorderColor: "{severity.help.200}",
-					color: "{severity.help.950}",
-					hoverColor: "{severity.help.950}",
-					activeColor: "{severity.help.950}",
+					background: "{severity.help.600}",
+					hoverBackground: "{severity.help.500}",
+					activeBackground: "{severity.help.400}",
+					borderColor: "{severity.help.600}",
+					hoverBorderColor: "{severity.help.500}",
+					activeBorderColor: "{severity.help.400}",
+					color: "{severity.help.50}",
+					hoverColor: "{severity.help.50}",
+					activeColor: "{severity.help.50}",
 					focusRing: {
-						color: "{severity.help.400}",
+						color: "{severity.help.600}",
 						shadow: "none"
 					}
+					
 				},
 				danger: {
-					background: "{severity.danger.400}",
-					hoverBackground: "{severity.danger.300}",
-					activeBackground: "{severity.danger.200}",
-					borderColor: "{severity.danger.400}",
-					hoverBorderColor: "{severity.danger.300}",
-					activeBorderColor: "{severity.danger.200}",
-					color: "{severity.danger.950}",
-					hoverColor: "{severity.danger.950}",
-					activeColor: "{severity.danger.950}",
+					background: "{severity.danger.500}",
+					hoverBackground: "{severity.danger.400}",
+					activeBackground: "{severity.danger.300}",
+					borderColor: "{severity.danger.500}",
+					hoverBorderColor: "{severity.danger.400}",
+					activeBorderColor: "{severity.danger.300}",
+					color: "{severity.danger.0}",
+					hoverColor: "{severity.danger.0}",
+					activeColor: "{severity.danger.0}",
 					focusRing: {
-						color: "{severity.danger.400}",
+						color: "{severity.danger.500}",
 						shadow: "none"
 					}
 				},

@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-
 import { ButtonModule } from 'primeng/button';
-
 import { MenuItem, MessageService } from 'primeng/api';
 import { SplitButton } from 'primeng/splitbutton';
 import { ToastModule } from 'primeng/toast';

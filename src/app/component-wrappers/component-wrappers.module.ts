@@ -19,10 +19,28 @@ import { InputDialogComponent } from './input-dialog/input-dialog.component';
 
 @NgModule({
   declarations: [
+    // PfmButtonBlockComponent,
+    // ButtonWrapComponent,
+    // InputWrapComponent,
+    // ModalWrapComponent,
+    // AlertWrapComponent,
+    // TableWrapComponent,
+    // TokenWrapComponent,
+    // InputCalendarWrapComponent,
+    // InputNumberComponent,
+    // InputTextComponent,
+    // InputSelectComponent,
+    // InputRadioButtonComponent,
+    // InputSwitchComponent,
+    // InputDialogComponent
+  ],
+  imports: [
+    CommonModule,
     PfmButtonBlockComponent,
     ButtonWrapComponent,
     InputWrapComponent,
     ModalWrapComponent,
+    
     AlertWrapComponent,
     TableWrapComponent,
     TokenWrapComponent,
@@ -33,9 +51,6 @@ import { InputDialogComponent } from './input-dialog/input-dialog.component';
     InputRadioButtonComponent,
     InputSwitchComponent,
     InputDialogComponent
-  ],
-  imports: [
-    CommonModule
   ],
   exports: [
     PfmButtonBlockComponent,
@@ -54,4 +69,4 @@ import { InputDialogComponent } from './input-dialog/input-dialog.component';
     InputDialogComponent
   ]
 })
-export class ComponentWrappersModule { }
+export class ComponentWrappersModule_fm { }

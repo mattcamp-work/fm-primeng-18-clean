@@ -24,10 +24,10 @@
     "bootstrap": "^5.3.3",
     "chart.js": "^4.4.7",
     "colorjs.io": "^0.5.2",
+    "primeicons": "^7.0.0",
     "primeng": "^18.0.2",
     "quill": "^2.0.3",
     "rxjs": "~7.8.0",
-    "tailwindcss-primeui": "^0.3.4",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
   },

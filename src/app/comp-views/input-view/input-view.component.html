@@ -1,0 +1,170 @@
+<app-comp-row title="Auto Complete">
+	<p-autocomplete [(ngModel)]="autocomplete_value" [suggestions]="autocomplete_items" (completeMethod)="autocomplete_search($event)" />
+</app-comp-row>
+<app-comp-row title="cascade select">
+	<p-cascadeselect [(ngModel)]="cascadeSelect__selected" [options]="cascadeSelect__data" optionLabel="cname" optionGroupLabel="name" [style]="{ minWidth: '14rem' }" placeholder="Select a City"></p-cascadeselect> (need to fix this)
+	<!--
+
+				[optionGroupChildren]="['states', 'cities']" attribute keeps throwing errors with typescript
+
+				see error below: 
+
+				✘ [ERROR] NG2: Type 'string[]' is not assignable to type 'string'. [plugin angular-compiler]
+
+				    src/app/comp-views/input-view/input-view.component.html:4:111:
+				      4 │ ..." optionLabel="cname" [optionGroupChildren]="['states', 'cities'...
+				        ╵                           ~~~~~~~~~~~~~~~~~~~
+
+				  Error occurs in the template of component InputViewComponent.
+
+				    src/app/comp-views/input-view/input-view.component.ts:15:15:
+				      15 │   templateUrl: './input-view.component.html',
+				         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+		  -->
+</app-comp-row>
+<app-comp-row title="Checkbox">
+	<div class="d-flex flex-gap-3">
+		<div class="flex items-center">
+			<p-checkbox inputId="ingredient1" name="pizza" value="Cheese" [(ngModel)]="checkbox_pizza" />
+			<label for="ingredient1" class="ml-2"> Cheese </label>
+		</div>
+		<div class="flex items-center">
+			<p-checkbox inputId="ingredient2" name="pizza" value="Mushroom" [(ngModel)]="checkbox_pizza" />
+			<label for="ingredient2" class="ml-2"> Mushroom </label>
+		</div>
+		<div class="flex items-center">
+			<p-checkbox inputId="ingredient3" name="pizza" value="Pepper" [(ngModel)]="checkbox_pizza" />
+			<label for="ingredient3" class="ml-2"> Pepper </label>
+		</div>
+		<div class="flex items-center">
+			<p-checkbox inputId="ingredient4" name="pizza" value="Onion" [(ngModel)]="checkbox_pizza" />
+			<label for="ingredient4" class="ml-2"> Onion </label>
+		</div>
+	</div>
+</app-comp-row>
+<app-comp-row title="Date Picker">
+	<div class="d-flex flex-gap-3">
+		<div class="d-block">
+			<label for="buttondisplay" class="font-bold block mb-2"> Button </label>
+			<p-datepicker [(ngModel)]="date1" [showIcon]="true" inputId="buttondisplay" [showOnFocus]="false" />
+		</div>
+		<div class="d-block">
+			<label for="icondisplay" class="font-bold block mb-2"> Default Icon </label>
+			<p-datepicker [(ngModel)]="date2" [iconDisplay]="'input'" [showIcon]="true" inputId="icondisplay" />
+		</div>
+		<div class="d-block">
+			<label for="templatedisplay" class="font-bold block mb-2"> Custom Icon </label>
+			<p-datepicker [(ngModel)]="date3" [iconDisplay]="'input'" [showIcon]="true" [timeOnly]="true" inputId="templatedisplay">
+				<ng-template #inputicon let-clickCallBack="clickCallBack">
+					<i class="pi pi-clock" (click)="clickCallBack($event)"></i>
+				</ng-template>
+			</p-datepicker>
+		</div>
+	</div>
+</app-comp-row>
+<app-comp-row title="Float Label">
+	<p-floatlabel>
+		<input id="favorite_color" pInputText [(ngModel)]="floatLabel_value" type="text" />
+		<label for="favorite_color">Favorite Color</label>
+	</p-floatlabel>
+</app-comp-row>
+<app-comp-row title="Icon Field">
+	<div class="d-flex flex-gap-3">
+		<p-iconfield>
+			<p-inputicon styleClass="pi pi-search" />
+			<input type="text" pInputText placeholder="Search" />
+		</p-iconfield>
+		<p-iconfield>
+			<input type="text" pInputText />
+			<p-inputicon styleClass="pi pi-spinner pi-spin" />
+		</p-iconfield>
+	</div>
+</app-comp-row>
+<app-comp-row title="Ifta Label">
+	<p-iftalabel>
+		<input pInputText id="pets_name" [(ngModel)]="iftaLabel_value" />
+		<label for="pets_name">Pet's Name</label>
+	</p-iftalabel>
+</app-comp-row>
+<app-comp-row title="Input Group">
+	<div style="max-width:450px; width:100%">
+		<p-inputgroup class="">
+			<p-inputgroup-addon>
+				<i class="pi pi-clock"></i>
+			</p-inputgroup-addon>
+			<p-inputgroup-addon>
+				<i class="pi pi-star-fill"></i>
+			</p-inputgroup-addon>
+			<input type="text" pInputText placeholder="Price" />
+			<p-inputgroup-addon>$</p-inputgroup-addon>
+			<p-inputgroup-addon>.00</p-inputgroup-addon>
+		</p-inputgroup>
+	</div>
+</app-comp-row>
+<app-comp-row title="Input Mask">
+	<div class="d-flex flex-gap-3">
+		<div class="d-block">
+			<label class="font-bold block mb-2">SSN</label>
+			<p-inputmask class="d-block" mask="999-99-9999" [(ngModel)]="inputMask_value1" placeholder="999-99-9999" />
+		</div>
+		<div class="d-block">
+			<label class="font-bold block mb-2">Phone</label>
+			<p-inputmask class="d-block" mask="(999) 999-9999" [(ngModel)]="inputMask_value2" placeholder="(999) 999-9999" />
+		</div>
+		<div class="d-block">
+			<label class="font-bold block mb-2">Serial Number</label>
+			<p-inputmask class="d-block" mask="a*-999-a999" [(ngModel)]="inputMask_value3" placeholder="a*-999-a999" />
+		</div>
+	</div>
+</app-comp-row>
+<app-comp-row title="Input Number">
+	<div class="d-flex flex-gap-3 mb-3">
+		<div class="d-block">
+			<label for="integeronly">Integer Only</label>
+			<p-inputnumber inputId="integeronly" [(ngModel)]="inputNumber_value1" />
+		</div>
+		<div class="d-block">
+			<label for="withoutgrouping">Without Grouping</label>
+			<p-inputnumber [(ngModel)]="inputNumber_value2" mode="decimal" inputId="withoutgrouping" [useGrouping]="false" />
+		</div>
+		<div class="d-block">
+			<label for="minmaxfraction">Min-Max Fraction Digits</label>
+			<p-inputnumber [(ngModel)]="inputNumber_value3" inputId="minmaxfraction" mode="decimal" [minFractionDigits]="2" [maxFractionDigits]="5" />
+		</div>
+		<div class="d-block">
+			<label for="minmax">Min-Max Boundaries</label>
+			<p-inputnumber [(ngModel)]="inputNumber_value4" inputId="minmax" mode="decimal" [min]="0" [max]="100" />
+		</div>
+	</div>
+	<div class="d-flex flex-gap-3">
+		<p-inputnumber [(ngModel)]="inputNumber_value5" [showButtons]="true" inputId="stacked" mode="currency" currency="USD" />
+		<p-inputnumber [(ngModel)]="inputNumber_value6" mode="decimal" [showButtons]="true" inputId="minmax-buttons" [min]="0" [max]="100" />
+		<p-inputnumber [(ngModel)]="inputNumber_value7" [showButtons]="true" buttonLayout="horizontal" inputId="horizontal" spinnerMode="horizontal" [step]="0.25" mode="currency" currency="EUR">
+			<ng-template pTemplate="incrementbuttonicon">
+				<span class="pi pi-plus"></span>
+			</ng-template>
+			<ng-template pTemplate="decrementbuttonicon">
+				<span class="pi pi-minus"></span>
+			</ng-template>
+		</p-inputnumber>
+	</div>
+</app-comp-row>
+<app-comp-row title="">
+</app-comp-row>
+<app-comp-row title="">
+</app-comp-row>
+<app-comp-row title="">
+</app-comp-row>
+<app-comp-row title="">
+</app-comp-row>
+<app-comp-row title="">
+</app-comp-row>
+<app-comp-row title="">
+</app-comp-row>
+<app-comp-row title="">
+</app-comp-row>
+<app-comp-row title="">
+</app-comp-row>
+<app-comp-row title="">
+</app-comp-row>

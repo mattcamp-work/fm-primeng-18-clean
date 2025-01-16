@@ -1,0 +1,79 @@
+<app-comp-row title="Regular Buttons">
+	<div class="d-flex flex-gap-2">
+		<p-button label="Primary" />
+		<p-button label="Secondary" severity="secondary" />
+		<p-button label="Success" severity="success" />
+		<p-button label="Info" severity="info" />
+		<p-button label="Warn" severity="warn" />
+		<p-button label="Help" severity="help" />
+		<p-button label="Danger" severity="danger" />
+		<p-button label="Contrast" severity="contrast" />
+	</div>
+</app-comp-row>
+
+
+<app-comp-row title="Text Buttons">
+<div class="d-flex flex-gap-2">
+	<p-button label="Primary" variant="text" />
+	<p-button label="Secondary" variant="text" severity="secondary" />
+	<p-button label="Success" variant="text" severity="success" />
+	<p-button label="Info" variant="text" severity="info" />
+	<p-button label="Warn" variant="text" severity="warn" />
+	<p-button label="Help" variant="text" severity="help" />
+	<p-button label="Danger" variant="text" severity="danger" />
+	<p-button label="Plain" variant="text" />
+</div>
+</app-comp-row>
+<app-comp-row title="Icon Buttons">
+<div class="d-flex flex-gap-2 mb-2">
+	<p-button icon="pi pi-check" />
+	<p-button icon="pi pi-bookmark" severity="secondary" />
+	<p-button icon="pi pi-search" severity="success" />
+	<p-button icon="pi pi-user" severity="info" />
+	<p-button icon="pi pi-bell" severity="warn" />
+	<p-button icon="pi pi-heart" severity="help" />
+	<p-button icon="pi pi-times" severity="danger" />
+</div>
+
+<div class="d-flex flex-gap-2 mb-2">
+	<p-button icon="pi pi-check" [rounded]="true" />
+	<p-button icon="pi pi-bookmark" [rounded]="true" severity="secondary" />
+	<p-button icon="pi pi-search" [rounded]="true" severity="success" />
+	<p-button icon="pi pi-user" [rounded]="true" severity="info" />
+	<p-button icon="pi pi-bell" [rounded]="true" severity="warn" />
+	<p-button icon="pi pi-heart" [rounded]="true" severity="help" />
+	<p-button icon="pi pi-times" [rounded]="true" severity="danger" />
+</div>
+<div class="d-flex flex-gap-2 mb-2">
+	<p-button icon="pi pi-check" [rounded]="true" [outlined]="true" />
+	<p-button icon="pi pi-bookmark" [rounded]="true" severity="secondary" [outlined]="true" />
+	<p-button icon="pi pi-search" [rounded]="true" severity="success" [outlined]="true" />
+	<p-button icon="pi pi-user" [rounded]="true" severity="info" [outlined]="true" />
+	<p-button icon="pi pi-bell" [rounded]="true" severity="warn" [outlined]="true" />
+	<p-button icon="pi pi-heart" [rounded]="true" severity="help" [outlined]="true" />
+	<p-button icon="pi pi-times" [rounded]="true" severity="danger" [outlined]="true" />
+</div>
+</app-comp-row>
+
+
+<app-comp-row title="Split Button">
+
+	<div class="d-flex flex-gap-2 mb-2">
+		 <p-toast />
+	    <p-splitbutton label="Save" (onClick)="save()" [model]="splitButtonItems" />
+	    <p-splitbutton label="Save" (onClick)="save()" [model]="splitButtonItems" severity="secondary" />
+	    <p-splitbutton label="Save" (onClick)="save()" [model]="splitButtonItems" severity="success" />
+	    <p-splitbutton label="Save" (onClick)="save()" [model]="splitButtonItems" severity="info" />
+	    <p-splitbutton label="Save" (onClick)="save()" [model]="splitButtonItems" severity="warn" />
+	    <p-splitbutton label="Save" (onClick)="save()" [model]="splitButtonItems" severity="help" />
+	    <p-splitbutton label="Save" (onClick)="save()" [model]="splitButtonItems" severity="danger" />
+	</div>
+	
+</app-comp-row>
+
+<app-comp-row title="Speed Dial">
+	<div class="d-flex flex-gap-2 mb-2">
+		<p-speeddial [model]="speedDialItems" direction="right"  />
+	</div>
+</app-comp-row>
+

@@ -13,12 +13,32 @@
   <div class="container">
     <div class="row">
       <div class="col-12 p-4">
-        <app-comp-row title="Buttons">
-          <app-button-test></app-button-test>
-        </app-comp-row>
-        <app-comp-row title="Calendar">
-          <app-input-dialog></app-input-dialog>
-        </app-comp-row>
+        <p-button label="hello"></p-button>
+      <div class="card">
+   <p-tabs value="1">
+        <p-tablist>
+            <p-tab value="0">Buttons</p-tab>
+            <p-tab value="1">Inputs</p-tab>
+            <p-tab value="2">Data</p-tab>
+            <p-tab value="3">Table</p-tab>
+        </p-tablist>
+        <p-tabpanels>
+            <p-tabpanel value="0">
+                <app-button-view></app-button-view>
+            </p-tabpanel>
+            <p-tabpanel value="1">
+                <app-input-view></app-input-view>
+            </p-tabpanel>
+            <p-tabpanel value="2">
+                 <app-data-view></app-data-view>
+            </p-tabpanel>
+             <p-tabpanel value="3">
+                 <app-table-view></app-table-view>
+            </p-tabpanel>
+        </p-tabpanels>
+    </p-tabs> 
+</div>
+
       </div>
     </div>
   </div>

@@ -82,7 +82,8 @@ import { CommonModule } from '@angular/common';
     import { StepsModule } from 'primeng/steps';
     import { TabMenuModule } from 'primeng/tabmenu';
     import { TableModule } from 'primeng/table';
-    import { TabViewModule } from 'primeng/tabview';
+    // import { TabViewModule } from 'primeng/tabview';
+    import { TabsModule } from 'primeng/tabs';
     import { Tag } from 'primeng/tag';
     import { Terminal } from 'primeng/terminal';
     import { TieredMenuModule } from 'primeng/tieredmenu';
@@ -106,7 +107,7 @@ import { CommonModule } from '@angular/common';
     import { AutoFocusModule } from 'primeng/autofocus';
     import { OverlayBadgeModule } from 'primeng/overlaybadge';
 
-    
+    import { FluidModule } from 'primeng/fluid';
 
     @NgModule({
       imports: [
@@ -193,7 +194,7 @@ import { CommonModule } from '@angular/common';
         StepsModule,
         TableModule,
         TabMenuModule,
-        TabViewModule,
+        //TabViewModule,
         Tag,
         Terminal,
         TieredMenuModule,
@@ -212,7 +213,10 @@ import { CommonModule } from '@angular/common';
         IconField,
         InputIcon,
         AutoFocusModule,
-        OverlayBadgeModule
+        OverlayBadgeModule,
+
+        FluidModule,
+        TabsModule
       ],
       exports: [
         AvatarModule,
@@ -238,6 +242,7 @@ import { CommonModule } from '@angular/common';
         ConfirmDialog,
         ConfirmPopupModule,
         ContextMenuModule,
+        DatePicker,
         DataView,
         Dialog,
         DividerModule,
@@ -297,7 +302,7 @@ import { CommonModule } from '@angular/common';
         StepsModule,
         TableModule,
         TabMenuModule,
-        TabViewModule,
+        //TabViewModule,
         Tag,
         Terminal,
         TieredMenuModule,
@@ -317,7 +322,10 @@ import { CommonModule } from '@angular/common';
         IconField,
         InputIcon,
         AutoFocusModule,
-        OverlayBadgeModule
+        OverlayBadgeModule,
+
+        FluidModule,
+        TabsModule,
       ],
       providers: [  ]
     })

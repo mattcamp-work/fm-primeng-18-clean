@@ -343,17 +343,17 @@ const button: any = {
 					
 				},
 				danger: {
-					background: "{severity.danger.500}",
-					hoverBackground: "{severity.danger.400}",
-					activeBackground: "{severity.danger.300}",
-					borderColor: "{severity.danger.500}",
-					hoverBorderColor: "{severity.danger.400}",
-					activeBorderColor: "{severity.danger.300}",
+					background: "{severity.danger.600}",
+					hoverBackground: "{severity.danger.500}",
+					activeBackground: "{severity.danger.400}",
+					borderColor: "{severity.danger.600}",
+					hoverBorderColor: "{severity.danger.500}",
+					activeBorderColor: "{severity.danger.400}",
 					color: "{severity.danger.0}",
 					hoverColor: "{severity.danger.0}",
 					activeColor: "{severity.danger.0}",
 					focusRing: {
-						color: "{severity.danger.500}",
+						color: "{severity.danger.600}",
 						shadow: "none"
 					}
 				},

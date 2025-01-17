@@ -12,6 +12,11 @@ interface AutoCompleteCompleteEvent {
   query: string;
 }
 
+interface City {
+    name: string,
+    code: string
+}
+
 
 @Component({
   selector: 'app-input-view',
@@ -69,12 +74,73 @@ export class InputViewComponent {
   //Input Text
   inputText_value?: String = "";
 
+  //Knob
+  knob_value1?:any = 10;
+  knob_value2?:any = 15;
+
+  //listBox
+  listBox_data!: City[];
+  listBox_selected!: City;
+
+  //MultiSelect
+  multiSelect_data!: City[];
+  multiSelect_selected!: City[];
+
+  //Password
+  password_value?:String;
+
+  // Radio Button
+  rButton_value?:any;
+
+  //Rating
+  rating_value?:any;
+
+  //Select
+  select_data!: City[];
+  select_selected!: City[];
+
+  //Select Button
+  selectButton_options: any[] = [{ label: 'One-Way', value: 'one-way' },{ label: 'Return', value: 'return' }];
+  selectButton_value: string = 'off'
+
+  //Slider Value
+  slider_value?:any;
+
+  //Text Area
+  textArea_value?:any;
+ 
+
   constructor() {
     this.cascadeSelect__data = data__cascadeSelect;
     this.cascadeSelect__optionGroupChildren = ['states', 'cities'];
 
     //this.date1 = new Date();
+    this.knob_value1 = 11;
+    this.knob_value2 = 12;
 
+     this.listBox_data = [
+            { name: 'New York', code: 'NY' },
+            { name: 'Rome', code: 'RM' },
+            { name: 'London', code: 'LDN' },
+            { name: 'Istanbul', code: 'IST' },
+            { name: 'Paris', code: 'PRS' }
+        ];
+
+       this.multiSelect_data = [
+            {name: 'New York', code: 'NY'},
+            {name: 'Rome', code: 'RM'},
+            {name: 'London', code: 'LDN'},
+            {name: 'Istanbul', code: 'IST'},
+            {name: 'Paris', code: 'PRS'}
+        ];
+
+        this.select_data = [
+            {name: 'Flavor Town', code: 'NY'},
+            {name: 'Rome', code: 'RM'},
+            {name: 'London', code: 'LDN'},
+            {name: 'Istanbul', code: 'IST'},
+            {name: 'Paris', code: 'PRS'}
+        ];
   }
 
 }

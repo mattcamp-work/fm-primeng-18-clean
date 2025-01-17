@@ -26,8 +26,8 @@ import { InputTextModule } from 'primeng/inputtext';
 import { KeyFilter } from 'primeng/keyfilter';
 import { Knob } from 'primeng/knob';
 import { Listbox } from 'primeng/listbox';
-import { MultiSelect } from 'primeng/multiselect';
-import { Password } from 'primeng/password';
+import { MultiSelectModule } from 'primeng/multiselect';
+import { PasswordModule } from 'primeng/password';
 import { RadioButton } from 'primeng/radiobutton';
 import { Rating } from 'primeng/rating';
 import { Select } from 'primeng/select';
@@ -153,8 +153,8 @@ import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
     KeyFilter,
     Knob,
     Listbox,
-    MultiSelect,
-    Password,
+    MultiSelectModule,
+    PasswordModule,
     RadioButton,
     Rating,
     Select,
@@ -270,8 +270,8 @@ import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
     KeyFilter,
     Knob,
     Listbox,
-    MultiSelect,
-    Password,
+    MultiSelectModule,
+    PasswordModule,
     RadioButton,
     Rating,
     Select,

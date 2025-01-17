@@ -8,10 +8,8 @@ import { DisplayRowComponent } from './display-row/display-row.component';
 
 
 @NgModule({
-  declarations: [
-   
-    HeaderComponent,
-    
+  declarations: [   
+    HeaderComponent,    
     DisplayRowComponent
   ],
   imports: [

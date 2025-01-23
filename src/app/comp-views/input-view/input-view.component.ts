@@ -3,8 +3,11 @@ import { Component } from '@angular/core';
 
 import { PrimengImportsModule } from '~app/primeng-imports/primeng-imports-fixed.module';
 import { MenuItem, MessageService } from 'primeng/api';
+import { TreeDataService } from '~app/services/tree-data.service'
 
 import { data__cascadeSelect } from './data--cascadeSelect';
+
+
 
 
 interface AutoCompleteCompleteEvent {
@@ -24,7 +27,7 @@ interface City {
   imports: [PrimengImportsModule],
   templateUrl: './input-view.component.html',
   styleUrl: './input-view.component.scss',
-  providers: [MessageService],
+  providers: [MessageService,TreeDataService],
 })
 export class InputViewComponent {
 
@@ -108,9 +111,22 @@ export class InputViewComponent {
 
   //Text Area
   textArea_value?:any;
+
+  //Toggle Button
+  toggleButton_checked?:boolean = false;
+
+  //Toggle Switch
+  toggleSwitch_checked?:boolean = false;
+
+  //Tree Select 
+
+  treeSelect_nodes!: any[];
+
+  treeSelect_selectedNodes: any;
+
  
 
-  constructor() {
+  constructor(private _treeDataService: TreeDataService) {
     this.cascadeSelect__data = data__cascadeSelect;
     this.cascadeSelect__optionGroupChildren = ['states', 'cities'];
 
@@ -141,6 +157,8 @@ export class InputViewComponent {
             {name: 'Istanbul', code: 'IST'},
             {name: 'Paris', code: 'PRS'}
         ];
+
+       this._treeDataService.getFiles().then((files) => (this.treeSelect_nodes = files));
   }
 
 }

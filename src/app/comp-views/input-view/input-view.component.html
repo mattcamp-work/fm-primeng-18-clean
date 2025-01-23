@@ -232,3 +232,20 @@
 	<textarea rows="5" cols="30" pTextarea [(ngModel)]="textArea_value"></textarea>
 </app-comp-row>
 
+
+<app-comp-row title="Toggle Button" >
+	<p-togglebutton [(ngModel)]="toggleButton_checked" onLabel="Locked" offLabel="Unlocked" onIcon="pi pi-check" offIcon="pi pi-times" onIcon="pi pi-lock" offIcon="pi pi-lock-open" styleClass="w-36" ariaLabel="Do you confirm" />
+</app-comp-row>
+
+<app-comp-row title="Toggle Switch" >
+	<p-toggleswitch [(ngModel)]="toggleSwitch_checked" />
+</app-comp-row>
+
+<app-comp-row title="Tree Select" >
+	    <p-treeselect class="md:w-80 w-full" style="width:100%" containerStyleClass="w-full" [(ngModel)]="treeSelect_selectedNodes" [options]="treeSelect_nodes" placeholder="Select Item" />
+
+</app-comp-row>
+
+
+
+

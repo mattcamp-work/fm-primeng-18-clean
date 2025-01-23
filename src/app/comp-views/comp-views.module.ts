@@ -9,9 +9,12 @@ import { FormViewComponent } from './form-view/form-view.component';
 import { InputViewComponent } from './input-view/input-view.component';
 import { MediaViewComponent } from './media-view/media-view.component';
 import { MenuViewComponent } from './menu-view/menu-view.component';
+import { MiscViewComponent } from './misc-view/misc-view.component';
+import { MessagesViewComponent } from './messages-view/messages-view.component';
 import { OverlayViewComponent } from './overlay-view/overlay-view.component';
 import { PanelViewComponent } from './panel-view/panel-view.component';
 import { TableViewComponent } from './table-view/table-view.component';
+
 
 
 
@@ -26,7 +29,9 @@ import { TableViewComponent } from './table-view/table-view.component';
     FormViewComponent,
     InputViewComponent,
     MediaViewComponent,
+    MiscViewComponent,
     MenuViewComponent,
+    MessagesViewComponent,
     OverlayViewComponent,
     PanelViewComponent,
     TableViewComponent,
@@ -40,7 +45,9 @@ import { TableViewComponent } from './table-view/table-view.component';
     FormViewComponent,
     InputViewComponent,
     MediaViewComponent,
+    MiscViewComponent,
     MenuViewComponent,
+    MessagesViewComponent,
     OverlayViewComponent,
     PanelViewComponent,
     TableViewComponent,

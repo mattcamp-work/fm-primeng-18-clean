@@ -1,1 +1,93 @@
 <p>data-view works!</p>
+<app-comp-row title="Data View">
+	Too complicated, skipping for now
+</app-comp-row>
+
+<app-comp-row title="Order List">
+	<p-orderlist [value]="orderList_products" dataKey="id" breakpoint="575px">
+	    <ng-template pTemplate="orderList_option" let-option>
+	        {{ option.name }}
+	    </ng-template>
+	</p-orderlist>
+</app-comp-row>
+
+<app-comp-row title="Org Chart">
+	<p-organization-chart [value]="orgChart_data" />
+</app-comp-row>
+
+
+<app-comp-row title="Pick List">
+	 <p-picklist [source]="pickList_sourceProducts" [target]="pickList_targetProducts" [dragdrop]="true" [responsive]="true" [sourceStyle]="{ height: '30rem' }" [targetStyle]="{ height: '30rem' }" breakpoint="1400px">
+        <ng-template let-item pTemplate="item">
+            {{ item.name }}
+        </ng-template>
+    </p-picklist>
+</app-comp-row>
+
+<app-comp-row title="Table">
+	<div class="flex justify-center mb-4">
+<!--     <p-selectbutton
+        [options]="table_sizes"
+        [(ngModel)]="table_selectedSize"
+        [multiple]="false"
+        optionLabel="name"
+        optionValue="class" /> -->
+</div>
+<p-table [value]="table_products" [tableStyle]="{ 'min-width': '50rem' }" [styleClass]="table_selectedSize.class">
+    <ng-template #header>
+        <tr>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Quantity</th>
+        </tr>
+    </ng-template>
+    <ng-template #body let-product>
+        <tr>
+            <td>{{ product.code }}</td>
+            <td>{{ product.name }}</td>
+            <td>{{ product.category }}</td>
+            <td>{{ product.quantity }}</td>
+        </tr>
+    </ng-template>
+</p-table>
+</app-comp-row>
+
+<app-comp-row title="Time Line">
+    <p-timeline [value]="timeline_events" layout="horizontal" align="bottom">
+        <ng-template pTemplate="content" let-event>
+            {{ event.status }}
+        </ng-template>
+    </p-timeline>
+    <p-timeline [value]="timeline_events">
+        <ng-template pTemplate="content" let-event>
+            {{ event.status }}
+        </ng-template>
+    </p-timeline>
+</app-comp-row>
+
+<app-comp-row title="Tree">
+	<p-tree [value]="tree_files" styleClass="w-full md:w-[30rem]" /> 
+</app-comp-row>
+
+<app-comp-row title="Tree Table">
+	<p-treetable [value]="treeTable_files" [scrollable]="true" [tableStyle]="{'min-width':'50rem'}">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Name</th>
+            <th>Size</th>
+            <th>Type</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowNode let-rowData="rowData">
+        <tr [ttRow]="rowNode">
+            <td>
+                <p-treeTableToggler [rowNode]="rowNode" />
+                {{ rowData.name }}
+            </td>
+            <td>{{ rowData.size }}</td>
+            <td>{{ rowData.type }}</td>
+        </tr>
+    </ng-template>
+</p-treetable>
+</app-comp-row>

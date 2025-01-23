@@ -24,8 +24,9 @@ export const appConfig: ApplicationConfig = {
           //prefix: 'pfm',
           darkModeSelector: '.fm-dark-mode',
           cssLayer: {
-              name: 'fmTheme',
-              order: 'fmTheme, app-styles, primeng'
+              name: 'fm-theme-2',
+             // order: 'matt, tailwind-base, primeng, fm-theme, tailwind-utilities'
+              //last layer is the dominant 
           }
         } 
 

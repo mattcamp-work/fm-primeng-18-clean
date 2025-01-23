@@ -38,8 +38,8 @@ import { ToggleButton } from 'primeng/togglebutton';
 import { ToggleSwitch } from 'primeng/toggleswitch';
 import { TreeSelect } from 'primeng/treeselect';
 
-// Button Components
-import { Button } from 'primeng/button';
+// ButtonModule Components
+import { ButtonModule } from 'primeng/button';
 import { SpeedDial } from 'primeng/speeddial';
 import { SplitButton } from 'primeng/splitbutton';
 
@@ -56,14 +56,14 @@ import { TreeTableModule } from 'primeng/treetable';
 import { Scroller } from 'primeng/scroller';
 
 // Panel Components
-import { Accordion } from 'primeng/accordion';
-import { Card } from 'primeng/card';
+import { AccordionModule } from 'primeng/accordion';
+import { CardModule } from 'primeng/card';
 import { Divider } from 'primeng/divider';
 import { Fieldset } from 'primeng/fieldset';
 import { Panel } from 'primeng/panel';
 import { ScrollPanel } from 'primeng/scrollpanel';
 import { Splitter } from 'primeng/splitter';
-import { Stepper } from 'primeng/stepper';
+import { StepperModule } from 'primeng/stepper';
 import { TabsModule } from 'primeng/tabs';
 import { Toolbar } from 'primeng/toolbar';
 
@@ -95,7 +95,7 @@ import { ChartModule } from 'primeng/chart';
 
 // Messages Components
 import { Message } from 'primeng/message';
-import { Toast } from 'primeng/toast';
+import { ToastModule } from 'primeng/toast';
 
 // Media Components
 import { Carousel } from 'primeng/carousel';
@@ -164,8 +164,8 @@ import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
     ToggleButton,
     ToggleSwitch,
     TreeSelect,
-    // Button Components
-    Button,
+    // ButtonModule Components
+    ButtonModule,
     SpeedDial,
     SplitButton,
     // Data Components
@@ -180,14 +180,14 @@ import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
     TreeTableModule,
     Scroller,
     // Panel Components
-    Accordion,
-    Card,
+    AccordionModule,
+    CardModule,
     Divider,
     Fieldset,
     Panel,
     ScrollPanel,
     Splitter,
-    Stepper,
+    StepperModule,
     TabsModule,
     Toolbar,
     // Overlay Components
@@ -214,7 +214,7 @@ import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
     ChartModule,
     // Messages Components
     Message,
-    Toast,
+    ToastModule,
     // Media Components
     Carousel,
     GalleriaModule,
@@ -281,8 +281,8 @@ import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
     ToggleButton,
     ToggleSwitch,
     TreeSelect,
-    // Button Components
-    Button,
+    // ButtonModule Components
+    ButtonModule,
     SpeedDial,
     SplitButton,
     // Data Components
@@ -297,14 +297,14 @@ import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
     TreeTableModule,
     Scroller,
     // Panel Components
-    Accordion,
-    Card,
+    AccordionModule,
+    CardModule,
     Divider,
     Fieldset,
     Panel,
     ScrollPanel,
     Splitter,
-    Stepper,
+    StepperModule,
     TabsModule,
     Toolbar,
     // Overlay Components
@@ -331,7 +331,7 @@ import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
     ChartModule,
     // Messages Components
     Message,
-    Toast,
+    ToastModule,
     // Media Components
     Carousel,
     GalleriaModule,

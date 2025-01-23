@@ -1,1 +1,257 @@
-<p>panel-view works!</p>
+<app-comp-row title="Accordion">
+	<div class="card flex justify-center">
+   <p-accordion value="0">
+        <p-accordion-panel value="0">
+            <p-accordion-header>Header I</p-accordion-header>
+            <p-accordion-content>
+                <p class="m-0">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                    laborum.
+                </p>
+            </p-accordion-content>
+        </p-accordion-panel>
+
+        <p-accordion-panel value="1">
+            <p-accordion-header>Header II</p-accordion-header>
+            <p-accordion-content>
+                <p class="m-0">
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+                    aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo
+                    enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
+                    qui ratione voluptatem sequi nesciunt. Consectetur, adipisci velit, sed quia non numquam eius modi.
+                </p>
+            </p-accordion-content>
+        </p-accordion-panel>
+
+        <p-accordion-panel value="2">
+            <p-accordion-header>Header III</p-accordion-header>
+            <p-accordion-content>
+                <p class="m-0">
+At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus.
+                </p>
+            </p-accordion-content>
+        </p-accordion-panel>
+    </p-accordion>
+</div>
+</app-comp-row>
+
+
+<app-comp-row title="Card">
+	<div class="mb-4 p-8 flex items-center justify-center">
+    <p-card [style]="{ width: '25rem', overflow: 'hidden' }">
+        <ng-template pTemplate="header">
+            <img alt="Card" class="w-full" style="height:300px" src="https://primefaces.org/cdn/primeng/images/card-ng.jpg" />
+        </ng-template>
+        <ng-template pTemplate="title"> Advanced Card </ng-template>
+        <ng-template pTemplate="subtitle"> Card subtitle </ng-template>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
+            quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!
+        </p>
+        <ng-template pTemplate="footer">
+            <div class="d-flex flex-gap-3 justify-content-end">
+                <p-button label="Cancel" severity="secondary" class="w-full" [outlined]="true" styleClass="w-full" />
+                <p-button label="Save" class="w-full" styleClass="w-full" />
+            </div>
+        </ng-template>
+    </p-card>
+</div>
+</app-comp-row>
+
+<app-comp-row title="Divider">
+	<p>
+    Lorem ipsum dolor sit amet...
+</p>
+<p-divider />
+<p>
+    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium...
+</p>
+<p-divider />
+<p>
+    At vero eos et accusamus et iusto odio dignissimos...
+</p>
+<p-divider />
+<p>
+    Temporibus autem quibusdam et aut officiis...
+</p>
+</app-comp-row>
+
+<app-comp-row title="Fieldset">
+	<div class="card flex justify-center">
+    <p-fieldset legend="Header">
+        <p class="m-0">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+    </p-fieldset>
+</div>
+</app-comp-row>
+
+<app-comp-row title="Panel">
+	<div class="card flex justify-center">
+    <p-panel header="Header">
+        <p class="m-0">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+    </p-panel>
+</div>
+</app-comp-row>
+
+<app-comp-row title="Scroll Panel">
+	<div class="fm-card">
+	 <p-scrollpanel [style]="{ width: '100%', height: '150px' }">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
+            ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Consectetur, adipisci velit, sed quia non numquam eius modi.
+        </p>
+        <p class="m-0">
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui
+            officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus.
+        </p>
+    </p-scrollpanel>
+</div>
+</app-comp-row>
+
+
+<app-comp-row title="Splitter">
+	
+	<div class="card">
+    <p-splitter [style]="{ height: '300px' }" styleClass="mb-8">
+        <ng-template pTemplate>
+            <div class="d-flex align-items-center justify-content-center h-full">Panel 1</div>
+        </ng-template>
+        <ng-template pTemplate>
+            <div class="d-flex align-items-center justify-content-center h-full">Panel 2</div>
+        </ng-template>
+    </p-splitter>
+</div>
+
+</app-comp-row>
+<app-comp-row title="Stepper">
+
+<div class="card flex justify-center">
+    <p-stepper [value]="1" class="basis-[50rem]">
+        <p-step-list>
+            <p-step [value]="1">Header I</p-step>
+            <p-step [value]="2">Header II</p-step>
+            <p-step [value]="3">Header II</p-step>
+        </p-step-list>
+        <p-step-panels>
+            <p-step-panel [value]="1">
+                <ng-template #content let-activateCallback="activateCallback">
+                    <div class="d-flex flex-column fm-h-48">
+                        <div class="stepper-demo-box">
+                            Content I
+                        </div>
+                        <div class="d-flex flex-gap-3 pt-6 justify-content-end">
+                            <p-button label="Next" icon="pi pi-arrow-right" iconPos="right" (onClick)="activateCallback(2)" />
+                        </div>
+                    </div>
+                </ng-template>
+            </p-step-panel>
+
+            <p-step-panel [value]="2">
+                <ng-template #content let-activateCallback="activateCallback">
+                    <div class="d-flex flex-column fm-h-48">
+                        <div class="stepper-demo-box" >
+                            Content II
+                        </div>
+                         <div class="d-flex flex-gap-3 pt-6 justify-content-between">
+                        <p-button label="Back" severity="secondary" icon="pi pi-arrow-left" (onClick)="activateCallback(1)" />
+                        <p-button label="Next" icon="pi pi-arrow-right" iconPos="right" (onClick)="activateCallback(3)" />
+                    </div>
+                    </div>
+                   
+                </ng-template>
+            </p-step-panel>
+
+            <p-step-panel [value]="3">
+                <ng-template #content let-activateCallback="activateCallback">
+                    <div class="d-flex flex-column fm-h-48">
+                       <div class="stepper-demo-box" >
+                            Content III
+                        </div>
+                        <div class="d-flex flex-gap-3 pt-6 justify-content-start ">
+                        <p-button label="Back" icon="pi pi-arrow-left" iconPos="right" (onClick)="activateCallback(2)" />
+                    </div>
+                    </div>
+                    
+                </ng-template>
+            </p-step-panel>
+        </p-step-panels>
+    </p-stepper>
+</div>
+	
+</app-comp-row>
+
+<app-comp-row title="Tabs">
+	<div class="card">
+    <p-tabs value="0">
+        <p-tablist>
+            <p-tab value="0">Header I</p-tab>
+            <p-tab value="1">Header II</p-tab>
+            <p-tab value="2">Header III</p-tab>
+        </p-tablist>
+        <p-tabpanels>
+            <p-tabpanel value="0">
+                <p class="m-0">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                    ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                    anim id est laborum.
+                </p>
+            </p-tabpanel>
+            <p-tabpanel value="1">
+                <p class="m-0">
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+                    aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+                    dolores eos qui ratione voluptatem sequi nesciunt. Consectetur, adipisci velit, sed quia non numquam eius
+                    modi.
+                </p>
+            </p-tabpanel>
+            <p-tabpanel value="2">
+                <p class="m-0">
+                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti
+                    atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique
+                    sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum
+                    facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
+                    impedit quo minus.
+                </p>
+            </p-tabpanel>
+        </p-tabpanels>
+    </p-tabs>
+</div>
+</app-comp-row>
+
+<app-comp-row title="Toolbar">
+	<div class="card">
+    <p-toolbar>
+        <ng-template #start>
+            <p-button icon="pi pi-plus" class="mr-2" text severity="secondary" />
+            <p-button icon="pi pi-print" class="mr-2" text severity="secondary" />
+            <p-button icon="pi pi-upload" text severity="secondary" />
+        </ng-template>
+        <ng-template #center>
+            <p-iconfield iconPosition="left">
+                <p-inputicon styleClass="pi pi-search" />
+                <input type="text" pInputText placeholder="Search" />
+            </p-iconfield>
+        </ng-template>
+        <ng-template #end>
+            <p-splitbutton label="Save" [model]="toolbar_items" />
+        </ng-template>
+    </p-toolbar>
+</div>
+</app-comp-row>
+
+

@@ -3,6 +3,7 @@
 import { fmColorTokens } from './src/fm-theme/fm-color-tokens.ts'; // pull in color tokens from theme.
 
 module.exports = {
+  darkMode:['class','.fm-dark-mode'],
   content: [
     "./src/app/**/*.{html,ts,css,scss}", // TW scans these folders in "content" for the CSS classes you're using and discards the ones you're not (treeshaking). Very important. 
     "./node_modules/primeng/**/*.{js,css}" // 

@@ -3,17 +3,17 @@ const button: any = {
 		light: {
 			root: {
 				primary: {
-					background: "{primary.color}",
-					hoverBackground: "{primary.hover.color}",
-					activeBackground: "{primary.active.color}",
-					borderColor: "{primary.color}",
-					hoverBorderColor: "{primary.hover.color}",
-					activeBorderColor: "{primary.active.color}",
-					color: "{primary.contrast.color}",
-					hoverColor: "{primary.contrast.color}",
-					activeColor: "{primary.contrast.color}",
+					background: "{adk.primary}",
+					hoverBackground: "{navy.800}",
+					activeBackground: "{navy.900}",
+					borderColor: "{adk.primary}",
+					hoverBorderColor: "{navy.800}",
+					activeBorderColor: "{navy.900}",
+					color: "#ffffff",
+					hoverColor: "#ffffff",
+					activeColor: "#ffffff",
 					focusRing: {
-						color: "{primary.color}",
+						color: "{navy.500}",
 						shadow: "none"
 					}
 				},

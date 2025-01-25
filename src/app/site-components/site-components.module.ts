@@ -5,22 +5,29 @@ import { HeaderComponent } from './header/header.component';
 import { ThemeToggleComponent } from './theme-toggle/theme-toggle.component';
 import { DisplayRowComponent } from './display-row/display-row.component';
 
+import { TwColorRampComponent  } from './tw-color-ramp/tw-color-ramp.component';
+import { TwColorTokenComponent } from './tw-color-token/tw-color-token.component';
+
 
 
 @NgModule({
   declarations: [   
     HeaderComponent,    
-    DisplayRowComponent
+    DisplayRowComponent,
   ],
   imports: [
     ThemeToggleComponent,
     CompRowComponent,
-    CommonModule
+    CommonModule,
+    TwColorTokenComponent,
+    TwColorRampComponent,
   ],
   exports: [
     CompRowComponent,
     HeaderComponent,
-    ThemeToggleComponent
+    ThemeToggleComponent,
+    TwColorTokenComponent,
+    TwColorRampComponent,
   ]
 })
 export class SiteComponentsModule { }

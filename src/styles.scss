@@ -5,6 +5,62 @@
 // @tailwind components;
 // @tailwind utilities;
 
+
+
+/*
+
+CSS color theme utils
+
+brand colors
+adk colors
+ui colors
+
+semantic 
+  primary
+    bg
+    text
+  secondary
+    bg
+    text
+  success
+    bg
+    text
+  info
+    bg
+    text
+  warning
+    bg
+    text
+  danger
+    bg
+    text
+  help
+    bg
+    text
+button
+  primary
+    bg
+    text
+
+message
+  primary
+    bg
+    text
+red
+  xLight
+  light
+  medium
+  strong
+  
+
+
+Background
+
+
+
+
+*/
+
 @layer tailwind-base,
 matt,
 primeng,
@@ -157,6 +213,45 @@ tailwind-utilities;
 
   .flex-gap-4 {
     gap: 2rem
+  }
+
+  $colors: (
+  primary: "navy",
+  secondary: "gray",
+  success: "lime",
+  warning: "yellow",
+  danger: "red",
+  info: "blue",
+  help:"teal"
+);
+
+  @each $name, $color in $colors {
+    .p-bg-#{$name} {
+      background:var(--p-#{$color}-100);
+    }
+    .p-text-#{$name} {
+      color:var(--p-#{$color}-700);
+    }
+    .p-border-#{$name} {
+      color:1px solid var(--p-#{$color}-300);
+    }
+  }
+
+
+  .fm-dark-mode {
+
+     @each $name, $color in $colors {
+    .p-bg-#{$name} {
+      background:var(--p-#{$color}-900);
+    }
+    .p-text-#{$name} {
+      color:var(--p-#{$color}-300);
+    }
+    .p-border-#{$name} {
+      border:1px solid var(--p-#{$color}-700);
+    }
+  }
+
   }
 
 // mimic bootstrap grid with Tailwind

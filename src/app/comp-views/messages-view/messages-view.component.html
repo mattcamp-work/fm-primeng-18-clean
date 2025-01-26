@@ -1,1 +1,54 @@
-<p>messages-view works!</p>
+<app-comp-row title="Messages">
+	<div class="card ">
+
+		<div class="row">
+			<div class="col-4">
+				 <p-message size="small" icon="pi pi-send">Small Message</p-message>
+			    <p-message icon="pi pi-user">Normal Message</p-message>
+			    <p-message size="large" icon="pi pi-check">Large Message</p-message>
+			</div>
+			<div class="flex-row gap-4 col-4">
+				 <p-message size="small" icon="pi pi-send" severity="warn">Small Message</p-message>
+			    <p-message icon="pi pi-user" severity="warn">Normal Message</p-message>
+			    <p-message size="large" icon="pi pi-check" severity="warn">Large Message</p-message>
+			</div>
+			<div class="flex-row gap-4 col-4">
+				 <p-message size="small" icon="pi pi-send" severity="error">Small Message</p-message>
+			    <p-message icon="pi pi-user" severity="error">Normal Message</p-message>
+			    <p-message size="large" icon="pi pi-check" severity="error">Large Message</p-message>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-4">
+				 <p-message size="small" icon="pi pi-send" severity="success">Small Message</p-message>
+			    <p-message icon="pi pi-user" severity="success">Normal Message</p-message>
+			    <p-message size="large" icon="pi pi-check" severity="success">Large Message</p-message>
+			</div>
+			<div class="flex-row gap-4 col-4">
+				 <p-message size="small" icon="pi pi-send" severity="info">Small Message</p-message>
+			    <p-message icon="pi pi-user" severity="info">Normal Message</p-message>
+			    <p-message size="large" icon="pi pi-check" severity="info">Large Message</p-message>
+			</div>
+			<!-- <div class="flex-row gap-4 col-4">
+				 <p-message size="small" icon="pi pi-send" severity="help">Small Message</p-message>
+			    <p-message icon="pi pi-user" severity="help">Normal Message</p-message>
+			    <p-message size="large" icon="pi pi-check" severity="help">Large Message</p-message>
+			</div> -->
+		</div>
+   
+</div>
+</app-comp-row>
+
+
+<app-comp-row title="Toast">
+	<div class="card flex gap-2">
+    <p-toast />
+    <p-button type="button" pRipple (click)="showSuccess()" label="Success" severity="success" />
+    <p-button type="button" pRipple (click)="showInfo()" label="Info" severity="info" />
+    <p-button type="button" pRipple (click)="showWarn()" label="Warn" severity="warn" />
+    <p-button type="button" pRipple (click)="showError()" label="Error" severity="danger" />
+    <p-button type="button" pRipple (click)="showSecondary()" label="Secondary" severity="secondary" />
+    <p-button type="button" pRipple (click)="showContrast()" label="Contrast" severity="contrast" />
+</div>
+</app-comp-row>

@@ -98,7 +98,7 @@ import { Message } from 'primeng/message';
 import { ToastModule } from 'primeng/toast';
 
 // Media Components
-import { Carousel } from 'primeng/carousel';
+import { CarouselModule } from 'primeng/carousel';
 import { GalleriaModule } from 'primeng/galleria';
 import { Image } from 'primeng/image';
 import { ImageCompareModule } from 'primeng/imagecompare';
@@ -123,6 +123,8 @@ import { Ripple } from 'primeng/ripple';
 import { StyleClass } from 'primeng/styleclass';
 import { Tag } from 'primeng/tag';
 import { Terminal } from 'primeng/terminal';
+
+import { OverlayBadgeModule } from 'primeng/overlaybadge';
 
 //To Organize: 
 import { InputIcon } from 'primeng/inputicon';
@@ -216,7 +218,7 @@ import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
     Message,
     ToastModule,
     // Media Components
-    Carousel,
+    CarouselModule,
     GalleriaModule,
     Image,
     ImageCompareModule,
@@ -240,6 +242,9 @@ import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
     StyleClass,
     Tag,
     Terminal,
+
+    //undocumented PrimeNg Modules
+    OverlayBadgeModule,
 
     //site components
     CompRowComponent,
@@ -333,7 +338,7 @@ import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
     Message,
     ToastModule,
     // Media Components
-    Carousel,
+    CarouselModule,
     GalleriaModule,
     Image,
     ImageCompareModule,
@@ -356,6 +361,9 @@ import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
     StyleClass,
     Tag,
     Terminal,
+
+    //undocumented PrimeNg Modules
+    OverlayBadgeModule,
 
     //Site Components
     CompRowComponent,

@@ -69,44 +69,44 @@ tailwind-utilities;
 
 @layer tailwind-base {
   @tailwind base;
-   .test {
-    padding:32px;
-    background-color: orange;
-    color:white;
+  //  .test {
+  //   padding:32px;
+  //   background-color: orange;
+  //   color:white;
 
-     &:after {
-      content:"tailwind base"
-    }
-  }
+  //    &:after {
+  //     content:"tailwind base"
+  //   }
+  // }
 }
 
 @layer tailwind-utilities {
   @tailwind components;
   @tailwind utilities;
 
-   .test {
-    padding:32px;
-    background-color: violet;
-    color:white;
+  //  .test {
+  //   padding:32px;
+  //   background-color: violet;
+  //   color:white;
 
-     &:after {
-      content:"tailwind utils"
-    }
-  }
+  //    &:after {
+  //     content:"tailwind utils"
+  //   }
+  // }
 }
 
 
 @layer fm-theme {
 
 
-  .test {
-    padding:32px;
-    background-color: green;
-    color:white;
-    &:after {
-      content:"fm-theme"
-    }
-  }
+  // .test {
+  //   padding:32px;
+  //   background-color: green;
+  //   color:white;
+  //   &:after {
+  //     content:"fm-theme"
+  //   }
+  // }
 
   body,
   .fm-body-font {

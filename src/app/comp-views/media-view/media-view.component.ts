@@ -2,10 +2,23 @@ import { Component, OnInit } from '@angular/core';
 
 import { PrimengImportsModule } from '~app/primeng-imports/primeng-imports-fixed.module';
 import { MenuItem, MessageService } from 'primeng/api';
-import { TreeDataService } from '~app/services/tree-data.service';
-import { MegaMenuItem } from 'primeng/api';
+import { TreeDataService } from '~app/services/tree-data.service'
 
-import { MenuData} from './data_megaMenu';
+import { ProductService } from '~app/services/product.service';
+
+export interface Product {
+  id ? : string;
+  code ? : string;
+  name ? : string;
+  description ? : string;
+  price ? : number;
+  quantity ? : number;
+  inventoryStatus ? : string;
+  category ? : string;
+  image ? : string;
+  rating ? : number;
+}
+
 
 @Component({
   selector: 'app-media-view',
@@ -13,85 +26,63 @@ import { MenuData} from './data_megaMenu';
   imports: [PrimengImportsModule],
   templateUrl: './media-view.component.html',
   styleUrl: './media-view.component.scss',
-  providers: [MessageService]
+  providers: [TreeDataService, ProductService],
 })
-export class MediaViewComponent {
 
-  //breadcrumbs
-  breadCrumb_items: MenuItem[] | undefined;
-  breadCrumb_home: MenuItem | undefined;
+export class MediaViewComponent implements OnInit {
 
-  //contextmenu
-  contextMenu_items: MenuItem[] | undefined;
 
-  //Menu
-  menu_items: MenuItem[] | undefined;
 
-  //Menu Bar
-  menuBar_items: MenuItem[] | undefined;
 
-  //Mega Menu
-  megaMenu_items: MegaMenuItem[] | undefined;
+  carousel_products ? : Product[] = [];
 
-  //Panel Menu
-  panelMenu_items!: MenuItem[];
+  carousel_responsiveOptions ? : any[] = [];
 
-  //Steps
-  steps_items: MenuItem[] | undefined;
-  steps_active: number = 1;
+  constructor(private carousel_productService: ProductService) {
 
-  //Tiered Menu
-   tieredMenu_items: MenuItem[] | undefined;
-
+  }
 
   ngOnInit() {
 
-    // Breadcrumbs
-    this.breadCrumb_items = [
-      { label: 'Electronics' },
-      { label: 'Computer' },
-      { label: 'Accessories' },
-      { label: 'Keyboard' },
-      { label: 'Wireless' }
-    ];
+    this.carousel_productService.getProductsSmall().then((products) => {
+      this.carousel_products = products;
+    });
 
-    this.breadCrumb_home = { icon: 'pi pi-home', routerLink: '/' };
-
-    // Context Menu
-    this.contextMenu_items = [
-      { label: 'Copy', icon: 'pi pi-copy' },
-      { label: 'Rename', icon: 'pi pi-file-edit' }
-    ];
-
-    //Menu:
-    this.menu_items = MenuData.menu;
-
-    //Menubar items
-    this.menuBar_items = MenuData.menuBar;
-
-    //Mega Menu
-    this.megaMenu_items = MenuData.megaMenu;
-
-    //Panel Menu
-    this.panelMenu_items = MenuData.panelMenu;
-
-    //Tiered Menu
-
-    this.tieredMenu_items = MenuData.tieredMenu;
-
-    //Steps Items
-    this.steps_items = [
-            {
-                label: 'Personal Info'
-            },
-            {
-                label: 'Reservation'
-            },
-            {
-                label: 'Review'
-            }]
+    this.carousel_responsiveOptions = [{
+        breakpoint: '1400px',
+        numVisible: 2,
+        numScroll: 1
+      },
+      {
+        breakpoint: '1199px',
+        numVisible: 3,
+        numScroll: 1
+      },
+      {
+        breakpoint: '767px',
+        numVisible: 2,
+        numScroll: 1
+      },
+      {
+        breakpoint: '575px',
+        numVisible: 1,
+        numScroll: 1
+      }
+    ]
 
 
   }
 
+  getSeverity(status: any = ''): any {
+    switch (status) {
+      case 'INSTOCK':
+        return 'success';
+      case 'LOWSTOCK':
+        return 'warn';
+      case 'OUTOFSTOCK':
+        return 'danger';
+      default:
+        return undefined; // Return `undefined` instead of an empty string for better type safety
+    }
+  }
 }

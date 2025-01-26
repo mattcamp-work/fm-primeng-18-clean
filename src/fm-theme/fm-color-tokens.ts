@@ -43,12 +43,12 @@ const colorRamps: { [key: string]: any } = (function () {
   return _colorList;
 })();
 
-console.log("colorRamps",colorRamps);
-
+//console.log("colorRamps",colorRamps);
+console.log('\n\n ======= fm-color-tokens.ts loaded ======== \n\n')
 
 export const fmColorTokens:any = {
 
-	'fm-brand': {
+	'fm': {
 			black: 	'hsl(0,0%,7%)',			// hex: '#121212',
 			navy: 	'hsl(203, 88%, 16%)',	// hex: '#05314d',
 			blue: 	'hsl(203, 88%, 27%)', 	// hex: '#085280',
@@ -63,13 +63,13 @@ export const fmColorTokens:any = {
 		'adk': {
 			primary: 		'hsl(203, 88%, 33%)',	// hex: '#0a649d',
 			'primary-alt': 	'hsl(191, 62%, 36%)',	// hex: '#238196',
-			secondary: 		'{brand.white}',		// hex: '#fff',
+			secondary: 		'{fm.white}',		// hex: '#fff',
 			destructive: 	'hsl(0, 63%, 50%)',		// hex'	#d02f2f',
 			safe: 			'hsl(131, 87%, 28%)',	// hex: '#098620',
 			interactive: 	'hsl(203, 73%, 58%)',	// hex:	'#47a7e2',
 			'base-alert': 	'hsl(35, 100%, 60%)',	// hex: '#ffaa33',
-			canvas: '{brand.gray}',
-			text: '{brand.black}',
+			canvas: '{fm.gray}',
+			text: '{fm.black}',
 		},
 
    coords: {

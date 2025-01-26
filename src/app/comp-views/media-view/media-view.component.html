@@ -1,39 +1,48 @@
-<app-comp-row title="Breadcrumbs">
-	<p-breadcrumb class="max-w-full" [model]="breadCrumb_items" [home]="breadCrumb_home" />
-</app-comp-row>
-<app-comp-row title="Context Menu">
-	<div class="card flex">
-		<img #img src="https://primefaces.org/cdn/primeng/images/demo/nature/nature2.jpg" alt="Logo" aria-haspopup="true" class="w-full md:w-[30rem] rounded shadow-lg" />
-		<p-contextmenu [target]="img" [model]="contextMenu_items" />
+<app-comp-row title="Carousel">
+	<div class="card">
+		<p-carousel [value]="carousel_products!" [numVisible]="3" [numScroll]="3" [circular]="false" [responsiveOptions]="carousel_responsiveOptions">
+			<ng-template let-product #item>
+				<div class="border border-surface rounded-border m-2 p-4">
+					<div class="mb-4">
+						<div class="relative mx-auto">
+							<img src="https://primefaces.org/cdn/primeng/images/demo/product/{{ product.image }}" [alt]="product.name" class="w-full rounded-border" />
+							<p-tag [value]="product.inventoryStatus" [severity]="getSeverity(product.inventoryStatus)" class="absolute" styleClass="dark:!bg-surface-900" [ngStyle]="{ 'left.px': 5, 'top.px': 5 }" />
+						</div>
+					</div>
+					<div class="mb-4 font-medium">
+						{{ product.name }}
+					</div>
+					<div class="flex justify-between items-center">
+						<div class="mt-0 font-semibold text-xl">
+							{{ '$' + product.price }}
+						</div>
+						<span>
+							<p-button icon="pi pi-heart" severity="secondary" [outlined]="true" />
+							<p-button icon="pi pi-shopping-cart" styleClass="ml-2" />
+						</span>
+					</div>
+				</div>
+			</ng-template>
+		</p-carousel>
 	</div>
 </app-comp-row>
-<app-comp-row title="Dock">
-	Skipping this
+<app-comp-row title="Gallaria">
+	Example Code is Broken, Will try to fix later
 </app-comp-row>
-<app-comp-row title="Menu">
-	<div style="max-width: 240px; width:100%">
-		<p-menu [model]="menu_items" />
+<app-comp-row title="Image">
+	<div class="card flex justify-center">
+    <p-image src="https://primefaces.org/cdn/primeng/images/galleria/galleria10.jpg" alt="Image" width="250" />
+</div>
+</app-comp-row>
+<app-comp-row title="Image Compare">
+	<div class="card flex justify-center">
+		<p-imagecompare class="shadow-lg rounded-2xl">
+			<ng-template #left>
+				<img src="https://primefaces.org/cdn/primevue/images/compare/island1.jpg" />
+			</ng-template>
+			<ng-template #right>
+				<img src="https://primefaces.org/cdn/primevue/images/compare/island2.jpg" />
+			</ng-template>
+		</p-imagecompare>
 	</div>
-</app-comp-row>
-<app-comp-row title="Menu Bar">
-	<p-menubar [model]="menuBar_items" />
-</app-comp-row>
-<app-comp-row title="Mega Menu">
-	<p-megamenu [model]="megaMenu_items" />
-</app-comp-row>
-<app-comp-row title="Panel Menu">
-	<p-panelmenu [model]="panelMenu_items" styleClass="w-full md:w-80" />
-</app-comp-row>
-<app-comp-row title="Steps">
-	<div class="flex-row justify-start">
-		<p-steps [activeIndex]="steps_active" [model]="steps_items" />
-		<div class="flex mb-8 gap-2 justify-center pt-8">
-			<p-button (click)="steps_active = 0" [rounded]="true" label="1" styleClass="w-8 h-8 p-0" [outlined]="steps_active !== 0" />
-			<p-button (click)="steps_active = 1" [rounded]="true" label="2" styleClass="w-8 h-8 p-0" [outlined]="steps_active !== 1" />
-			<p-button (click)="steps_active = 2" [rounded]="true" label="3" styleClass="w-8 h-8 p-0" [outlined]="steps_active !== 2" />
-		</div>
-	</div>
-</app-comp-row>
-<app-comp-row title="Tiered Menu">
-	<p-tieredmenu [model]="tieredMenu_items" styleClass="w-full md:w-80" />
 </app-comp-row>

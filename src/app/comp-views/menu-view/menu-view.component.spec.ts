@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MenuViewComponent } from './menu-view.component';
+import { MediaViewComponent } from './media-view.component';
 
-describe('MenuViewComponent', () => {
-  let component: MenuViewComponent;
-  let fixture: ComponentFixture<MenuViewComponent>;
+describe('MediaViewComponent', () => {
+  let component: MediaViewComponent;
+  let fixture: ComponentFixture<MediaViewComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MenuViewComponent]
+      imports: [MediaViewComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(MenuViewComponent);
+    fixture = TestBed.createComponent(MediaViewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

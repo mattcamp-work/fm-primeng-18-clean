@@ -1,112 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
 
 
-// @tailwind base;
-// @tailwind components;
-// @tailwind utilities;
-
-
-
-/*
-
-CSS color theme utils
-
-brand colors
-adk colors
-ui colors
-
-semantic 
-  primary
-    bg
-    text
-  secondary
-    bg
-    text
-  success
-    bg
-    text
-  info
-    bg
-    text
-  warning
-    bg
-    text
-  danger
-    bg
-    text
-  help
-    bg
-    text
-button
-  primary
-    bg
-    text
-
-message
-  primary
-    bg
-    text
-red
-  xLight
-  light
-  medium
-  strong
-  
-
-
-Background
-
-
-
-
-*/
-
+// don't change the css layer order.
 @layer tailwind-base,
-matt,
 primeng,
+your-app,
 fm-theme,
 tailwind-utilities;
 
 @layer tailwind-base {
   @tailwind base;
-  //  .test {
-  //   padding:32px;
-  //   background-color: orange;
-  //   color:white;
-
-  //    &:after {
-  //     content:"tailwind base"
-  //   }
-  // }
 }
 
 @layer tailwind-utilities {
   @tailwind components;
   @tailwind utilities;
-
-  //  .test {
-  //   padding:32px;
-  //   background-color: violet;
-  //   color:white;
-
-  //    &:after {
-  //     content:"tailwind utils"
-  //   }
-  // }
 }
 
+
+@layer your-app {
+  /*
+
+   your app stuff here
+
+   */
+}
+
+@layer fm-theme {
+
+   body,
+  .fm-body-font {
+    font-family: "Source Sans 3", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+  .fm-display-font {
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+
+}
 
 @layer fm-theme {
 
 
-  // .test {
-  //   padding:32px;
-  //   background-color: green;
-  //   color:white;
-  //   &:after {
-  //     content:"fm-theme"
-  //   }
-  // }
 
   body,
   .fm-body-font {

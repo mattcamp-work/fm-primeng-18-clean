@@ -79,7 +79,7 @@ npm install tailwindcss tailwindcss-primeui --save-dev
 ```
 
 #### 1.3.1 Initialize TailwindCSS
-Run this command to initialize the TailwindCSS configuration file:
+Run this command to generate the `tailwind.config.js` configuration file:
 
 ```bash
 npx tailwindcss init
@@ -105,9 +105,10 @@ module.exports = {
         ...fmColorTokens, // inject fm-color tokens into Tailwind
         success:fmColorTokens.lime,
         danger:fmColorTokens.red,
-        warning:fmColorTokens.orange,
+        warn:fmColorTokens.orange,
         info:fmColorTokens.blue,
         help:fmColorTokens.teal,
+        error:fmColorTokens.red,
       }
     },
   },
@@ -264,7 +265,7 @@ Say goodbye to hex codes and custom stylesheets! Use Tailwind utility classes di
 <div class="sm:bg-blue-200 md:bg-blue-400 lg:bg-blue-600">Responsive backgrounds</div>
 ```
 
-### 2.3 Styling PrimeNG Components
+### 2.3 Styling PrimeNG Components (no more ngDeep)
 For some PrimeNG components, `class="..."` may not work directly. Instead, use the `styleClass` property:
 
 ```html

@@ -7,7 +7,8 @@ import { provideRouter } from '@angular/router';
 
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { providePrimeNG } from 'primeng/config';
-//import Aura from '@primeng/themes/aura';
+
+//import the FM Preset
 import { FmPreset } from '~/fm-theme/fm-preset';
 
 import { routes } from './app.routes';

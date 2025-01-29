@@ -12,7 +12,7 @@ const hueSat:any = {
       indigo:"235.1, 95.7%",
       purple:"270.2, 80.9%",
       magenta:"327.1, 64.9%",
-      "fm-gray":"30, 10%"
+      fmGray:"30, 10%"
 }
 
 
@@ -75,7 +75,7 @@ export const fmColorTokens:any = {
    coords: {
       ...hueSat,
     },
-    ...colorRamps,
+      ...colorRamps,
 	 // red: {
    //      50: `hsl(${hueSat.red}, 95%)`,
    //      100: `hsl(${hueSat.red}, 90%)`,

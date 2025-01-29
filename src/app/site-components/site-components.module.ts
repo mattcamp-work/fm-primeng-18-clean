@@ -8,6 +8,8 @@ import { DisplayRowComponent } from './display-row/display-row.component';
 import { TwColorRampComponent  } from './tw-color-ramp/tw-color-ramp.component';
 import { TwColorTokenComponent } from './tw-color-token/tw-color-token.component';
 
+import { ChatDemoComponent } from './chat-demo/chat-demo.component';
+
 
 
 @NgModule({
@@ -21,6 +23,7 @@ import { TwColorTokenComponent } from './tw-color-token/tw-color-token.component
     CommonModule,
     TwColorTokenComponent,
     TwColorRampComponent,
+    ChatDemoComponent
   ],
   exports: [
     CompRowComponent,
@@ -28,6 +31,7 @@ import { TwColorTokenComponent } from './tw-color-token/tw-color-token.component
     ThemeToggleComponent,
     TwColorTokenComponent,
     TwColorRampComponent,
+    ChatDemoComponent
   ]
 })
 export class SiteComponentsModule { }

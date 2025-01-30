@@ -1,5 +1,4 @@
 
-
 const hueSat:any = {
       red:"2.5, 94.8%",
       orange:"17, 77.6%",
@@ -16,15 +15,15 @@ const hueSat:any = {
 }
 
 
-const _settings: string[] = ['2.5','5', '10', '15', '20', '30', '40', '50', '60', '70', '80', '85', '90', '95','97.5'];
+const _levels: string[] = ['5', '10', '20', '30', '40', '50', '60', '70', '80', '90', '95'];
 
-function makeColorRamp(_color:string | unknown): { [key: string]: string } {
+function makeColorRamp(_hueSatValue:string | unknown): { [key: string]: string } {
   const _ramp: { [key: string]: string } = {};
 
-  _settings.forEach((_key) => {
+  _levels.forEach((_key) => {
     const _lightness: number = 100 - parseFloat(_key);
-    const _keyName: string = (parseFloat(_key)*10).toString();
-    _ramp[_keyName] = `hsl(${_color}, ${_lightness}%)`;
+    const _levelName: string = (parseFloat(_key)*10).toString();
+    _ramp[_levelName] = `hsl(${_hueSatValue}, ${_lightness}%)`;
   });
 
   return _ramp;
@@ -33,14 +32,15 @@ function makeColorRamp(_color:string | unknown): { [key: string]: string } {
 
 
 const colorRamps: { [key: string]: any } = (function () {
-  const _colorList: { [key: string]: any } = {};
+  const _colorRamps: { [key: string]: any } = {};
 
   // Assuming `hueSat` is an object with key-value pairs
+  // loop over hueSat values, generate color ramp object and attach it
   for (const [_name, _value] of Object.entries(hueSat)) {
-    _colorList[_name] = makeColorRamp(_value);
+    _colorRamps[_name] = makeColorRamp(_value);
   }
 
-  return _colorList;
+  return _colorRamps;
 })();
 
 //console.log("colorRamps",colorRamps);
@@ -76,6 +76,7 @@ export const fmColorTokens:any = {
       ...hueSat,
     },
       ...colorRamps,
+      gray:colorRamps['fmGray'],
 	 // red: {
    //      50: `hsl(${hueSat.red}, 95%)`,
    //      100: `hsl(${hueSat.red}, 90%)`,

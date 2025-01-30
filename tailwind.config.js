@@ -17,6 +17,7 @@ module.exports = {
         warning:fmColorTokens.orange,
         info:fmColorTokens.blue,
         help:fmColorTokens.teal,
+        surface:fmColorTokens['fmGray'],
       }
     },
   },

@@ -24,13 +24,14 @@ if (FmBase.primitive) {
 
 const FmPreset = definePreset(FmBase, {
 	primitive: {
-		...fmColorTokens, // add in our color tokens
+		...fmColorTokens
 	},
 
 	semantic: {
 		primary: fmColorTokens.blue,
 
 		severity: {
+			primary: fmColorTokens.navy,
 			secondary: fmColorTokens.fmGray,
 			info: fmColorTokens.blue,
 			success: fmColorTokens.lime,
@@ -38,7 +39,7 @@ const FmPreset = definePreset(FmBase, {
 			help: fmColorTokens.teal,
 			danger: fmColorTokens.red,
 		},
-		surface:fmColorTokens.fmGray,
+		surface:fmColorTokens['fmGray'],
 
 		colorScheme: {
 			light: {

@@ -4,9 +4,11 @@
 
 /*
   
-  putt all of your site level css within the @layer this-app {}
+  putt all of your site level css here:
+         @layer this-app {}
   
-  learn more about how css layers work by reading the comments in fm-main.scss
+  learn more about how css layers work by reading the comments in 
+        ./fm-theme/styles/fm-main.scss
 
 */
 
@@ -17,7 +19,7 @@ body {
     padding: 0px;
     margin: 0px;
     width: 100vw;
-    
+
     background: var(--p-surface-50);
     color: var(--p-surface-900);
   }
@@ -29,16 +31,25 @@ body {
     }
   }
 
+  a {
+      &:link {
+        color: var(--p-severity-info-500);
+      }
+      &:hover {
+        color: var(--p-severity-info-600);
+      }
+      &:active,&:visited {
+        color: var(--p-severity-info-700);
+      }
 
-  .fm-card {
-    border: 1px solid rgba(0, 0, 0, .12);
-    border-radius: 8px;
-    padding: 16px;
   }
 
-  .fm-h-48 {
-    height: 48px;
+
+  .scroll-panel-card {
+    @apply border-gray-100 border rounded-lg p-4;
   }
+
+
 
   .stepper-demo-box {
     background-color: var(--p-blue-50);

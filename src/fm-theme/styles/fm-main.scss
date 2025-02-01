@@ -1,0 +1,68 @@
+//==================================================================
+// FONT INSTALLATIION
+//==================================================================
+
+// 
+// If you see "FLASH OF UNSTYLED TEXT" on load, go to http://fonts.google.com and get the pre-fetch script tag to drop in your index.html
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Source+Sans+3:wght@400;700&display=swap');
+
+//==========================================================================
+// CSS LAYER ORDER
+//==========================================================================
+// CSS layers (@layer) allow developers to control the cascade order explicitly. 
+// Styles in later layers override earlier ones, regardless of specificity. 
+
+// rock-styles,           <-- Lowest Override Priority 
+// paper-styles,
+// scissors-styles,       <-- Highest Override Priority
+
+// =====================================v===================================*/
+
+@layer tailwind-base,
+primeng,
+this-app,
+fm-utilities,
+tailwind-utilities;
+
+@layer tailwind-base {
+  @tailwind base;
+}
+
+@layer tailwind-utilities {
+  @tailwind components;
+  @tailwind utilities;
+}
+
+
+@layer this-app {
+  /*
+
+   your app stuff here
+
+   */
+}
+
+
+
+@layer fm-utilities {
+
+  body,
+  .fm-body-font {
+    font-family: "Source Sans 3", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .fm-display-font {
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  @import './utils/_fm-grid.scss'
+
+}
+

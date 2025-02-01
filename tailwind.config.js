@@ -1,5 +1,36 @@
 /** @type {import('tailwindcss').Config} */
 
+/*
+==================================================================
+  How this tailwind tree shaking works
+
+        ┌───────────────────────────┐
+        │  Source Files (HTML, JS)  │  <- Your project files
+        └───────────────────────────┘
+                 │
+     (Tailwind scans for class names)
+                 ▼
+        ┌────────────────────┐
+        │   Tailwind Engine  │  <- Parses and extracts classes
+        └────────────────────┘
+                 │
+     (Matches classes with Tailwind's utility set)
+                 ▼
+        ┌────────────────────┐
+        │  Purge Unused CSS  │  <- Removes unused styles (Tree Shaking)
+        └────────────────────┘
+                 │
+     (Outputs only necessary styles)
+                 ▼
+        ┌────────────────────┐
+        │  Final CSS Output  │  <- Minimized and optimized
+        └────────────────────┘
+==================================================================
+
+
+*/
+
+
 import { fmColorTokens } from './src/fm-theme/fm-color-tokens.ts'; // pull in color tokens from theme.
 
 module.exports = {

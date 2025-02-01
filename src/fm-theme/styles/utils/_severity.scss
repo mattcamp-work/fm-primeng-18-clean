@@ -1,0 +1,43 @@
+  $colors: (primary: "navy",
+  secondary: "gray",
+  success: "lime",
+  warning: "yellow",
+  danger: "red",
+  info: "blue",
+  help:"teal"
+  );
+
+  @each $name,
+  $color in $colors {
+    .p-bg-#{$name} {
+      background:var(--p-#{$color}-100);
+    }
+
+    .p-text-#{$name} {
+      color:var(--p-#{$color}-700);
+    }
+
+    .p-border-#{$name} {
+      color:1px solid var(--p-#{$color}-300);
+    }
+  }
+
+
+  .fm-dark-mode {
+
+    @each $name,
+    $color in $colors {
+      .p-bg-#{$name} {
+        background:var(--p-#{$color}-900);
+      }
+
+      .p-text-#{$name} {
+        color:var(--p-#{$color}-300);
+      }
+
+      .p-border-#{$name} {
+        border:1px solid var(--p-#{$color}-700);
+      }
+    }
+
+  }

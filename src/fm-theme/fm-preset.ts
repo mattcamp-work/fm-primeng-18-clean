@@ -1,16 +1,53 @@
 import { definePreset } from "@primeng/themes";
-import Aura from "@primeng/themes/aura";
 
+
+/*
+		How the PrimeNg Token Systme works
+
+        ┌──────────────────┐
+        │       Base       │  (Core Styles, Layout, Spacing)
+        └──────────────────┘
+                 │
+                 ▼
+        ┌──────────────────┐
+        │      Preset      │  (Colors, Shadows, Theming)
+        └──────────────────┘
+                 │
+                 ▼
+         ┌────────────────┐
+         │    Browser     │  (Rendered Components)
+         └────────────────┘
+
+
+*/
+
+//=====================================
+// Import BASE token defaults from PrimeNG
+import Aura from "@primeng/themes/aura";
+//=====================================
+
+//=====================================
 // import brand colors, legacy ADK colors, and UI colors
 import { fmColorTokens } from "./fm-color-tokens";
+//=====================================
 
+console.log("fmColorTokens",fmColorTokens);
+
+//=====================================
 // import custom (FM) button preset settings
 import { button } from "./components/button-styles";
+//=====================================
 
-// Create a deep copy of the Aura BASE token schema to safely remove the extra, non-brand colors without altering the AURA base object
+
+//=====================================
+// Create a deep copy of the Aura BASE token schema to safely make changes to it
 const FmBase = JSON.parse(JSON.stringify(Aura));
+//=====================================
 
+
+//=====================================
 // Remove non FM colors from the object
+//=====================================
 if (FmBase.primitive) {
 	delete FmBase.primitive.cyan;
 	delete FmBase.primitive.amber;
@@ -21,6 +58,7 @@ if (FmBase.primitive) {
 	delete FmBase.primitive.sky;
 	delete FmBase.primitive.violet;
 }
+//=====================================
 
 const FmPreset = definePreset(FmBase, {
 	primitive: {
@@ -39,13 +77,14 @@ const FmPreset = definePreset(FmBase, {
 			help: fmColorTokens.teal,
 			danger: fmColorTokens.red,
 		},
-		surface:fmColorTokens['fmGray'],
+		
 
 		colorScheme: {
 			light: {
 				primary: {
 					color: "{blue.400}",
-				},				
+				},
+				surface:fmColorTokens['fmGray'],				
 				level: {
 					floor: "#fff",
 					0: "{surface.50}",
@@ -59,7 +98,7 @@ const FmPreset = definePreset(FmBase, {
 				primary: {
 					color: "{blue.400}",
 				},
-
+				surface:fmColorTokens.zinc,
 				level: {
 					floor: "#000",
 					0: "{surface.950}",

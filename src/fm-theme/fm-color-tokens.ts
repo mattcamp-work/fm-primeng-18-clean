@@ -2,6 +2,10 @@
 // Brand / Legacy Colors
 //====================================
 
+import _ from 'lodash';
+
+import Color from 'colorjs.io';
+
 const fmBrandColors:any = {
   "fm": {
     black: "hsl(0,0%,7%)", // hex: "#121212",
@@ -54,14 +58,18 @@ const hueSat: any = {
   stone: "24,5%",
 }
 
+ const alpha:any = {
+    white:'203,0%,100%',
+    black:'203,0%,0%' 
+  }
+
 // lightness levels
-const levels: string[] = ["2.5","5","7.5","10","15","20","30","40","50","60","70","80","85","90","92.5","95","97.5"];
+const levels: string[] = ["0","2.5","5","7.5","10","15","20","25","30","40","50","60","70","75","80","85","90","92.5","95","97.5"];
 
 // take color and loop through lightness levels, kick out color ramp object
 function makeLightnessRamp(_hueSatValue: string | unknown): {
   [key: string]: string } {
-  const _ramp: {
-    [key: string]: string } = {};
+  const _ramp:any = {};
 
   levels.forEach((_level) => {
     const _lightness: number = 100 - parseFloat(_level);
@@ -73,7 +81,18 @@ function makeLightnessRamp(_hueSatValue: string | unknown): {
 }
 
 
-function buildColorRamps() {
+function makeAlphaRamp(_hslValue:string) {
+  const _ramp:any = {};
+   levels.forEach((_level) => {
+        const _alpha:any = _level;
+        const _levelName: string = (parseFloat(_level) * 10).toString();
+        _ramp[_levelName] = `hsla(${_hslValue},${_alpha}%)`;
+      });
+   return _ramp;
+}
+
+
+function buildColorRampList() {
   const _colorRamps:any = {};
   for (const [_name, _value] of Object.entries(hueSat)) {
     _colorRamps[_name] = makeLightnessRamp(_value);
@@ -82,7 +101,20 @@ function buildColorRamps() {
 }
 
 
-const fmUiColors:any = buildColorRamps();
+function buildAlphaRampList() {
+ const _alphaRamps:any = {};
+  _.each(alpha,function(_value,_name){
+    _alphaRamps[_name] = makeAlphaRamp(_value);
+  })
+  return _alphaRamps;
+}
+
+
+
+
+
+const fmUiColors:any = buildColorRampList();
+const fmUiAlpha:any = buildAlphaRampList();
 
 //console.log("colorRamps",colorRamps);
 console.log('\n\n ======= fm-color-tokens.ts loaded ======== \n\n')
@@ -92,10 +124,15 @@ export const fmColorTokens: any = {
   hueSat: {
     ...hueSat,
   },
-  ...fmUiColors,
+  alpha:{
+    ...fmUiAlpha,
+  },
+    ...fmUiColors,
   gray: fmUiColors["fmGray"],
 }
 
 export { fmBrandColors };
 
 export { fmUiColors }
+
+export { fmUiAlpha }

@@ -17,99 +17,13 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-12"></div>
-        </div>
-    </div>
-</div>
-<div class="wrap">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 p-12">
-                <div class="card">
-                    <p-tabs value="10">
-                        <p-tablist>
-                            <p-tab value="0">Tailwind Test</p-tab>
-                            <p-tab value="1">Tailwind Tokens</p-tab>
-                            <p-tab value="2">Buttons</p-tab>
-                            <p-tab value="3">Inputs</p-tab>
-                            <p-tab value="4">Data</p-tab>
-                            <p-tab value="5">Panels</p-tab>
-                            <p-tab value="6">File</p-tab>
-                            <p-tab value="7">Media</p-tab>
-                            <p-tab value="8">Messages</p-tab>
-                            <p-tab value="9">Menu</p-tab>
-                            <p-tab value="10">Misc</p-tab>
-                            <p-tab value="11">Overlays</p-tab>
-                            <p-tab value="12">Chat Demo</p-tab>
-                        </p-tablist>
-                        <p-tabpanels class="p-8" >
-                            <p-tabpanel value="0" >
-                                <div class="p-4">
-                                    
-                                </div>
-                                <div class="grid grid-cols-4 gap-4">
-                                    <div class="p-4 border-2 bg-red-100 text-red-700 border-red-500 rounded-md dark:text-red-200 dark:bg-red-800 dark:border-red-600">
-                                      Tailwind Test
-                                   </div>
-                                   <div class="p-4 bg-fm-navy text-white rounded-md ">
-                                       Welcome to Fannie Mae
-                                   </div>
-                                   <div class="p-4 bg-magenta-100 text-fm-orange rounded-md ">
-                                       Test 4
-                                   </div>
-                                   <div class="p-4 bg-teal-300 rounded-md text-teal-700 dark:bg-teal-700 dark:text-teal-300">
-                                       test 5
-                                   </div>
-                                   <div class="p-4 bg-purple-300 rounded-md text-purple-700 dark:bg-purple-700 dark:text-purple-300">
-                                       test 6
-                                   </div>
-                                   <div class="p-4 bg-lime-300 rounded-md text-lime-700 dark:bg-blue-700 dark:text-magenta-300">
-                                       .text-help-600
-                                   </div>
-                                  
-                                </div>
-                            </p-tabpanel>
-                            <p-tabpanel value="1">
-                                <app-tw-color-ramp></app-tw-color-ramp>
-                                <app-tw-color-ramp></app-tw-color-ramp>
-                            </p-tabpanel>
-                            <p-tabpanel value="2">
-                                <app-button-view></app-button-view>
-                            </p-tabpanel>
-                            <p-tabpanel value="3">
-                                <app-input-view></app-input-view>
-                            </p-tabpanel>
-                            <p-tabpanel value="4">
-                                <app-data-view></app-data-view>
-                            </p-tabpanel>
-                            <p-tabpanel value="5">
-                                <app-panel-view></app-panel-view>
-                            </p-tabpanel>
-                            <p-tabpanel value="6">
-                                <app-file-view></app-file-view>
-                            </p-tabpanel>
-                            <p-tabpanel value="7">
-                                <app-media-view></app-media-view>
-                            </p-tabpanel>
-                            <p-tabpanel value="8">
-                                <app-messages-view></app-messages-view>
-                            </p-tabpanel>
-                            <p-tabpanel value="9">
-                                <app-menu-view></app-menu-view>
-                            </p-tabpanel>
-                            <p-tabpanel value="10">
-                                <app-misc-view></app-misc-view>
-                            </p-tabpanel>
-                            <p-tabpanel value="11">
-                                <app-overlay-view></app-overlay-view>
-                            </p-tabpanel>
-                             <p-tabpanel value="12">
-                                <app-chat-demo></app-chat-demo>
-                            </p-tabpanel>
-                        </p-tabpanels>
-                    </p-tabs>
-                </div>
+            <div class="col-12">
+                <a class="page-link" routerLink="/components" routerLinkActive="active">Components</a>
+               <a class="page-link" routerLink="/tokens" routerLinkActive="active">Tokens</a>
+                
             </div>
         </div>
     </div>
 </div>
+
+   <router-outlet></router-outlet>

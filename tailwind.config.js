@@ -33,6 +33,22 @@
 
 import { fmColorTokens } from './src/fm-theme/fm-color-tokens.ts'; // pull in color tokens from theme.
 
+
+/* =======================*/
+// Remove colors from tailwind defaults that are not part of FM colors
+
+const twColorRemoveList = {
+  emerald: undefined,
+  amber:undefined,
+  emerald:undefined,
+  cyan:undefined,
+  sky:undefined,
+  violet:undefined,
+  fuscia:undefined, 
+  pink:undefined,
+
+}
+
 module.exports = {
   darkMode:['class','.fm-dark-mode'],
   content: [
@@ -42,13 +58,17 @@ module.exports = {
   theme: {
     extend: {
       colors:{
+        ...twColorRemoveList,
         ...fmColorTokens,
         success:fmColorTokens.lime,
         danger:fmColorTokens.red,
         warning:fmColorTokens.orange,
         info:fmColorTokens.blue,
         help:fmColorTokens.teal,
-      }
+        dark: {
+
+        },
+      },
     },
   },
   plugins: [

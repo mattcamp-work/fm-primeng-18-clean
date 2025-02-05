@@ -15,7 +15,7 @@ import { OverlayViewComponent } from './overlay-view/overlay-view.component';
 import { PanelViewComponent } from './panel-view/panel-view.component';
 import { TableViewComponent } from './table-view/table-view.component';
 
-
+import { TwTokenViewComponent } from './tw-token-view/tw-token-view.component'
 
 
 
@@ -35,6 +35,7 @@ import { TableViewComponent } from './table-view/table-view.component';
     OverlayViewComponent,
     PanelViewComponent,
     TableViewComponent,
+    TwTokenViewComponent,
    // PrimengImportsModule,
   ],
   exports: [
@@ -51,6 +52,7 @@ import { TableViewComponent } from './table-view/table-view.component';
     OverlayViewComponent,
     PanelViewComponent,
     TableViewComponent,
+    TwTokenViewComponent,
     //PrimengImportsModule,
   ]
 })

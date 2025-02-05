@@ -85,13 +85,13 @@ const FmPreset = definePreset(FmBase, {
 					color: "{blue.400}",
 				},
 				surface:fmColorTokens['fmGray'],				
-				level: {
-					floor: "#fff",
-					0: "{surface.50}",
-					1: "{surface.100}",
-					2: "{surface.200}",
-					3: "{surface.300}",
-					4: "{surface.400}",
+				ground: {
+					
+					0: "{fm.white}",
+					1: "{surface.50}",
+					2: "{surface.100}",
+					3: "{surface.150}",
+					4: "{surface.200}",
 				},
 			},
 			dark: {
@@ -99,13 +99,13 @@ const FmPreset = definePreset(FmBase, {
 					color: "{blue.400}",
 				},
 				surface:fmColorTokens.zinc,
-				level: {
-					floor: "#000",
-					0: "{surface.950}",
+				ground: {
+
+					0: "#000",
 					1: "{surface.900}",
-					2: "{surface.800}",
-					3: "{surface.700}",
-					4: "{surface.600}",
+					2: "{surface.850}",
+					3: "{surface.800}",
+					4: "{surface.750}",
 				},
 			},
 		},

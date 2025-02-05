@@ -7,8 +7,11 @@ import { DisplayRowComponent } from './display-row/display-row.component';
 
 import { TwColorRampComponent  } from './tw-color-ramp/tw-color-ramp.component';
 import { TwColorTokenComponent } from './tw-color-token/tw-color-token.component';
+import { TwColorSwatchComponent } from './tw-color-swatch/tw-color-swatch.component'
 
 import { ChatDemoComponent } from './chat-demo/chat-demo.component';
+
+import { CodeCopyComponent } from './code-copy/code-copy.component';
 
 
 
@@ -23,7 +26,9 @@ import { ChatDemoComponent } from './chat-demo/chat-demo.component';
     CommonModule,
     TwColorTokenComponent,
     TwColorRampComponent,
-    ChatDemoComponent
+    ChatDemoComponent,
+    CodeCopyComponent,
+    TwColorSwatchComponent,
   ],
   exports: [
     CompRowComponent,
@@ -31,7 +36,9 @@ import { ChatDemoComponent } from './chat-demo/chat-demo.component';
     ThemeToggleComponent,
     TwColorTokenComponent,
     TwColorRampComponent,
-    ChatDemoComponent
+    ChatDemoComponent,
+    CodeCopyComponent,
+    TwColorSwatchComponent,
   ]
 })
 export class SiteComponentsModule { }

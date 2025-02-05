@@ -14,6 +14,57 @@
 
 @layer this-app {
 
+
+  .bg-ground-0 {
+      background: var(--p-ground-0)!important;
+    }
+    .bg-ground-1 {
+      background: var(--p-ground-1)!important;
+    }
+    .bg-ground-2 {
+      background: var(--p-ground-2)!important;
+    }
+    .bg-ground-3 {
+      background: var(--p-ground-3)!important;
+    }
+    .bg-ground-4 {
+      background: var(--p-ground-4)!important;
+    }
+
+
+    .border-ground-0 {
+      border-color: var(--p-ground-0)!important;
+    }
+    .border-ground-1 {
+      border-color: var(--p-ground-1)!important;
+    }
+    .border-ground-2 {
+      border-color: var(--p-ground-2)!important;
+    }
+    .border-ground-3 {
+      border-color: var(--p-ground-3)!important;
+    }
+    .border-ground-4 {
+      border-color: var(--p-ground-4)!important;
+    }
+
+    .text-ground-0 {
+      color: var(--p-ground-0)!important;
+    }
+    .text-ground-1 {
+      color: var(--p-ground-1)!important;
+    }
+    .text-ground-2 {
+      color: var(--p-ground-2)!important;
+    }
+    .text-ground-3 {
+      color: var(--p-ground-3)!important;
+    }
+    .text-ground-4 {
+      color: var(--p-ground-4)!important;
+    }
+
+
 body {
     
     padding: 0px;
@@ -22,6 +73,9 @@ body {
 
     background: var(--p-surface-50);
     color: var(--p-surface-900);
+
+    
+
   }
 
   .fm-dark-mode {
@@ -29,6 +83,7 @@ body {
       background: var(--p-surface-950);
       color: var(--p-surface-50);
     }
+
   }
 
   a {

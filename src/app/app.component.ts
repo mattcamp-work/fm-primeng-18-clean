@@ -1,14 +1,10 @@
 import { Component } from '@angular/core';
+import { RouterModule, RouterOutlet } from '@angular/router'; 
+
+
 import { CommonModule } from '@angular/common'; 
-import { RouterOutlet } from '@angular/router';
-
 import { PrimengImportsModule } from './primeng-imports/primeng-imports-fixed.module'; 
-
-import { ButtonTestComponent } from './button-test/button-test.component';
-
 import { SiteComponentsModule } from './site-components/site-components.module'; 
-
-
 import { CompViewsModule } from './comp-views/comp-views.module';
 
 //import { TabsModule } from 'primeng/tabs';
@@ -23,7 +19,7 @@ import { CompViewsModule } from './comp-views/comp-views.module';
   standalone: true,
   imports: [
       RouterOutlet,
-      ButtonTestComponent,
+      RouterModule,
       SiteComponentsModule,
       PrimengImportsModule,
       CompViewsModule,

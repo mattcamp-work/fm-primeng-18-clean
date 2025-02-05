@@ -1,0 +1,7 @@
+.swatch-card {
+	@apply border border-alpha-black-150 p-0 inline-block rounded-md overflow-hidden  dark:border-alpha-white-150;
+}
+
+.swatch-color {
+	@apply bg-fm-navy h-24 w-52 rounded-sm border-b dark:border-b-slate-850;
+}

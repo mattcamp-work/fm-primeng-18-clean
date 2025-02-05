@@ -1,0 +1,38 @@
+
+
+.fm-text-strong {
+	color:"#000"!important;
+}
+
+.fm-text-normal {
+	color: var(--p-fm-black)!important;
+}
+
+.fm-text-dim {
+	color: var(--p-alpha-black-600)!important;
+}
+
+.fm-text-dim-2 {
+	color: var(--p-alpha-black-400)!important;
+}
+
+
+.fm-dark-mode {
+
+	.fm-text-strong {
+		color:"#fff"!important;
+	}
+
+	.fm-text-normal {
+		color: var(--p-alpha-white-800)!important;
+	}
+
+	.fm-text-dim {
+		color: var(--p-alpha-white-600)!important;
+	}
+
+	.fm-text-dim-2 {
+		color: var(--p-alpha-white-400)!important;
+	}
+
+}

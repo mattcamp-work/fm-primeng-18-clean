@@ -1,0 +1,36 @@
+
+	.fm-border-strong {
+		color:var(--p-alpha-black-400)!important;
+	}
+
+	.fm-border-normal {
+		color: var(--p-alpha-black-300)!important;
+	}
+
+	.fm-border-dim {
+		color: var(--p-alpha-black-200)!important;
+	}
+
+	.fm-border-dim-2 {
+		color: var(--p-alpha-black-150)!important;
+	}
+
+.fm-dark-mode {
+
+	.fm-border-strong {
+		color:var(--p-alpha-white-400)!important;
+	}
+
+	.fm-border-normal {
+		color: var(--p-alpha-white-300)!important;
+	}
+
+	.fm-border-dim {
+		color: var(--p-alpha-white-200)!important;
+	}
+
+	.fm-border-dim-2 {
+		color: var(--p-alpha-white-150)!important;
+	}
+
+}

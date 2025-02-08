@@ -1,0 +1,52 @@
+a.btn-view-code {
+	//@apply text-xs px-2 rounded-md text-blue-500 cursor-pointer pt-1 bg-white shadow-md justify-self-center flex-initial;
+
+	display: inline-block;
+	background: white;
+	border-radius: 8px;
+	visibility: hidden;
+	flex:initial;
+	line-height:0px!important;
+
+	float:right;
+
+	span {
+		@apply p-1 bg-fm-white rounded-md border text-blue-600;
+		display: inline-block;
+		cursor: pointer;
+		//width: 50px;
+	}
+}
+.color-swatch {
+	@apply p-1;
+	display: inline-block;
+	width: 100%;
+
+	transition: .3s;
+
+	.color-name {
+		opacity: .66;
+	}
+
+	@apply border-t-alpha-white-0 border-t;
+
+	&:hover {
+		.btn-view-code {
+			visibility: visible;
+
+		}
+
+		.color-name {
+			opacity: 1;
+		}
+
+		z-index: 100;
+
+
+		@apply shadow-lg border-t-alpha-white-200 border-t ;
+
+
+	}
+
+}
+	/* hover:shadow-md hover:bg-alpha-white-900 hover:text-blue-600  */

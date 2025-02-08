@@ -62,7 +62,7 @@ if (FmBase.primitive) {
 
 const FmPreset = definePreset(FmBase, {
 	primitive: {
-		...fmColorTokens
+		...fmColorTokens,
 	},
 
 	semantic: {
@@ -98,7 +98,7 @@ const FmPreset = definePreset(FmBase, {
 				primary: {
 					color: "{blue.400}",
 				},
-				surface:fmColorTokens.zinc,
+				surface:fmColorTokens.slate,
 				ground: {
 
 					0: "#000",

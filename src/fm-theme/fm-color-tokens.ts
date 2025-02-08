@@ -64,11 +64,10 @@ const hueSat: any = {
   }
 
 // lightness levels
-const levels: string[] = ["0","2.5","5","7.5","10","15","20","25","30","40","50","60","70","75","80","85","90","92.5","95","97.5"];
+const levels: string[] = ["0","2.5","5","7.5","10","15","20","25","30","40","50","60","70","75","80","85","90","95"];
 
 // take color and loop through lightness levels, kick out color ramp object
-function makeLightnessRamp(_hueSatValue: string | unknown): {
-  [key: string]: string } {
+function makeLightnessRamp(_hueSatValue:string) {
   const _ramp:any = {};
 
   levels.forEach((_level) => {
@@ -94,9 +93,9 @@ function makeAlphaRamp(_hslValue:string) {
 
 function buildColorRampList() {
   const _colorRamps:any = {};
-  for (const [_name, _value] of Object.entries(hueSat)) {
+  _.each(hueSat,function(_value,_name){
     _colorRamps[_name] = makeLightnessRamp(_value);
-  }
+  })
   return _colorRamps;
 }
 
@@ -116,6 +115,8 @@ function buildAlphaRampList() {
 const fmUiColors:any = buildColorRampList();
 const fmUiAlpha:any = buildAlphaRampList();
 
+fmUiColors.gray = fmUiColors['fmGray'];
+
 //console.log("colorRamps",colorRamps);
 console.log('\n\n ======= fm-color-tokens.ts loaded ======== \n\n')
 
@@ -128,7 +129,10 @@ export const fmColorTokens: any = {
     ...fmUiAlpha,
   },
     ...fmUiColors,
-  gray: fmUiColors["fmGray"],
+}
+
+const allFmColors = {
+  fmBrandColors,fmUiColors,fmUiAlpha
 }
 
 export { fmBrandColors };
@@ -136,3 +140,5 @@ export { fmBrandColors };
 export { fmUiColors }
 
 export { fmUiAlpha }
+
+export { allFmColors }

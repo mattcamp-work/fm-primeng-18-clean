@@ -1,4 +1,4 @@
-import { Component, Input, signal } from '@angular/core';
+import { Component, Input, signal, OnInit } from '@angular/core';
 
 import { PrimengImportsModule } from '~/app/primeng-imports/primeng-imports-fixed.module';
 import { CodeCopyComponent } from '~/app/site-components/code-copy/code-copy.component';
@@ -12,7 +12,7 @@ import Color from 'colorjs.io';
   templateUrl: './tw-color-swatch.component.html',
   styleUrl: './tw-color-swatch.component.scss'
 })
-export class TwColorSwatchComponent {
+export class TwColorSwatchComponent implements OnInit {
 
   @Input() name: string = 'Test Red';
   @Input() value: string = '#ff0000';
@@ -22,7 +22,7 @@ export class TwColorSwatchComponent {
 
 
 
-   convertToHex = function(_color: string) {
+  convertToHex = function(_color: string) {
     const colorObj = new Color(_color);
     return colorObj.to("srgb").toString({ format: "hex" });
   }
@@ -36,13 +36,20 @@ export class TwColorSwatchComponent {
       return _input.replace(/ /gmi,'');
   }
 
-  constructor(){
+  adjustPrefix(_input:string) {
 
-    this.value = this.value.replace(/ /gmi,'X');
-
-     if(this.prefix.length > 0) {
-        this.classPrefix = this.classPrefix+'-';
+       if(_input.length > 0) {
+        return _input+'-';
       }
+
+      return _input;
   }
+
+  ngOnInit() {
+
+     this.classPrefix = this.adjustPrefix(this.prefix);
+
+  }
+
 
 }

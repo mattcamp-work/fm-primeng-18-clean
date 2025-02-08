@@ -1,42 +1,53 @@
-<h3 class="text-xl font-bold mt-10 mb-2">Brand Colors</h3>
-<ul class="flex gap-4 flex-wrap">
-	<ng-container *ngFor="let color of _fmBrandColors | keyvalue">
-		<ng-container *ngTemplateOutlet="colorTemplate; context: { key: color.key, value: color.value, prefix:'fm' }"></ng-container>
-	</ng-container>
-</ul>
-<h3 class="text-xl font-bold mt-10 mb-2">ADK Colors</h3>
-<ul class="flex gap-4 flex-wrap">
-	<ng-container *ngFor="let color of _adkColors | keyvalue">
-		<ng-container *ngTemplateOutlet="colorTemplate; context: { key: color.key, value: color.value, prefix:'adk' }"></ng-container>
-	</ng-container>
-</ul>
-<ng-template #colorTemplate let-key="key" let-value="value" let-prefix="prefix">
-	<li class="shadow-md bg-ground-0 p-0 inline-block rounded-md overflow-hidden border-ground-4 dark:border">
-		<div class="bg-fm-navy h-24 w-52 rounded-sm border-b dark:border-b-slate-850" [style.background]="value"></div>
-		<div class="p-4 !pt-3 flex">
-			<div>
-				<p class="capitalize text-sm font-bold"><span class="uppercase">{{prefix}}</span> {{ key }}</p>
-				<p class="text-xs">{{ value }}</p>
+<div class="border rounded-md overflow-hidden dark:border-surface-700">
+	<div class="px-4 py-3 border-b dark:border-b-surface-700">
+		<span class="text-sm font-semibold capitalize">{{prefix}} {{name}}</span>
+	</div>
+	<div class="w-56">
+	<ng-container *ngFor="let color of rampColorList">
+		<div class="flex bg-surface-300 dark:bg-surface-800">
+			<div class="color-swatch" [style.background]="color.value">
+				<span class="p-2 text-xs color-name" [class]="getTextColor2(color.value)">
+					{{color.name}}
+				</span>
+				<a (click)="pop.toggle($event)" class="btn-view-code"><span class="pi pi-code text-shadow" style="font-size:.75rem"></span></a>
 			</div>
-			<div class="text-end justify-center flex-auto item-center self-center">
-				<p-button (click)="op.toggle($event)" icon="pi pi-code" severity="secondary" />
-			</div>
-			<p-popover #op >
-				<div class="p-2">
-					<!-- <p class="text-xs mb-2"><b>Color</b></p> -->
-					<!-- <app-code-copy styleClass="mb-2" text="{{value}}"></app-code-copy> -->
-					<!-- <app-code-copy styleClass="mb-2" text="{{convertToHex(value)}}"></app-code-copy> -->
-					<!-- <app-code-copy styleClass="mb-2" text="{{convertToRGB(value)}}"></app-code-copy> -->
-					<p class="text-xs mb-2"><b>CSS:</b></p>
-					<app-code-copy text="var(--p-{{prefix}}-{{key}})"></app-code-copy>
-					<p class="text-xs mb-2 mt-4"><b>Tailwind:</b></p>
-					<div class="flex-row gap-2">
-						<app-code-copy styleClass="mb-2" text="bg-{{prefix}}-{{ key }}"></app-code-copy>
-						<app-code-copy styleClass="mb-2" text="text-{{prefix}}-{{ key }}"></app-code-copy>
-						<app-code-copy styleClass="mb-2" text="border-{{prefix}}-{{ key }}"></app-code-copy>
-					</div>
-				</div>
+			<p-popover #pop>
+				<ng-container *ngTemplateOutlet="popoverContent; context: { color: color }"></ng-container>
 			</p-popover>
 		</div>
-	</li>
+	</ng-container>
+	</div>
+</div> 
+
+<ng-template #popoverContent let-color="color">
+	<div class="p-1">
+		<div class="mb-4 pb-3 border-b border-b-surface-100 dark:border-b-surface-700">
+			<p class="text-md pb-1 font-semibold  ">{{color.prefix}}-{{color.name}}</p>
+			<p class="text-xs ps-1 opacity-70 select-all">
+				{{color.value}}
+			</p>
+			<p class="text-xs ps-1 opacity-70 select-all">
+				{{convertToHex(color.value)}}
+			</p>
+		</div>
+		<p class="text-xs mb-2 font-semibold">CSS Var:</p>
+		<app-code-copy text="var(--p-{{color.classPrefix + color.name}})"></app-code-copy>
+		<p class="text-xs mb-2 font-semibold mt-4">Tailwind Classes:</p>
+		<div class="flex-row gap-2">
+			<app-code-copy styleClass="mb-1" text="bg-{{color.classPrefix + color.name }}"></app-code-copy>
+			<app-code-copy styleClass="mb-1" text="text-{{color.classPrefix + color.name }}"></app-code-copy>
+			<app-code-copy styleClass="mb-1" text="border-{{color.classPrefix + color.name }}"></app-code-copy>
+			<!-- <app-code-copy styleClass="mb-1" text="ring-{{color.classPrefix + color.name }}"></app-code-copy>
+			<app-code-copy styleClass="mb-1" text="outline-{{color.classPrefix + color.name }}"></app-code-copy>
+			<app-code-copy styleClass="mb-1" text="caret-{{color.classPrefix + color.name }}"></app-code-copy> -->
+		</div>
+		<!-- <p class="mt-4 mb-2 font-semibold text-xs">
+			Color
+		</p> -->
+		<div class="flex-row gap-2">
+			<!-- <app-code-copy styleClass="mb-2" text="{{color.value}}"></app-code-copy> -->
+			<!-- 	<app-code-copy styleClass="mb-2" text="{{convertToHex(color.value)}}"></app-code-copy>
+			<app-code-copy styleClass="mb-2" text="{{convertToRGBA(color.value)}}"></app-code-copy> -->
+		</div>
+	</div>
 </ng-template>

@@ -1,0 +1,13 @@
+.bg-trans-helper {
+	background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAChJREFUKFNjnDJj4X8GNBAU4IUuxMA4FBQ+e/EawzPrNmzD9MwQUAgALOsvn1BWujMAAAAASUVORK5CYII=);
+}
+
+.section-head {
+	@apply my-8;
+
+}
+
+
+.card-wrap {
+	@apply flex gap-4 flex-wrap;
+}

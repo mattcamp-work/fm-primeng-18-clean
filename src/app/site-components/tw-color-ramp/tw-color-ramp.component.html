@@ -6,7 +6,7 @@
 	<ng-container *ngFor="let color of rampColorList">
 		<div class="flex bg-surface-300 dark:bg-surface-800">
 			<div class="color-swatch" [style.background]="color.value">
-				<span class="p-2 text-xs color-name" [class]="getTextColor2(color.value)">
+				<span class="p-2 text-xs color-name" [class]="getContrastingTextColor(color.value)">
 					{{color.name}}
 				</span>
 				<a (click)="pop.toggle($event)" class="btn-view-code"><span class="pi pi-code text-shadow" style="font-size:.75rem"></span></a>
@@ -29,6 +29,9 @@
 			<p class="text-xs ps-1 opacity-70 select-all">
 				{{convertToHex(color.value)}}
 			</p>
+			<p class="text-xs ps-1 opacity-70 select-all">
+				{{convertToRGB(color.value)}}
+			</p>
 		</div>
 		<p class="text-xs mb-2 font-semibold">CSS Var:</p>
 		<app-code-copy text="var(--p-{{color.classPrefix + color.name}})"></app-code-copy>
@@ -47,7 +50,7 @@
 		<div class="flex-row gap-2">
 			<!-- <app-code-copy styleClass="mb-2" text="{{color.value}}"></app-code-copy> -->
 			<!-- 	<app-code-copy styleClass="mb-2" text="{{convertToHex(color.value)}}"></app-code-copy>
-			<app-code-copy styleClass="mb-2" text="{{convertToRGBA(color.value)}}"></app-code-copy> -->
+			<app-code-copy styleClass="mb-2" text="{{convertToRGB(color.value)}}"></app-code-copy> -->
 		</div>
 	</div>
 </ng-template>

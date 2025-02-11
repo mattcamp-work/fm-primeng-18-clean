@@ -4,18 +4,11 @@ import { CommonModule } from '@angular/common';
 
 import { PrimengImportsModule } from '~app/primeng-imports/primeng-imports-fixed.module';
 
-import { CodeCopyComponent } from '../code-copy/code-copy.component';
+import { CodeCopyComponent } from '~/app/site-components/code-copy/code-copy.component';
 import * as fmColorLibrary from '~/fm-theme/fm-color-tokens';
 
 import Color from 'colorjs.io';
 import _ from 'lodash';
-
-
-console.log("colorjs", Color);
-
-// console.log("loaded =====================");
-
-// console.log(" RED =======>", fmColorLibrary.fmUiColors);
 
 @Component({
   selector: 'app-tw-color-ramp',
@@ -24,84 +17,68 @@ console.log("colorjs", Color);
   templateUrl: './tw-color-ramp.component.html',
   styleUrl: './tw-color-ramp.component.scss'
 })
+
 export class TwColorRampComponent {
 
-  _testColor: any = this.convertColorList(fmColorLibrary.fmUiColors.red, 'red');
-
-  //ramp?:any = [];
 
 
-  @Input() name:string = 'Red';
-  @Input() value:string = '#ff0000';
-  @Input() prefix:string = '';
+  @Input() name: string = 'Red';
+  @Input() prefix: string = ''; // used for 'alpha' ramps
+  @Input() ramp_values ? : any = []; // ramp color values sent in from tw-token-view.component
 
-  @Input() ramp?:any = [];
+  rampColorList ? : any = []; // object to hold the cleaned up color list
 
-  rampColorList?:any = [];
-
-
-  classPrefix?:string = '';
 
 
   ngOnInit() {
 
+    //set the default value if not supplied
+     this.rampColorList = this.convertColorList(fmColorLibrary.fmUiColors.red, 'red');
 
-    console.log('ramp ====>', this.ramp, 'name ====>',this.name, 'prefix ====>',this.prefix)
+     // it ramp_value has been supplied, set up the rampColorList
+    if (this.ramp_values.length !== 0) {
 
-
-
-    this.rampColorList = this._testColor;
-
-    if (this.ramp.length !== 0) {
-     // this.name = this.ramp.name;
-     // this.prefix = this.ramp.prefix;     
-
-      let _tempPrefix = this.adjustPrefix(this.prefix)+this.name;
-      this.rampColorList = this.convertColorList(this.ramp,_tempPrefix)
+      let _tempPrefix = this.adjustPrefix(this.prefix) + this.name;
+      this.rampColorList = this.convertColorList(this.ramp_values, _tempPrefix)
 
     }
 
-   console.log("ramp2 =========>", this.ramp)
-
-   this.classPrefix = this.adjustPrefix(this.prefix);
-
-
   }
 
+  // compare bg color against black and white, return the option that is the higher contrast
+  getContrastingTextColor(_BgColor: string = "#ff0000") {
+    const _thisColor = new Color(_BgColor);
 
-  getTextColor2(_inputColor: string = "#ff0000") {
-    const _thisColor = new Color(_inputColor);
-
-    let _black = new Color("#000000");
-    let _white = new Color("#FFFFFF");
-
-    let contrastWithBlack = _thisColor.contrast(_black, "WCAG21");
-    let contrastWithWhite = _thisColor.contrast(_white, "WCAG21");
+    let contrastWithBlack = _thisColor.contrast("#000", "WCAG21");
+    let contrastWithWhite = _thisColor.contrast("#fff", "WCAG21");
     return contrastWithBlack > contrastWithWhite ? "text-fm-black" : "text-fm-white";
   }
 
   convertToHex = function(_color: string) {
     const colorObj = new Color(_color);
+    //console.log("========= colorObj ========>",colorObj);
     return colorObj.to("srgb").toString({ format: "hex" });
   }
 
   convertToRGB = function(_color: string) {
     const colorObj = new Color(_color);
+    
+    if(colorObj.alpha !== undefined) {
+       return colorObj.to("srgb").toString({ format: "rgba" });
+    }
+
     return colorObj.to("srgb").toString({ format: "rgb" });
   }
 
-  convertToRGBA = function(_color: string) {
-    const colorObj = new Color(_color);
-    return colorObj.to("srgb").toString({ format: "rgba" });
-  }
+ 
 
   removeSpaces(_input: string) {
     return _input.replace(/ /gmi, '');
   }
 
-  adjustPrefix(_input:string = '') {
+  adjustPrefix(_input: string = '') {
 
-    if(_input.length === 0) {
+    if (_input.length === 0) {
       return _input;
     }
 
@@ -110,7 +87,7 @@ export class TwColorRampComponent {
       _input = _.kebabCase(_input);
     }
 
-   _input = _input+'-'
+    _input = _input + '-'
 
     return _input;
   }

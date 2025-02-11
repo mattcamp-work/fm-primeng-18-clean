@@ -25,10 +25,10 @@
 	</div>
 	<div class="card-wrap">
 		<ng-container *ngFor="let color of _uiColors">
-			<app-tw-color-ramp [ramp]="color.value" prefix="" [name]="color.name"></app-tw-color-ramp>
+			<app-tw-color-ramp [ramp_values]="color.value" prefix="" [name]="color.name"></app-tw-color-ramp>
 		</ng-container>
 		<ng-container *ngFor="let color of _alphaColors">
-			<app-tw-color-ramp [ramp]="color.value" [name]="color.name" prefix="alpha"></app-tw-color-ramp>
+			<app-tw-color-ramp [ramp_values]="color.value" [name]="color.name" prefix="alpha"></app-tw-color-ramp>
 		</ng-container>
 	</div>
 </div>

@@ -19,6 +19,8 @@
     "@angular/platform-browser-dynamic": "^18.0.0",
     "@angular/router": "^18.0.0",
     "@primeng/themes": "^18.0.2",
+    "@tsparticles/angular": "^3.0.0",
+    "@tsparticles/engine": "^3.8.1",
     "@types/chart.js": "^2.9.41",
     "@types/quill": "^2.0.14",
     "chart.js": "^4.4.7",

@@ -1,0 +1,9 @@
+.table-container {
+	@apply rounded border border-surface-100 dark:border-surface-700 inline-block shadow w-full;
+
+	max-width: 1000px;;
+
+	max-height: 450px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}

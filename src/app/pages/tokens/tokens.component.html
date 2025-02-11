@@ -2,24 +2,23 @@
 	<div class="row">
 		<div class="col-12">
 			<div class="card">
-				<p-tabs value="0">
+				<p-tabs value="colors">
 					<p-tablist>
-						<p-tab value="0">Colors</p-tab>
-                        <p-tab value="1">Grids / Columns</p-tab>
-                        <p-tab value="2">Fonts</p-tab>
-                        <p-tab value="3">Spacing</p-tab>
+						<p-tab value="colors">Colors</p-tab>
+                        <p-tab value="grids">Grids / Columns</p-tab>
+                        <p-tab value="fonts">Fonts</p-tab>
+                        <p-tab value="spacing">Spacing</p-tab>
 					</p-tablist>
 					<p-tabpanels>
-						<p-tabpanel value="0">
-							 <!-- <app-tw-color-ramp></app-tw-color-ramp> -->
-
+						<p-tabpanel value="colors">
 							 <app-tw-token-view></app-tw-token-view>
 						</p-tabpanel>
-						<p-tabpanel value="1">
+						<p-tabpanel value="grids">
 						</p-tabpanel>
-						<p-tabpanel value="2">
+						<p-tabpanel value="fonts">
+							 <app-tw-fonts></app-tw-fonts>
 						</p-tabpanel>
-						<p-tabpanel value="3">
+						<p-tabpanel value="spacing">
 						</p-tabpanel>
 					</p-tabpanels>
 				</p-tabs>

@@ -1,0 +1,77 @@
+<!-- <p *ngIf="!fonts?.length">No fonts available</p> -->
+<app-comp-row title="Font Sizes">
+    <div class="table-container">
+    <table class="bg-white dark:bg-surface-950 border-collapse">
+            <tr *ngFor="let font of fontSizes" class="border-b border-b-alpha-black-100 dark:border-b-surface-800">
+                <td class="bg-gray-25 dark:bg-alpha-white-75 px-8 w-36">
+                    <div class="text-sm text-center uppercase opacity-70">
+                        {{removePrefix(font.class,'text-')}}
+                    </div>
+                </td>
+                <td class="px-4 py-4 ps-8">
+                    <div class="capitalize max-w-[600px] w-full whitespace-nowrap overflow-hidden" [class]="font.class">The quick brown fox jumped over the lazy dog</div>
+                    <div class="text-xs text-alpha-black-400 dark:text-alpha-white-400">
+                        {{ font.rem }} | {{ font.px }}
+                    </div>
+                </td>
+                <td class="px-4 py-2 select-all">
+                    <app-code-copy [text]="font.class"></app-code-copy>
+                </td>
+            </tr>
+        
+    </table>
+</div>
+
+</app-comp-row>
+
+
+<app-comp-row title="Font Weights">
+    <div class="table-container">
+    <table class="bg-white dark:bg-surface-950 border-collapse">
+            <tr *ngFor="let font of fontWeights" class="border-b border-b-alpha-black-100 dark:border-b-surface-800">
+                <td class="bg-gray-25 dark:bg-alpha-white-75 px-8 w-36">
+                    <div class="text-sm capitalize opacity-70">
+                        {{removePrefix(font.class,'font-')}}
+                    </div>
+                </td>
+                <td class="px-4 py-4 ps-8">
+                    <div class="capitalize text-xl max-w-[600px] w-full" [class]="font.class">The quick brown fox jumped over the lazy dog</div>
+                    <div class="text-xs text-alpha-black-400 font-mono dark:text-alpha-white-400">
+                        {{ font.css }}
+                    </div>
+                </td>
+                <td class="px-4 py-2 select-all">
+                    <app-code-copy [text]="font.class"></app-code-copy>
+                </td>
+            </tr>
+        
+    </table>
+</div>
+
+</app-comp-row>
+
+<app-comp-row title="Misc Font Utilities">
+    <div class="table-container">
+    <table class="bg-white dark:bg-surface-950 border-collapse">
+            <tr *ngFor="let font of fontUtilties" class="border-b border-b-alpha-black-100 dark:border-b-surface-800">
+                <td class="bg-gray-25 dark:bg-alpha-white-75 px-8 w-36">
+                    <div class="text-sm capitalize opacity-70">
+                        {{removePrefix(font.class,'font-')}}
+                    </div>
+                </td>
+                <td class="px-4 py-4 ps-8">
+                    <div class="capitalize text-xl max-w-[600px] w-full" [class]="font.class">The quick brown fox jumped over the lazy dog</div>
+                    <div class="text-xs text-alpha-black-400 font-mono dark:text-alpha-white-400">
+                        {{ font.css }}
+                    </div>
+                </td>
+                <td class="px-4 py-2 select-all">
+                    <app-code-copy [text]="font.class"></app-code-copy>
+                </td>
+            </tr>
+        
+    </table>
+</div>
+
+</app-comp-row>
+

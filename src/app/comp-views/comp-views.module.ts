@@ -14,10 +14,9 @@ import { MessagesViewComponent } from './messages-view/messages-view.component';
 import { OverlayViewComponent } from './overlay-view/overlay-view.component';
 import { PanelViewComponent } from './panel-view/panel-view.component';
 import { TableViewComponent } from './table-view/table-view.component';
-
 import { TwTokenViewComponent } from './tw-token-view/tw-token-view.component'
-
-
+import { TwFontsComponent } from './tw-fonts/tw-fonts.component'
+import { TwGridsComponent } from './tw-grids/tw-grids.component'
 
 @NgModule({
   declarations: [],
@@ -36,6 +35,8 @@ import { TwTokenViewComponent } from './tw-token-view/tw-token-view.component'
     PanelViewComponent,
     TableViewComponent,
     TwTokenViewComponent,
+    TwFontsComponent,
+    TwGridsComponent,
    // PrimengImportsModule,
   ],
   exports: [
@@ -53,6 +54,8 @@ import { TwTokenViewComponent } from './tw-token-view/tw-token-view.component'
     PanelViewComponent,
     TableViewComponent,
     TwTokenViewComponent,
+    TwFontsComponent,
+    TwGridsComponent,
     //PrimengImportsModule,
   ]
 })

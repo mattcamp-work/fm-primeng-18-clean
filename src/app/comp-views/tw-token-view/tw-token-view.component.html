@@ -1,28 +1,20 @@
-<div class="px-4">
-	<div class="section-head">
-		<h3 class="font-bold text-lg">FM Brand Colors</h3>
-		<p class="text-sm">Colors taken directly from our FM Brand guide</p>
-	</div>
+<app-comp-row title="FM Brand Colors">
 	<div class="card-wrap">
 		<ng-container *ngFor="let color of _fmBrandColors">
 			<app-tw-color-swatch [name]="color.name" [value]="color.value" prefix="fm">
 			</app-tw-color-swatch>
 		</ng-container>
 	</div>
-	<div class="section-head">
-		<h3 class="font-bold text-lg">ADK Colors</h3>
-		<p class="text-sm">Colors taken from ADK styles</p>
-	</div>
+</app-comp-row>
+<app-comp-row title="ADK Colors">
 	<div class="card-wrap">
 		<ng-container *ngFor="let color of _adkColors">
 			<app-tw-color-swatch [name]="color.name" [value]="color.value" prefix="adk">
 			</app-tw-color-swatch>
 		</ng-container>
 	</div>
-	<div class="section-head">
-		<h3 class="font-bold text-lg">UI Colors</h3>
-		<p class="text-sm">Expanded color palette curated to harmonize with our brand colors.</p>
-	</div>
+</app-comp-row>
+<app-comp-row title="UI Colors">
 	<div class="card-wrap">
 		<ng-container *ngFor="let color of _uiColors">
 			<app-tw-color-ramp [ramp_values]="color.value" prefix="" [name]="color.name"></app-tw-color-ramp>
@@ -31,4 +23,4 @@
 			<app-tw-color-ramp [ramp_values]="color.value" [name]="color.name" prefix="alpha"></app-tw-color-ramp>
 		</ng-container>
 	</div>
-</div>
+</app-comp-row>

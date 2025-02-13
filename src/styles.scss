@@ -15,7 +15,54 @@
 @layer this-app {
 
 
-  .bg-ground-0 {
+
+a.link-external:after { 
+    content:"\e9d4";
+    display: inline-block;
+    font-family: primeicons;
+    //background: red;
+    // height: 20px;
+    // width: 20px;
+   //position: absolute;
+    right:0;
+    top:-2px;
+   // color:red;
+    padding-left:6px;
+    font-size:.6em;
+}
+
+a.link-external {
+  //background: red!important;
+  @apply text-info-600 dark:text-info-300;
+  display: inline-block;
+  position: relative;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+  .display-card {
+    @apply bg-ground-0;
+  }
+
+  p-tabpanel, .test {
+    background: red!important;
+  }
+// .p-tabpanels {
+//   background-color: var(--p-surface-25)!important;
+// }
+
+//   .page-link {
+//   @apply py-2 px-4 inline-block text-surface-400 font-semibold dark:text-surface-800;
+
+//   &.active {
+//     @apply bg-fm-white text-blue-400 rounded-t-lg dark:bg-surface-900 dark:text-blue-300;
+
+//   }
+// }
+
+
+    .bg-ground-0 {
       background: var(--p-ground-0)!important;
     }
     .bg-ground-1 {

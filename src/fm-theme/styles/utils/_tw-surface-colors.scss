@@ -1,0 +1,21 @@
+$values: 25,50,75,100,150,200,250,300,400,500,600,700,750,800,850,900,925,950,975;
+$prefix: "surface";
+
+@each $value in $values {
+  .bg-#{$prefix}-#{$value} {
+    background-color: var(--p-#{$prefix}-#{$value});
+  }
+  .text-#{$prefix}-#{$value} {
+    background-color: var(--p-#{$prefix}-#{$value});
+  }
+  .border-#{$prefix}-#{$value} {
+    background-color: var(--p-#{$prefix}-#{$value});
+  }
+  .outline-#{$prefix}-#{$value} {
+    background-color: var(--p-#{$prefix}-#{$value});
+  }
+  .caret-#{$prefix}-#{$value} {
+    background-color: var(--p-#{$prefix}-#{$value});
+  }
+
+}

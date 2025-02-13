@@ -1,0 +1,9 @@
+.code-sample {
+	@apply bg-gray-25 dark:bg-black p-4 rounded-md my-4 max-w-[700px] w-full border select-all text-xs dark:border-alpha-white-200;
+}
+.guide-text {
+	@apply text-base;
+}
+code {
+	@apply bg-blue-25 dark:bg-navy-850 py-1 px-2 mx-1 inline-block text-blue-600 dark:text-blue-200 rounded-md text-sm;
+}

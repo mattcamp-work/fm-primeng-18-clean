@@ -32,6 +32,16 @@
 
 
 import { fmColorTokens } from './src/fm-theme/fm-color-tokens.ts'; // pull in color tokens from theme.
+import { surfaceColors } from './src/fm-theme/fm-color-tokens.ts'; 
+import { levels } from './src/fm-theme/fm-color-tokens.ts'; 
+
+import _ from 'lodash';
+
+// const convert = (color) => {
+//     return `color-mix(in srgb, ${color} calc(100% * <alpha-value>), transparent)`;
+// };
+
+
 
 
 /* =======================*/
@@ -65,9 +75,10 @@ module.exports = {
         warning:fmColorTokens.orange,
         info:fmColorTokens.blue,
         help:fmColorTokens.teal,
-        dark: {
-
-        },
+        // surface:surfaceColors.light,
+        // dark: {
+        //   surface:surfaceColors.dark
+        // },
       },
     },
   },

@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { PrimengImportsModule } from '~/app/primeng-imports/primeng-imports-fixed.module';
 import { SiteComponentsModule } from '~/app/site-components/site-components.module';
 import * as fmColorLibrary from '~/fm-theme/fm-color-tokens'
+import { surfaceColors } from '~/fm-theme/fm-color-tokens'
 
 import { CodeCopyComponent } from '~/app/site-components/code-copy/code-copy.component';
 
@@ -25,16 +26,22 @@ export class TwTokenViewComponent implements OnInit {
   _adkColors:any = this.convertColorList(fmColorLibrary.fmBrandColors.adk);
   _uiColors:any = this.convertColorList(fmColorLibrary.fmUiColors);
   _alphaColors:any = this.convertColorList(fmColorLibrary.fmUiAlpha);
+  _surfaceColors:any = this.convertColorList(surfaceColors);
 
-  _rampList:any = this.makeColorRampList();
 
-  _red:any = this.convertColorList(fmColorLibrary.fmUiColors.red,'red');
 
-  _alphaWhite:any = this.convertColorList(fmColorLibrary.fmUiAlpha.white,'alpha-white');
+  // _red:any = this.convertColorList(fmColorLibrary.fmUiColors.red,'red');
+
+  // _alphaWhite:any = this.convertColorList(fmColorLibrary.fmUiAlpha.white,'alpha-white');
+
+  
+
+
+   _rampList:any = this.makeColorRampList();
 
   ngOnInit() {
-      // console.log('======== red ========',fmColorLibrary.fmUiColors.red);
-      // console.log('======= ramp list ===',this._rampList);
+
+    console.log('_surfaceColors',this._surfaceColors,surfaceColors)
   }
 
   convertColorList(_list:string[],_prefix:string='xx'):string[] {

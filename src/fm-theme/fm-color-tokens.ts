@@ -64,7 +64,7 @@ const hueSat: any = {
   }
 
 // lightness levels
-const levels: string[] = ["0","2.5","5","7.5","10","15","20","25","30","40","50","60","70","75","80","85","90","95"];
+const levels: string[] = ["0","2.5","5","7.5","10","15","20","25","30","40","50","60","70","75","80","85","90","92.5","95","97.5"];
 
 // take color and loop through lightness levels, kick out color ramp object
 function makeLightnessRamp(_hueSatValue:string) {
@@ -115,6 +115,11 @@ function buildAlphaRampList() {
 const fmUiColors:any = buildColorRampList();
 const fmUiAlpha:any = buildAlphaRampList();
 
+const surfaceColors: any = {
+    light:fmUiColors['fmGray'],
+    dark:fmUiColors.slate
+}
+
 fmUiColors.gray = fmUiColors['fmGray'];
 
 //console.log("colorRamps",colorRamps);
@@ -129,10 +134,11 @@ export const fmColorTokens: any = {
     ...fmUiAlpha,
   },
     ...fmUiColors,
+    //surface:fmUiColors['fmGray'],
 }
 
 const allFmColors = {
-  fmBrandColors,fmUiColors,fmUiAlpha
+  fmBrandColors,fmUiColors,fmUiAlpha,levels
 }
 
 export { fmBrandColors };
@@ -141,4 +147,10 @@ export { fmUiColors }
 
 export { fmUiAlpha }
 
+export { levels }
+
 export { allFmColors }
+
+export { surfaceColors }
+
+

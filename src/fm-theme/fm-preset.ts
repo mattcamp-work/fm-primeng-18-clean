@@ -29,6 +29,8 @@ import Aura from "@primeng/themes/aura";
 //=====================================
 // import brand colors, legacy ADK colors, and UI colors
 import { fmColorTokens } from "./fm-color-tokens";
+
+import { surfaceColors } from "./fm-color-tokens";
 //=====================================
 
 console.log("fmColorTokens",fmColorTokens);
@@ -84,7 +86,7 @@ const FmPreset = definePreset(FmBase, {
 				primary: {
 					color: "{blue.400}",
 				},
-				surface:fmColorTokens['fmGray'],				
+				surface:surfaceColors.light,				
 				ground: {
 					
 					0: "{fm.white}",
@@ -98,7 +100,7 @@ const FmPreset = definePreset(FmBase, {
 				primary: {
 					color: "{blue.400}",
 				},
-				surface:fmColorTokens.slate,
+				surface:surfaceColors.dark,
 				ground: {
 
 					0: "#000",

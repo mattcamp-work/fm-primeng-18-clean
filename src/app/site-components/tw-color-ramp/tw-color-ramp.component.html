@@ -5,9 +5,9 @@
 	<div class="w-56">
 	<ng-container *ngFor="let color of rampColorList">
 		<div class="flex bg-surface-300 dark:bg-surface-800">
-			<div class="color-swatch" [style.background]="color.value">
+			<div class="color-swatch"  [ngStyle]="{ backgroundColor: color.value }" >
 				<span class="p-2 text-xs color-name" [class]="getContrastingTextColor(color.value)">
-					{{color.name}}
+					{{color.level}}
 				</span>
 				<a (click)="pop.toggle($event)" class="btn-view-code"><span class="pi pi-code text-shadow" style="font-size:.75rem"></span></a>
 			</div>
@@ -22,7 +22,7 @@
 <ng-template #popoverContent let-color="color">
 	<div class="p-1">
 		<div class="mb-4 pb-3 border-b border-b-surface-100 dark:border-b-surface-700">
-			<p class="text-md pb-1 font-semibold  ">{{color.prefix}}-{{color.name}}</p>
+			<p class="text-md pb-1 font-semibold  ">{{color.className}}</p>
 			<p class="text-xs ps-1 opacity-70 select-all">
 				{{color.value}}
 			</p>
@@ -34,12 +34,12 @@
 			</p>
 		</div>
 		<p class="text-xs mb-2 font-semibold">CSS Var:</p>
-		<app-code-copy text="var(--p-{{color.classPrefix + color.name}})"></app-code-copy>
+		<app-code-copy text="var(--p-{{color.className}})"></app-code-copy>
 		<p class="text-xs mb-2 font-semibold mt-4">Tailwind Classes:</p>
 		<div class="flex-row gap-2">
-			<app-code-copy styleClass="mb-1" text="bg-{{color.classPrefix + color.name }}"></app-code-copy>
-			<app-code-copy styleClass="mb-1" text="text-{{color.classPrefix + color.name }}"></app-code-copy>
-			<app-code-copy styleClass="mb-1" text="border-{{color.classPrefix + color.name }}"></app-code-copy>
+			<app-code-copy styleClass="mb-1" text="{{color.classPrefix }}bg-{{color.className }}"></app-code-copy>
+			<app-code-copy styleClass="mb-1" text="{{color.classPrefix }}text-{{color.className }}"></app-code-copy>
+			<app-code-copy styleClass="mb-1" text="{{color.classPrefix }}border-{{color.className }}"></app-code-copy>
 			<!-- <app-code-copy styleClass="mb-1" text="ring-{{color.classPrefix + color.name }}"></app-code-copy>
 			<app-code-copy styleClass="mb-1" text="outline-{{color.classPrefix + color.name }}"></app-code-copy>
 			<app-code-copy styleClass="mb-1" text="caret-{{color.classPrefix + color.name }}"></app-code-copy> -->

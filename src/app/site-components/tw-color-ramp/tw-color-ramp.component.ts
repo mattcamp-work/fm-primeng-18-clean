@@ -25,6 +25,7 @@ export class TwColorRampComponent {
   @Input() name: string = 'Red';
   @Input() prefix: string = ''; // used for 'alpha' ramps
   @Input() ramp_values ? : any = []; // ramp color values sent in from tw-token-view.component
+  @Input() is_surface: boolean = false;
 
   rampColorList ? : any = []; // object to hold the cleaned up color list
 
@@ -33,9 +34,9 @@ export class TwColorRampComponent {
   ngOnInit() {
 
     //set the default value if not supplied
-     this.rampColorList = this.convertColorList(fmColorLibrary.fmUiColors.red, 'red');
+    this.rampColorList = this.convertColorList(fmColorLibrary.fmUiColors.red, 'red');
 
-     // it ramp_value has been supplied, set up the rampColorList
+    // it ramp_value has been supplied, set up the rampColorList
     if (this.ramp_values.length !== 0) {
 
       let _tempPrefix = this.adjustPrefix(this.prefix) + this.name;
@@ -43,10 +44,13 @@ export class TwColorRampComponent {
 
     }
 
+
+
   }
 
   // compare bg color against black and white, return the option that is the higher contrast
   getContrastingTextColor(_BgColor: string = "#ff0000") {
+
     const _thisColor = new Color(_BgColor);
 
     let contrastWithBlack = _thisColor.contrast("#000", "WCAG21");
@@ -62,15 +66,15 @@ export class TwColorRampComponent {
 
   convertToRGB = function(_color: string) {
     const colorObj = new Color(_color);
-    
-    if(colorObj.alpha !== undefined) {
-       return colorObj.to("srgb").toString({ format: "rgba" });
+
+    if (colorObj.alpha !== undefined) {
+      return colorObj.to("srgb").toString({ format: "rgba" });
     }
 
     return colorObj.to("srgb").toString({ format: "rgb" });
   }
 
- 
+
 
   removeSpaces(_input: string) {
     return _input.replace(/ /gmi, '');
@@ -92,19 +96,56 @@ export class TwColorRampComponent {
     return _input;
   }
 
+
+  getClassName(_prefix: string = "-", _name: any = "test") {
+    // if (this.is_surface) {
+    //   return 'surface-' + _name;
+    // }
+    return this.adjustPrefix(_prefix) + _name;
+  }
+
+  getClassPrefix(_name: any) {
+
+  
+    if (/dark/igm.test(_name)) {
+      return "dark:"
+    }
+    return '';
+  }
+
+  // getCssVar(_name:any) {
+  //   return `var(--p-${this.getClassName('surface',_name)}`
+  // }
+
+
+getCSSVarFromDOM(_varName: string): string {
+    return getComputedStyle(document.documentElement).getPropertyValue(_varName).trim();
+}
+
   convertColorList(_list: string[], _prefix: string = ''): string[] {
 
     const _colorList: string[] = [];
 
     var _this = this;
 
-    _.each(_list, (_value, _key) => {
+    _.each(_list, (_colorCoord, _level) => {
       let _color: any = {};
-      _color.name = _key;
+      _color.level = _level;
       _color.prefix = _prefix;
-      _color.classPrefix = this.adjustPrefix(_prefix);
-      _color.value = _value;
+      _color.classPrefix = this.getClassPrefix(this.name);
+      _color.value = _colorCoord;
+      _color.className = this.getClassName(_prefix, _level);
+
+      // if (this.is_surface) {        
+      //   let _cssVar = `--p-surface-${_level.toString()}`;
+      //   _color.value = this.getCSSVarFromDOM(_cssVar);
+      // }
+
+
+
       _colorList.push(_color);
+
+
     });
 
     //console.log("Here is my color list:",_colorList);

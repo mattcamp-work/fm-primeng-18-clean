@@ -1,24 +1,24 @@
 <div class="container">
 	<div class="row">
 		<div class="col-12">
-			<div class="card">
-				<p-tabs value="colors">
+			<div class="display-card">
+				<p-tabs value="0">
 					<p-tablist>
-						<p-tab value="colors">Colors</p-tab>
-                        <p-tab value="grids">Grids / Columns</p-tab>
-                        <p-tab value="fonts">Fonts</p-tab>
-                        <p-tab value="spacing">Spacing</p-tab>
+						<p-tab value="0">Colors</p-tab>
+                        <!-- <p-tab value="grids">Grids / Columns</p-tab> -->
+                        <p-tab value="1">Fonts</p-tab>
+                        <p-tab value="2">Cheat Sheet</p-tab>
+                        <!-- <p-tab value="spacing">Spacing</p-tab> -->
 					</p-tablist>
 					<p-tabpanels>
-						<p-tabpanel value="colors">
+						<p-tabpanel value="0" class="test">
 							 <app-tw-token-view></app-tw-token-view>
 						</p-tabpanel>
-						<p-tabpanel value="grids">
-						</p-tabpanel>
-						<p-tabpanel value="fonts">
+						<p-tabpanel value="1">
 							 <app-tw-fonts></app-tw-fonts>
 						</p-tabpanel>
-						<p-tabpanel value="spacing">
+						<p-tabpanel value="2">
+							<app-tw-cheat-sheet></app-tw-cheat-sheet>
 						</p-tabpanel>
 					</p-tabpanels>
 				</p-tabs>

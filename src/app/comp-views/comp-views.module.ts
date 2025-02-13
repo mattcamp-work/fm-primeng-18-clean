@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { AlertViewComponent } from './alert-view/alert-view.component';
-import { ButtonViewComponent } from './button-view/button-view.component';
-import { DataViewComponent } from './data-view/data-view.component';
+import { AlertViewComponent }   from './alert-view/alert-view.component';
+import { ButtonViewComponent }  from './button-view/button-view.component';
+import { DataViewComponent }  from './data-view/data-view.component';
 import { FileViewComponent } from './file-view/file-view.component';
 import { FormViewComponent } from './form-view/form-view.component';
 import { InputViewComponent } from './input-view/input-view.component';
@@ -17,6 +17,7 @@ import { TableViewComponent } from './table-view/table-view.component';
 import { TwTokenViewComponent } from './tw-token-view/tw-token-view.component'
 import { TwFontsComponent } from './tw-fonts/tw-fonts.component'
 import { TwGridsComponent } from './tw-grids/tw-grids.component'
+import { TwCheatSheetComponent } from './tw-cheat-sheet/tw-cheat-sheet.component'
 
 @NgModule({
   declarations: [],
@@ -37,6 +38,7 @@ import { TwGridsComponent } from './tw-grids/tw-grids.component'
     TwTokenViewComponent,
     TwFontsComponent,
     TwGridsComponent,
+    TwCheatSheetComponent,
    // PrimengImportsModule,
   ],
   exports: [
@@ -56,6 +58,7 @@ import { TwGridsComponent } from './tw-grids/tw-grids.component'
     TwTokenViewComponent,
     TwFontsComponent,
     TwGridsComponent,
+    TwCheatSheetComponent,
     //PrimengImportsModule,
   ]
 })

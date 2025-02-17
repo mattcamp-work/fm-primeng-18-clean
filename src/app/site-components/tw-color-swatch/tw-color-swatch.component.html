@@ -14,10 +14,7 @@
 			</div>
 			<p-popover #pop >
 				<div class="p-1">
-					<!-- <p class="text-xs mb-2"><b>Color</b></p> -->
-					<!-- <app-code-copy styleClass="mb-2" text="{{value}}"></app-code-copy> -->
-					<!-- <app-code-copy styleClass="mb-2" text="{{convertToHex(value)}}"></app-code-copy> -->
-					<!-- <app-code-copy styleClass="mb-2" text="{{convertToRGB(value)}}"></app-code-copy> -->
+					
 					<p class="text-xs mb-1"><b>CSS Values:</b></p>
 					<app-code-copy text="var(--p-{{classPrefix + name}})"></app-code-copy>
 					<p class="text-xs mb-1 mt-4"><b>Tailwind Classes:</b></p>
@@ -26,6 +23,14 @@
 						<app-code-copy styleClass="mb-1" text="text-{{classPrefix + name }}"></app-code-copy>
 						<app-code-copy styleClass="mb-1" text="border-{{classPrefix + name }}"></app-code-copy>
 					</div>
+					<p class="text-xs mt-2 mb-1"><b>Color</b></p>
+					<div class="flex-row gap-2">
+						<app-code-copy styleClass="mb-2" text="{{value}}"></app-code-copy>
+						<app-code-copy styleClass="mb-2" text="{{convertToHex(value)}}"></app-code-copy>
+						<app-code-copy styleClass="mb-2" text="{{convertToRGB(value)}}"></app-code-copy>
+						
+					</div>
+					
 
 				</div>
 			</p-popover>

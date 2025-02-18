@@ -76,8 +76,15 @@ export class TwColorRampComponent {
 
    convertToRGB = (_color: string): string => {
     const colorObj = new Color(_color);
-    const [r, g, b] = colorObj.to("srgb").coords.map(v => Math.round(v * 255));
-    return `rgb(${r}, ${g}, ${b})`;
+  const [r, g, b] = colorObj.to("srgb").coords.map(v => Math.round(v * 255));
+  const alpha = colorObj.alpha ?? 1; // Defaults to 1 if no alpha is provided
+
+  if (alpha) {
+    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+  }
+
+  return `rgb(${r}, ${g}, ${b})`;
+
   };
 
 

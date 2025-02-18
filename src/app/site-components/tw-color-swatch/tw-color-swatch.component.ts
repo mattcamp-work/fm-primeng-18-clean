@@ -27,10 +27,12 @@ export class TwColorSwatchComponent implements OnInit {
     return colorObj.to("srgb").toString({ format: "hex" });
   }
 
-  convertToRGB = function(_color: string) {
+
+  convertToRGB = (_color: string): string => {
     const colorObj = new Color(_color);
-    return colorObj.to("srgb").toString({ format: "rgb" });
-  }
+    const [r, g, b] = colorObj.to("srgb").coords.map(v => Math.round(v * 255));
+    return `rgb(${r}, ${g}, ${b})`;
+  };
 
   removeSpaces(_input:string){
       return _input.replace(/ /gmi,'');

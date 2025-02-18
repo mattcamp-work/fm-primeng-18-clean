@@ -64,15 +64,21 @@ export class TwColorRampComponent {
     return colorObj.to("srgb").toString({ format: "hex" });
   }
 
-  convertToRGB = function(_color: string) {
+  // convertToRGB = function(_color: string) {
+  //   const colorObj = new Color(_color);
+
+  //   if (colorObj.alpha !== undefined) {
+  //     return colorObj.to("srgb").toString({ format: "rgba" });
+  //   }
+
+  //   return colorObj.to("srgb").toString({ format: "rgb" });
+  // }
+
+   convertToRGB = (_color: string): string => {
     const colorObj = new Color(_color);
-
-    if (colorObj.alpha !== undefined) {
-      return colorObj.to("srgb").toString({ format: "rgba" });
-    }
-
-    return colorObj.to("srgb").toString({ format: "rgb" });
-  }
+    const [r, g, b] = colorObj.to("srgb").coords.map(v => Math.round(v * 255));
+    return `rgb(${r}, ${g}, ${b})`;
+  };
 
 
 

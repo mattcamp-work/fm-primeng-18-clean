@@ -67,6 +67,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        serif: ["Roboto Slab", "serif"],
+        sans: ["Source Sans 3", "sans-serif"],
+      },
       colors:{
         ...twColorRemoveList,
         ...fmColorTokens,

@@ -18,6 +18,7 @@ import { TwTokenViewComponent } from './tw-token-view/tw-token-view.component'
 import { TwFontsComponent } from './tw-fonts/tw-fonts.component'
 import { TwGridsComponent } from './tw-grids/tw-grids.component'
 import { TwCheatSheetComponent } from './tw-cheat-sheet/tw-cheat-sheet.component'
+import { TokenExportComponent } from './token-export/token-export.component'
 
 @NgModule({
   declarations: [],
@@ -39,6 +40,7 @@ import { TwCheatSheetComponent } from './tw-cheat-sheet/tw-cheat-sheet.component
     TwFontsComponent,
     TwGridsComponent,
     TwCheatSheetComponent,
+    TokenExportComponent,
    // PrimengImportsModule,
   ],
   exports: [
@@ -59,6 +61,7 @@ import { TwCheatSheetComponent } from './tw-cheat-sheet/tw-cheat-sheet.component
     TwFontsComponent,
     TwGridsComponent,
     TwCheatSheetComponent,
+    TokenExportComponent,
     //PrimengImportsModule,
   ]
 })

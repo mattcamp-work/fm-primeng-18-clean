@@ -1,0 +1,39 @@
+<div class="token-export-container">
+  <h2>Token Export</h2>
+  <div class="content">
+    <table class="color-table">
+      <thead>
+        <tr>
+          <th>Color</th>
+          <th>Name & Level</th>
+          <th>CSS Variable</th>
+          <th>Tailwind Classes</th>
+          <th>Color Values</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let token of colorTokens">
+          <td [style.background-color]="token.value" class="first-col">
+            <!-- <div class="color-swatch" [style.background-color]="token.value"></div> -->
+          </td>
+          <td>
+            <b>{{token.name}}-{{token.level}}</b>
+          </td>
+          <td>
+            <span class="selectMe">{{token.cssVar}}</span>
+          </td>
+          <td>
+            <span class="selectMe">{{token.tailwindBg}}</span><br>
+            <span class="selectMe">{{token.tailwindText}}</span><br>
+            <span class="selectMe">border-{{token.name}}-{{token.level}}</span>
+          </td>
+          <td>
+            <span class="selectMe">{{token.hex}}</span><br>
+            <span class="selectMe">{{token.hsl}}</span><br>
+            <span class="selectMe">{{token.rgb}}</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div> 

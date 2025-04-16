@@ -4,7 +4,7 @@ import { PrimengCompsComponent } from '~/app/pages/primeng-comps/primeng-comps.c
 import { TokensComponent } from '~/app/pages/tokens/tokens.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'components', pathMatch: 'full' }, // Redirect root to '/components'
+  { path: '', redirectTo: 'tokens', pathMatch: 'full' }, // Redirect root to '/components'
   { path: 'components', component: PrimengCompsComponent },  // Matches '/components'
   { path: 'tokens', component: TokensComponent }  // Matches '/tokens'
 ];

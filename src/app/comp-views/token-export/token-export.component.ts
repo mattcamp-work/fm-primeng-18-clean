@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import * as fmColorLibrary from '~/fm-theme/fm-color-tokens';
 import _ from 'lodash';

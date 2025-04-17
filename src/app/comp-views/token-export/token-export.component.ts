@@ -9,7 +9,9 @@ import { ColorService } from '~app/services/color.service';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './token-export.component.html',
-  styleUrls: ['./token-export.component.scss']
+  styleUrls: ['./token-export.component.scss'],
+  encapsulation: ViewEncapsulation.None,
+
 })
 export class TokenExportComponent {
   private colorService = inject(ColorService);

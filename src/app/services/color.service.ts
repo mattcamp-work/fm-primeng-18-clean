@@ -35,12 +35,23 @@ export class ColorService {
   }
 
   // Convert color to HSL format with commas
-  convertToHSL(color: string): string {
-    const colorObj = new Color(color);
-    const coords = colorObj.coords;
-    return `hsl(${Math.round(coords[0])}, ${coords[2]}%, ${coords[1]}%)`;
-  }
+  // convertToHSL(color: string): string {
+  //   const colorObj = new Color(color);
+  //   const coords = colorObj.coords;
+  //   return `hsl(${Math.round(coords[0])}, ${coords[2]}%, ${coords[1]}%)`;
+  // }
 
+  convertToHSL(input: string): string {
+ const color = new Color(input).to("hsl"); // Convert to HSL color space
+
+    const [h, s, l] = color.coords;
+
+    const hStr = h.toFixed(2);
+    const sStr = (s * 100).toFixed(2);
+    const lStr = (l * 100).toFixed(2);
+
+    return `hsl(${hStr} ${sStr}% ${lStr}%)`;
+}
 
  
   // Get CSS variable value from DOM

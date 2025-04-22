@@ -33,10 +33,9 @@ export class TokenExportComponent {
           value: value,
           hex: this.colorService.convertToHex(value),
           hsl: value,
+          fullname:`${colorName}-${level}`,
           rgb: this.colorService.convertToRGB(value),
-          cssVar: `var(--ui-${colorName}-${level})`,
-          tailwindBg: `bg-${colorName}-${level}`,
-          tailwindText: `text-${colorName}-${level}`
+          textcolor: this.colorService.getContrastingTextColor(value),
         });
       });
     });

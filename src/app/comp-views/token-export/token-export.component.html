@@ -5,7 +5,7 @@
       <thead>
         <tr>
           <th>Color</th>
-          <th>Name & Level</th>
+          <!-- <th>Name & Level</th> -->
           <th>CSS Variable</th>
           <th>Tailwind Classes</th>
           <th>Color Values</th>
@@ -14,23 +14,24 @@
       <tbody>
         <tr *ngFor="let token of colorTokens">
           <td [style.background-color]="token.value" class="first-col">
+             <b [style.color]="token.textcolor">{{token.name}}-{{token.level}}</b>
             <!-- <div class="color-swatch" [style.background-color]="token.value"></div> -->
           </td>
+       <!--    <td  [style.background-color]="token.value" >
+           
+          </td> -->
           <td>
-            <b>{{token.name}}-{{token.level}}</b>
+            <code>var(--{{token.fullname}})</code>
           </td>
           <td>
-            <span class="selectMe">{{token.cssVar}}</span>
+            <code>bg-{{token.fullname}}</code><br>
+            <code>text-{{token.fullname}}</code><br>
+            <code>border-{{token.fullname}}</code>
           </td>
           <td>
-            <span class="selectMe">{{token.tailwindBg}}</span><br>
-            <span class="selectMe">{{token.tailwindText}}</span><br>
-            <span class="selectMe">border-{{token.name}}-{{token.level}}</span>
-          </td>
-          <td>
-            <span class="selectMe">{{token.hex}}</span><br>
-            <span class="selectMe">{{token.hsl}}</span><br>
-            <span class="selectMe">{{token.rgb}}</span>
+            <code>{{token.hex}}</code><br>
+            <code>{{token.hsl}}</code><br>
+            <code>{{token.rgb}}</code>
           </td>
         </tr>
       </tbody>

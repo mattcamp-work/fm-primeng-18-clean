@@ -1,0 +1,64 @@
+// Custom styles can be added here if needed 
+
+// Custom styles for range inputs
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  background: var(--p-surface-200);
+  border-radius: 3px;
+  outline: none;
+  margin: 10px 0;
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: var(--p-primary-color);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.15s ease-in-out;
+
+    &:hover {
+      background: var(--p-primary-600);
+    }
+  }
+
+  &::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    background: var(--p-primary-color);
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    transition: background 0.15s ease-in-out;
+
+    &:hover {
+      background: var(--p-primary-600);
+    }
+  }
+}
+
+// Dark mode adjustments
+:host-context(.fm-dark-mode) {
+  input[type="range"] {
+    background: var(--p-surface-700);
+
+    &::-webkit-slider-thumb {
+      background: var(--p-primary-400);
+      
+      &:hover {
+        background: var(--p-primary-300);
+      }
+    }
+
+    &::-moz-range-thumb {
+      background: var(--p-primary-400);
+      
+      &:hover {
+        background: var(--p-primary-300);
+      }
+    }
+  }
+} 

@@ -74,6 +74,7 @@ module.exports = {
       colors:{
         ...twColorRemoveList,
         ...fmColorTokens,
+        primary:fmColorTokens.navy,
         success:fmColorTokens.lime,
         danger:fmColorTokens.red,
         warning:fmColorTokens.orange,

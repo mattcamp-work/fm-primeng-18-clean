@@ -26,12 +26,12 @@ export class ColorService {
   convertToRGB(color: string): string {
     const colorObj = new Color(color);
     const [r, g, b] = colorObj.to("srgb").coords.map(v => Math.round(v * 255));
-    const alpha = colorObj.alpha ?? 1;
+    const alpha = colorObj.alpha ?? 1; // if alpha
 
     if (alpha < 1) {
-      return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+      return `rgba(${r},${g},${b},${alpha})`;
     }
-    return `rgb(${r}, ${g}, ${b})`;
+    return `rgb(${r},${g},${b})`;
   }
 
   // Convert color to HSL format with commas
@@ -42,20 +42,22 @@ export class ColorService {
   // }
 
   convertToHSL(input: string): string {
- const color = new Color(input).to("hsl"); // Convert to HSL color space
+    const colorObj = new Color(input).to("hsl"); // Convert to HSL color space
+    const [h, s, l] = colorObj.coords;
 
-    const [h, s, l] = color.coords;
+    const hueVal = h.toFixed(2);
+    const satVal = (s * 100).toFixed(2);
+    const lightVal = (l * 100).toFixed(2);
+    const alpha = colorObj.alpha ?? 1; // if alpha
 
-    const hStr = h.toFixed(2);
-    const sStr = (s * 100).toFixed(2);
-    const lStr = (l * 100).toFixed(2);
+    if (alpha < 1) {
+      return `hsl(${hueVal},${satVal}%,${lightVal}%,${alpha.toFixed(2)})`;
+    }
 
-    return `hsl(${hStr} ${sStr}% ${lStr}%)`;
-}
+    return `hsl(${hueVal},${satVal}%,${lightVal}%)`;
 
- 
-  // Get CSS variable value from DOM
-  getCSSVarFromDOM(varName: string): string {
-    return getComputedStyle(document.documentElement).getPropertyValue(varName).trim();
   }
-} 
+
+
+
+}

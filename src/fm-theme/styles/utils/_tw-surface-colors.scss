@@ -6,16 +6,16 @@ $prefix: "surface";
     background-color: var(--p-#{$prefix}-#{$value});
   }
   .text-#{$prefix}-#{$value} {
-    background-color: var(--p-#{$prefix}-#{$value});
+    color: var(--p-#{$prefix}-#{$value});
   }
   .border-#{$prefix}-#{$value} {
-    background-color: var(--p-#{$prefix}-#{$value});
+    border-color: var(--p-#{$prefix}-#{$value});
   }
   .outline-#{$prefix}-#{$value} {
-    background-color: var(--p-#{$prefix}-#{$value});
+    outline-color: var(--p-#{$prefix}-#{$value});
   }
   .caret-#{$prefix}-#{$value} {
-    background-color: var(--p-#{$prefix}-#{$value});
+    caret-color: var(--p-#{$prefix}-#{$value});
   }
 
 }

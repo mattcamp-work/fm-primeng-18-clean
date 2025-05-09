@@ -23,12 +23,18 @@
     user-select: all;
     font-family: monospace;
     font-size: .75em;
-    padding: .125rem .25rem;
+    padding: .125rem .5rem;
     color:var(--ui-blue-600);
-   // background-color:var(--ui-blue-50);
     border-radius: 4px;
     margin-bottom: 4px;
     display: inline-block;
+    float:left;
+    clear:left;
+
+    &:hover {
+      background-color:var(--ui-blue-50);
+    }
+
   }
 
   .color-table {

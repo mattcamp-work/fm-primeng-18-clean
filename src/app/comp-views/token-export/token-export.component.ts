@@ -1,6 +1,6 @@
 import { Component, inject, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import * as fmColorLibrary from '~/fm-theme/fm-color-tokens';
+import * as fmColorLibrary from '~node/fm-theme/fm-color-tokens';
 import _ from 'lodash';
 import { ColorService } from '~app/services/color.service';
 

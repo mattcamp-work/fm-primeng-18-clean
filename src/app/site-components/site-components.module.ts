@@ -12,7 +12,6 @@ import { TwColorSwatchComponent } from './tw-color-swatch/tw-color-swatch.compon
 import { ChatDemoComponent } from './chat-demo/chat-demo.component';
 
 import { CodeCopyComponent } from './code-copy/code-copy.component';
-import { HomeEquityCalculatorComponent } from './home-equity-calculator/home-equity-calculator.component';
 
 @NgModule({
   declarations: [   
@@ -28,7 +27,7 @@ import { HomeEquityCalculatorComponent } from './home-equity-calculator/home-equ
     ChatDemoComponent,
     CodeCopyComponent,
     TwColorSwatchComponent,
-    HomeEquityCalculatorComponent,
+
   ],
   exports: [
     CompRowComponent,
@@ -39,7 +38,7 @@ import { HomeEquityCalculatorComponent } from './home-equity-calculator/home-equ
     ChatDemoComponent,
     CodeCopyComponent,
     TwColorSwatchComponent,
-    HomeEquityCalculatorComponent,
+
   ]
 })
 export class SiteComponentsModule { }

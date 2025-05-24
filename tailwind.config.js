@@ -31,9 +31,9 @@
 */
 
 
-import { fmColorTokens } from './src/fm-theme/fm-color-tokens.ts'; // pull in color tokens from theme.
-import { surfaceColors } from './src/fm-theme/fm-color-tokens.ts'; 
-import { levels } from './src/fm-theme/fm-color-tokens.ts'; 
+import { fmColorTokens } from './node_modules_dev/fm-theme/fm-color-tokens.ts'; // pull in color tokens from theme.
+import { surfaceColors } from './node_modules_dev/fm-theme/fm-color-tokens.ts'; 
+import { levels } from './node_modules_dev/fm-theme/fm-color-tokens.ts'; 
 
 import _ from 'lodash';
 
@@ -80,6 +80,28 @@ module.exports = {
         warning:fmColorTokens.orange,
         info:fmColorTokens.blue,
         help:fmColorTokens.teal,
+        ground: {
+          0: 'var(--p-ground-0)',
+          25: 'var(--p-ground-25)',
+          50: 'var(--p-ground-50)',
+          75: 'var(--p-ground-75)',
+          100: 'var(--p-ground-100)',
+          150: 'var(--p-ground-150)',
+          200: 'var(--p-ground-200)',
+          250: 'var(--p-ground-250)',
+          300: 'var(--p-ground-300)',
+          400: 'var(--p-ground-400)',
+          500: 'var(--p-ground-500)',
+          600: 'var(--p-ground-600)',
+          700: 'var(--p-ground-700)',
+          750: 'var(--p-ground-750)',
+          800: 'var(--p-ground-800)',
+          850: 'var(--p-ground-850)',
+          900: 'var(--p-ground-900)',
+          925: 'var(--p-ground-925)',
+          950: 'var(--p-ground-950)',
+          975: 'var(--p-ground-975)',
+        },
         // surface:surfaceColors.light,
         // dark: {
         //   surface:surfaceColors.dark
@@ -92,4 +114,6 @@ module.exports = {
     //preflight:true,
   ],
 }
+
+
 

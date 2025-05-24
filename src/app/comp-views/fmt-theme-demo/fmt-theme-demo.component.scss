@@ -1,0 +1,50 @@
+// Import the theme styles
+@import '../../../fm-theme/styles/fm-tailwind-theme/main';
+
+// Component-specific styles
+:host {
+  display: block;
+  padding: 1rem;
+}
+
+// Ensure proper spacing between sections
+.space-y-6 > * + * {
+  margin-top: 1.5rem;
+}
+
+.space-y-4 > * + * {
+  margin-top: 1rem;
+}
+
+.space-y-2 > * + * {
+  margin-top: 0.5rem;
+}
+
+// Ensure proper spacing between flex items
+.gap-4 {
+  gap: 1rem;
+}
+
+// Ensure proper vertical alignment
+.items-center {
+  align-items: center;
+}
+
+// Ensure proper block display for labels
+.block {
+  display: block;
+}
+
+// Ensure proper margin for labels
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+// Ensure proper padding for the container
+.p-4 {
+  padding: 1rem;
+} 

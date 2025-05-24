@@ -1,0 +1,291 @@
+<div class="p-4">
+  <h1 class="fmt-heading-1">Fannie Mae Tailwind Theme Demo</h1>
+  <p class="mb-4">A comprehensive showcase of all available theme styles and components.</p>
+
+  <p-tabView>
+    <!-- Typography Tab -->
+    <p-tabPanel header="Typography">
+      <div class="space-y-6">
+        <div>
+          <h2 class="fmt-heading-2">Headings</h2>
+          <div class="space-y-4">
+            <h1 class="fmt-heading-1">Heading 1</h1>
+            <h2 class="fmt-heading-2">Heading 2</h2>
+            <h3 class="fmt-heading-3">Heading 3</h3>
+            <h4 class="fmt-heading-4">Heading 4</h4>
+            <h5 class="fmt-heading-5">Heading 5</h5>
+            <h6 class="fmt-heading-6">Heading 6</h6>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="fmt-heading-2">Links</h2>
+          <div class="space-y-2">
+            <a href="#" class="fmt-link">Regular Link</a>
+            <br>
+            <a href="https://example.com" class="fmt-link-external" target="_blank">External Link</a>
+          </div>
+        </div>
+      </div>
+    </p-tabPanel>
+
+    <!-- Form Elements Tab -->
+    <p-tabPanel header="Form Elements">
+      <div class="space-y-6">
+        <div>
+          <h2 class="fmt-heading-2">Text Inputs</h2>
+          <div class="space-y-4">
+            <div>
+              <label class="block mb-2">Text Input</label>
+              <input type="text" class="fmt-input" [(ngModel)]="textInput" placeholder="Enter text...">
+            </div>
+            <div>
+              <label class="block mb-2">Textarea</label>
+              <textarea class="fmt-textarea" [(ngModel)]="textareaInput" placeholder="Enter long text..."></textarea>
+            </div>
+            <div>
+              <label class="block mb-2">Select</label>
+              <select class="fmt-select" [(ngModel)]="selectValue">
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="fmt-heading-2">Checkboxes & Radio Buttons</h2>
+          <div class="space-y-4">
+            <div class="fmt-checkbox-group">
+              <span class="fmt-checkbox-group-label">Checkbox Group</span>
+              <label class="fmt-checkbox">
+                <input type="checkbox" [(ngModel)]="checkboxValue">
+                <span class="fmt-checkbox-box"></span>
+                <span class="fmt-checkbox-label">Option 1</span>
+              </label>
+              <label class="fmt-checkbox">
+                <input type="checkbox">
+                <span class="fmt-checkbox-box"></span>
+                <span class="fmt-checkbox-label">Option 2</span>
+              </label>
+            </div>
+
+            <div class="fmt-radio-group">
+              <span class="fmt-radio-group-label">Radio Group</span>
+              <label class="fmt-radio">
+                <input type="radio" name="radioGroup" [(ngModel)]="radioValue" value="option1">
+                <span class="fmt-radio-box"></span>
+                <span class="fmt-radio-label">Option 1</span>
+              </label>
+              <label class="fmt-radio">
+                <input type="radio" name="radioGroup" [(ngModel)]="radioValue" value="option2">
+                <span class="fmt-radio-box"></span>
+                <span class="fmt-radio-label">Option 2</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </p-tabPanel>
+
+    <!-- Buttons Tab -->
+    <p-tabPanel header="Buttons">
+      <div class="space-y-6">
+        <div>
+          <h2 class="fmt-heading-2">Button Variants</h2>
+          <div class="space-y-4">
+            <div class="flex gap-4">
+              <button class="fmt-button fmt-button-primary">Primary Button</button>
+              <button class="fmt-button fmt-button-secondary">Secondary Button</button>
+              <button class="fmt-button fmt-button-outline">Outline Button</button>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="fmt-heading-2">Button Sizes</h2>
+          <div class="space-y-4">
+            <div class="flex gap-4 items-center">
+              <button class="fmt-button fmt-button-primary fmt-button-sm">Small Button</button>
+              <button class="fmt-button fmt-button-primary">Default Button</button>
+              <button class="fmt-button fmt-button-primary fmt-button-lg">Large Button</button>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="fmt-heading-2">Button States</h2>
+          <div class="space-y-4">
+            <div class="flex gap-4">
+              <button class="fmt-button fmt-button-primary fmt-button-disabled">Disabled Button</button>
+              <button class="fmt-button fmt-button-primary fmt-button-loading">Loading Button</button>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="fmt-heading-2">Button Groups</h2>
+          <div class="space-y-4">
+            <div class="fmt-button fmt-button-group">
+              <button class="fmt-button fmt-button-primary">Left</button>
+              <button class="fmt-button fmt-button-primary">Middle</button>
+              <button class="fmt-button fmt-button-primary">Right</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </p-tabPanel>
+
+    <!-- Tables Tab -->
+    <p-tabPanel header="Tables">
+      <div class="space-y-6">
+        <div>
+          <h2 class="fmt-heading-2">Basic Table</h2>
+          <table class="fmt-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of tableData">
+                <td>{{item.id}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.role}}</td>
+                <td>{{item.status}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div>
+          <h2 class="fmt-heading-2">Table Variants</h2>
+          <div class="space-y-4">
+            <table class="fmt-table fmt-table-striped">
+              <thead>
+                <tr>
+                  <th>Striped Table</th>
+                  <th>Header 2</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Row 1</td><td>Data</td></tr>
+                <tr><td>Row 2</td><td>Data</td></tr>
+              </tbody>
+            </table>
+
+            <table class="fmt-table fmt-table-bordered">
+              <thead>
+                <tr>
+                  <th>Bordered Table</th>
+                  <th>Header 2</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Row 1</td><td>Data</td></tr>
+                <tr><td>Row 2</td><td>Data</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </p-tabPanel>
+
+    <!-- Alerts Tab -->
+    <p-tabPanel header="Alerts">
+      <div class="space-y-6">
+        <div>
+          <h2 class="fmt-heading-2">Alert Variants</h2>
+          <div class="space-y-4">
+            <div *ngIf="showInfoAlert" class="fmt-alert fmt-alert-info fmt-alert-dismissible">
+              <div class="fmt-alert-content">
+                <div class="fmt-alert-title">Information</div>
+                <p>This is an informational alert message.</p>
+              </div>
+              <button class="fmt-alert-close" (click)="closeAlert('info')">×</button>
+            </div>
+
+            <div *ngIf="showSuccessAlert" class="fmt-alert fmt-alert-success fmt-alert-dismissible">
+              <div class="fmt-alert-content">
+                <div class="fmt-alert-title">Success</div>
+                <p>Operation completed successfully.</p>
+              </div>
+              <button class="fmt-alert-close" (click)="closeAlert('success')">×</button>
+            </div>
+
+            <div *ngIf="showWarningAlert" class="fmt-alert fmt-alert-warning fmt-alert-dismissible">
+              <div class="fmt-alert-content">
+                <div class="fmt-alert-title">Warning</div>
+                <p>Please review your input before proceeding.</p>
+              </div>
+              <button class="fmt-alert-close" (click)="closeAlert('warning')">×</button>
+            </div>
+
+            <div *ngIf="showErrorAlert" class="fmt-alert fmt-alert-error fmt-alert-dismissible">
+              <div class="fmt-alert-content">
+                <div class="fmt-alert-title">Error</div>
+                <p>An error occurred while processing your request.</p>
+              </div>
+              <button class="fmt-alert-close" (click)="closeAlert('error')">×</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </p-tabPanel>
+
+    <!-- Badges Tab -->
+    <p-tabPanel header="Badges">
+      <div class="space-y-6">
+        <div>
+          <h2 class="fmt-heading-2">Badge Variants</h2>
+          <div class="space-y-4">
+            <div class="flex gap-4">
+              <span class="fmt-badge fmt-badge-primary">Primary</span>
+              <span class="fmt-badge fmt-badge-secondary">Secondary</span>
+              <span class="fmt-badge fmt-badge-success">Success</span>
+              <span class="fmt-badge fmt-badge-danger">Danger</span>
+              <span class="fmt-badge fmt-badge-warning">Warning</span>
+              <span class="fmt-badge fmt-badge-info">Info</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="fmt-heading-2">Badge Sizes</h2>
+          <div class="space-y-4">
+            <div class="flex gap-4 items-center">
+              <span class="fmt-badge fmt-badge-primary fmt-badge-sm">Small</span>
+              <span class="fmt-badge fmt-badge-primary">Default</span>
+              <span class="fmt-badge fmt-badge-primary fmt-badge-lg">Large</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="fmt-heading-2">Badge with Dot</h2>
+          <div class="space-y-4">
+            <div class="flex gap-4">
+              <span class="fmt-badge fmt-badge-dot fmt-badge-dot-primary">Status</span>
+              <span class="fmt-badge fmt-badge-dot fmt-badge-dot-success">Online</span>
+              <span class="fmt-badge fmt-badge-dot fmt-badge-dot-warning">Pending</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="fmt-heading-2">Dismissible Badge</h2>
+          <div class="space-y-4">
+            <div *ngIf="showBadge" class="fmt-badge fmt-badge-dismissible fmt-badge-primary">
+              Dismissible Badge
+              <button class="fmt-badge-close" (click)="closeBadge()">×</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </p-tabPanel>
+  </p-tabView>
+</div> 

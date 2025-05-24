@@ -1,16 +1,10 @@
 
-@use './fm-theme/styles/fm-main.scss';
+@import '../node_modules_dev/fm-theme/styles/fm-tailwind.scss';
 
+.scope-adk {
+ // @import ''
+}
 
-/*
-  
-  putt all of your site level css here:
-         @layer this-app {}
-  
-  learn more about how css layers work by reading the comments in 
-        ./fm-theme/styles/fm-main.scss
-
-*/
 
 @layer this-app {
 

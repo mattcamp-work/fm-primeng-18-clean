@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { PrimengImportsModule } from '~/app/primeng-imports/primeng-imports-fixed.module';
 import { SiteComponentsModule } from '~/app/site-components/site-components.module';
-import * as fmColorLibrary from '~/fm-theme/fm-color-tokens'
-import { surfaceColors } from '~/fm-theme/fm-color-tokens'
+import * as fmColorLibrary from '~node/fm-theme/fm-color-tokens'
+import { surfaceColors } from '~node/fm-theme/fm-color-tokens'
 
 import { CodeCopyComponent } from '~/app/site-components/code-copy/code-copy.component';
 

@@ -9,6 +9,7 @@
       "~/*": ["./src/*"],
       "~app/*": ["./src/app/*"],
       "~theme/*": ["./src/theme/*"],
+      "~node/*": ["./node_modules_dev/*"],
     }
   },
   "files": [

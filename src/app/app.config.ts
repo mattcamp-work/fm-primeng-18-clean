@@ -1,17 +1,15 @@
 import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
 import { provideRouter } from '@angular/router';
-
-
+import { routes } from './app.routes';
 
 // Install PrimeNg 18 Theme
-
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { providePrimeNG } from 'primeng/config';
 
 //import the FM Preset
-import { FmPreset } from '~/fm-theme/fm-preset';
+import { FmPreset } from '~node/fm-theme/fm-preset';
 
-import { routes } from './app.routes';
+
 
 export const appConfig: ApplicationConfig = {
   providers: [

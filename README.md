@@ -2,11 +2,23 @@
 <style>
    
    .warning {
-      background-color: rgba(250,175,50,.2);
-      color:firebrick;
-      padding:12px 16px;
-      font-weight: bold;
+      background-color: rgba(250,175,50,.15);
+      /*color:Orange;*/
+      padding:.75em 1em;
+      //font-weight: bold;
       border-radius: 8px;
+      display: inline-block;
+      .msg {
+         display: inline-block;
+         /*vertical-align: top;*/
+      }
+      &:before {
+         content: '⚠️';
+         display: inline-block;
+         margin-right:.75em;
+         font-size: 1.5em;
+         vertical-align: middle;
+      }
    }
 
    .callout {
@@ -17,26 +29,33 @@
       margin-bottom: 1em;
    }
 
+   .table-wrap {
+      margin: 0 auto;
+      display: inline-block;
+      padding:2em;
+      background-color: color-mix(in srgb, currentColor 2%, transparent);
+      border-radius: 16px;
+      text-align: center;
+      border: 1px solid color-mix(in srgb, currentColor 6%, transparent);;
+   }
+
 </style>
 
 
 # ADK PrimeNG 18 Installation Guide
 
 
-## 1. Installing PrimeNg
+#### This guide helps you: 
 
-#### What this process does: 
-
-- Installs a brand aligned SCSS theme for **PrimeNg 18 Components**
-- Installs a brand aligned them for **TailwindCss Utilities**
-
-#### Why do I need to install ADK-PrimeNg AND TailwindCss? 
-
-- The ADK-PrimeNg Theme only targets primeng components, you will still need scss to structure the page and your site. TailwindCSS makes this wonderfully easy and fast. 
+- Install a brand aligned SCSS theme for **PrimeNg 18 Components**
+- Install a brand aligned them for **TailwindCss Utilities**
+<br /><br /> 
 
 
-### Steps:
-1. Verify that your angular version is 18 or newer
+
+## Part 1: Installing PrimeNg-18 and the PrimeNg-18 Theme
+
+1. **Verify that your angular version is 18 or newer**
    ```bash
       npx ng version
    ```
@@ -44,7 +63,7 @@
 2. **Install the following node modules from nexus**:
 
    ```bash
-   ng add primeng adk-prime-ui-theme
+   ng add primeng adk-prime-ui
    ```
 
 3. **Import the Preset File into `app.config`**:
@@ -79,7 +98,7 @@
               preset: FmPreset,
               options: {
                 //prefix: 'pfm',
-                darkModeSelector: '.fm-dark-mode',
+                darkModeSelector: '.fm-dark-mode', 
                 cssLayer: {
                   ripple:true
                 }
@@ -92,44 +111,65 @@
       };
 
    ```
+## Part 2: Installing Tailwind and the FM Tailwind Preset (theme)
+  
 
-3. **Configure Tailwind CSS**:
+   ### Why do I need to install ADK-PrimeNg AND TailwindCss? 
 
-   Run the Tailwind CSS configuration command to set up Tailwind in your project:
+- PrimeNg18 only partially themes your app (components: buttons, dropdowns, inputs). You still a theme to cover everything else (page, text, links, divs, columns).
+ <br /><br /> 
+
+**The table below shows the gaps in theme coverage across different components.**
+
+<div class="table-wrap">
+
+ 
+
+   | Site Elements        | PrimeNG                           | Tailwind CSS                     | ADK 3.0 / Blueprint
+   |----------------------|-----------------------------------|----------------------------------|--------------------------|
+   | Buttons, Inputs, Tables, Dropdowns etc     | ✅ | ❌ | ⚠️ |
+   | Columns, Margin, Padding  | ❌ | ✅  |✅  |
+   | Typography        | ⚠️ | ✅  | ⚠️ |
+   | Color Theming     |  ✅   | ✅  | ✅  |
+   | Media Queries / Responsive Utilities   | ❌   | ✅ | ⚠️ |
+   | State Styling     | ✅  | ✅ |⚠️|
+   | Theming Extensibility | ⚠️ | ✅  | ⚠️ |
+   | Accessibility Utilities | ⚠️ | ✅  | ⚠️ |
+
+<div style="text-align: right;">
+✅ <small>Strong support</small>&nbsp;&nbsp;  ⚠️ = <small>Partial Support</small> &nbsp;&nbsp; ❌ = <small>Oooof</small> 
+</div>
+</div>
+  
+
+<br /><br /> 
+
+### Installation 
+ <div class="warning">
+   If your app already has ADK, skip these steps. ADK and Tailwind have style conflicts that are difficult to resolve.
+   </div>
+   <br /><br /> 
+1. **Install the following node modules from nexus**:
+
+   ```bash
+   ng add tailwindcss tailwindcss-primeui
+   ```
+
+2. **Configure Tailwind CSS**:
+
+   This will create a tailwind.config file in the root dir:
    ```bash
    npx tailwindcss init
    ```
 
 4. **Add Tailwind Preset**:
-   Make sure to include the Tailwind preset in your `tailwind.config.js`:
+   Add in the the tailwind 'preset' `tailwind.config.js`:
+   (This will align tailwind utilities to the FM brand colors)
    ```js
    module.exports = {
      presets: [
        require('tailwindcss/prd-prime-ui-theme'),
      ],
+     require('tailwindcss/prd-prime-ui-theme'),
    }
    ```
-
-## 2. Install with Existing PRDK Legacy System
-
-If you are working with an existing PRDK legacy system, follow these steps:
-
-### Steps:
-1. **Install PrimeNG**:
-   Run the following command to install PrimeNG:
-   ```bash
-   npm install primeng
-   ```
-
-2. **Install the Preset File**:
-   Install the preset file to ensure the theme integration works with the legacy system:
-   ```bash
-   npm install prd-prime-ui-theme
-   ```
-
-3. **Skip Tailwind CSS**:
-   Since Tailwind CSS is not required for legacy systems, **do not** run the Tailwind configuration steps.
-
----
-
-Feel free to refer to this guide for quick setup in your project.
